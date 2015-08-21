@@ -90,8 +90,8 @@ button
     border: 0;
     border-radius: 3px;
     outline: none;
-    background: #2ecc71;
-    box-shadow: 0 5px 0 #27ae60;
+    background: #0086b3;
+  /*  box-shadow: 0 5px 0 #27ae60;*/
 }
 
 button:hover
@@ -223,6 +223,16 @@ button.view-cart:active
 {
     border-top: 5px solid white;
     box-shadow: none;
+}
+
+.btn-header{
+    background-color:transparent;
+    border-top:hidden;
+    border-bottom:hidden;
+    border-left:hidden;
+    border-right-width:thin;
+    border-right-color:white;
+    width:65px;
 }
 
 @media (max-width: 1280px)
