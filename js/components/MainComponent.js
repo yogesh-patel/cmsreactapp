@@ -21,12 +21,46 @@ class MainComponent extends React.Component{
     render(){
         return (
             <div className="row">
-                 <div className="col-lg-9">
+        /*         <div className="col-lg-6">
                     <ReactMaerial.AppBar
-                        title="CMS"
+                        title="Home"
+
                         showMenuIconButton={false}
                         iconElementRight={<ReactMaerial.FlatButton label="Save" />} />
-                 </div>
+                 </div>*/
+
+            <Tabs>
+            <Tab label="Item One" >
+            <div>
+            <h2>Tab One Template Example</h2>
+<p>
+    This is an example of a tab template!
+</p>
+<p>
+    You can put any sort of HTML or react component in here.
+</p>
+</div>
+</Tab>
+<Tab label="Item Two" >
+    <div>
+    <h2 >Two Template Example</h2>
+<p>
+This is another example of a tab template!
+</p>
+<p>
+Fair warning - the next tab routes to home!
+</p>
+</div>
+</Tab>
+/*<Tab
+label="Item Three"
+route="home"
+onActive={this._onActive} />*/
+</Tabs>
+
+/*_onActive(tab){
+    this.context.router.transitionTo(tab.props.route)
+}*/
             </div>
         );
     }
