@@ -20,6 +20,8 @@ var ThemeManager = new mui.Styles.ThemeManager();
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 var FirstPanel = require('./FirstPanel');
+var SecondPanel = require('./SecondPanel');
+var ThirdPanel = require('./ThirdPanel');
 
 class UpperHeader extends React.Component {
     constructor() {
@@ -31,6 +33,29 @@ class UpperHeader extends React.Component {
 
         };
     }
+
+    creatRequest(){
+        alert("button create request");
+    }
+    RatePackage (){
+        alert("Rate Package button clicked");
+    }
+    ReqToHold (){
+        alert("Request To Hold button clicked");
+    }
+    VerifyAddr (){
+        alert("Verify Address button clicked");
+    }
+    Details(){
+        alert("Details button clicked");
+    }
+    International (){
+        alert("International button clicked");
+    }
+    Clear () {
+        alert("Clear All button clicked");
+    }
+
     render() {
         return(
 <div>
@@ -38,17 +63,23 @@ class UpperHeader extends React.Component {
             <table>
             <tr>
 
-                  <td>  <button  >Create Request</button> </td>
-                   <td> <button  >Rate Package</button></td>
-                  <td> <button  >Request To Hold</button></td>
-                   <td><button  >Verify Address</button></td>
-                <td> <button  >Details</button></td>
-                <td> <button  >International</button></td>
-                <td><button  >Clear All</button></td>
+                   <td>  <button onClick={this.creatRequest} >Create Request</button> </td>
+                   <td> <button onClick={this.RatePackage} >Rate Package</button></td>
+                   <td> <button onClick={this.ReqToHold} >Request To Hold</button></td>
+                   <td><button onClick={this.VerifyAddr} >Verify Address</button></td>
+                   <td> <button  onClick={this.Details}>Details</button></td>
+                   <td> <button onClick={this.International} >International</button></td>
+                   <td><button  onClick={this.Clear}>Clear All</button></td>
             </tr>
             </table>
             </div>
-            <FirstPanel />
+            <table>
+                <tr>
+                   <td> <FirstPanel /> </td>
+                    <td><SecondPanel /> </td>
+                    <td><ThirdPanel /> </td>
+            </tr>
+            </table>
         </div>
 
 
