@@ -151,7 +151,7 @@ class FirstPanel extends React.Component {
                  </tr>
                  <tr>
                      <td></td>
-                      <td ><FlatButton id="btnEmail" onClick={this.email} label="Email" /> </td>
+                      <td ><FlatButton id="btnEmail" onClick={this.email} label="Email" className="RightAllignedButtons" /> </td>
                  </tr>
                  </table>
 

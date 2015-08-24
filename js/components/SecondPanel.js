@@ -15,6 +15,7 @@ var Tabs = mui.Tabs;
 var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
+var FlatButton = mui.FlatButton;
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -96,7 +97,7 @@ class SecondPanel extends React.Component {
                         </tr>
                         <tr>
                             <td><label>Special Services</label></td>
-                            <td><input type="button" value="Select(F12)" Style="float:right" /></td>
+                            <td><FlatButton  label="Select(F12)" className="RightAllignedButtons" /></td>
                         </tr>
                         <tr>
                             <td><input type="text" Style="overflow:scroll" /></td>

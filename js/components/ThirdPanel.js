@@ -14,6 +14,7 @@ var Tabs = mui.Tabs;
 var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
+var FlatButton = mui.FlatButton;
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -75,7 +76,7 @@ class ThirdPanel extends React.Component {
                                 <td colSpan="2"><label>Dimentions</label></td>
                             </tr>
                             <tr>
-                                <td><input type="button" value="Carton" /></td>
+                                <td><FlatButton label="Carton" className="RightAllignedButtons"/></td>
                             </tr>
                             <tr>
                                 <td Style="background-color:silver">
@@ -108,7 +109,7 @@ class ThirdPanel extends React.Component {
                                 </tr>
                                 <tr>
                                     <td><label>Shipment</label></td>
-                                    <td><input type="button" value="Instructions" Style="float:right" /></td>
+                                    <td><FlatButton label="Instructions" className="RightAllignedButtons" /></td>
                                 </tr>
                                 <tr>
                                     <td colSpan="2"><input type="text" Style="width:300px" /></td>

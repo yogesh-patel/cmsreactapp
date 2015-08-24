@@ -278,6 +278,9 @@ button.view-cart:active
 .trHeader{
     background-color: #0086b3;
 }
+.RightAllignedButtons{
+    float: right;
+}
 .collapseButton{
     width: 15px;
     float: right;
