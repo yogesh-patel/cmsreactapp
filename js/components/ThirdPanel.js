@@ -15,6 +15,8 @@ var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
 var FlatButton = mui.FlatButton;
+var TextField = mui.TextField;
+
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -50,24 +52,24 @@ class ThirdPanel extends React.Component {
                             <tr>
                                 <td colSpan="2"><label>Box Information</label></td>
                             </tr>
-                            <tr>
+                            <tr style={{"background-color":"silver"}}>
                                 <td>Package Count</td>
                                 <td>Package#</td>
                             </tr>
                             <tr>
-                                <td><input type="text" /></td>
-                                <td><input type="text" /> <br /></td>
+                                <td><TextField /></td>
+                                <td><TextField  /> <br /></td>
 
                             </tr>
-                            <tr>
-                                <td colSpan="2">Weight</td>
+                            <tr style={{"background-color":"silver"}}>
+                                <td colSpan="2" >Weight</td>
                             </tr>
                             <tr>
                                 <td><label>Weight</label></td>
                                 <td><label>Units</label></td>
                             </tr>
                             <tr>
-                                <td><input type="text" /></td>
+                                <td><TextField /></td>
                                 <td>
                                     <DropDownMenu menuItems={menuItems} />
                                 </td>
@@ -76,29 +78,28 @@ class ThirdPanel extends React.Component {
                                 <td colSpan="2"><label>Dimentions</label></td>
                             </tr>
                             <tr>
-                                <td><FlatButton label="Carton" className="RightAllignedButtons"/></td>
+                                <td colSpan="2"><FlatButton label="Carton" className="RightAllignedButtons"/></td>
                             </tr>
                             <tr>
-                                <td Style="background-color:silver">
+                                <td style={{"background-color":"silver"}}>
                                     <div>
-                                        <label Style="width:100px">Length  </label><label Style="width:70px; margin-left:5px">   Width</label>
+                                        <label>Length  </label><label style={{"width":"70px","margin-left":"5px"}}>   Width</label>
                                     </div>
                                 </td>
 
-
-                                <td Style="background-color:silver">
+                                <td style={{"background-color":"silver"}}>
                                     <div>
-                                        <label Style="width:100px">Height  </label><label Style="width:70px; align-self:center">   Units</label>
+                                        <label style={{"width":"100px"}}>Height  </label><label style={{"width":"70px", "align-self":"center"}}>   Units</label>
                                     </div>
                                 </td>
 
                             </tr>
                             <tr>
-                                <td><div><input Style="width:70px" type="text" /><input Style="width:70px" type="text" /></div></td>
+                                <td><div><TextField style={{"width":"70px"}} /><TextField style={{"width":"70px"}} /></div></td>
 
                                 <td class="td-width">
                                     <div>
-                                        <input type="text" Style="width:70px" />
+                                        <TextField  style={{"width":"70px"}} />
                                         <DropDownMenu menuItems={menuItems} />
                                     </div>
                                 </td>
@@ -112,11 +113,11 @@ class ThirdPanel extends React.Component {
                                     <td><FlatButton label="Instructions" className="RightAllignedButtons" /></td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="2"><input type="text" Style="width:300px" /></td>
+                                    <td colSpan="2"><TextField style={{"width":"300px","overflow-y":"scroll"}} /></td>
                                 </tr>
                                 <tr><td colSpan="2"><label>Package</label></td></tr>
                                 <tr>
-                                    <td colSpan="2"><input type="text" Style="overflow:scroll; overflow-y:visible; width:300px" /></td>
+                                    <td colSpan="2"><TextField style={{"overflow-y":"scroll"}} /></td>
                                 </tr>
                             </table>
                         </div>

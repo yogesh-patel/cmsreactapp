@@ -14,14 +14,36 @@
 
 let React = require('react');
 var mui = require('material-ui');
-var Tabs = mui.Tabs;
-var Tab = mui.Tab;
+
+var Toolbar = mui.Toolbar;
+var ToolbarGroup = mui.ToolbarGroup;
+var ToolbarTitle = mui.ToolbarTitle;
+var DropDownIcon = mui.DropDownIcon;
+var ToolbarSeparator = mui.ToolbarSeparator;
+var RaisedButton = mui.RaisedButton;
+var DropDownMenu = mui.DropDownMenu;
+var FontIcon = mui.FontIcon;
+var Paper = mui.Paper;
 var ThemeManager = new mui.Styles.ThemeManager();
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 var FirstPanel = require('./FirstPanel');
 var SecondPanel = require('./SecondPanel');
 var ThirdPanel = require('./ThirdPanel');
+
+let filterOptions = [
+    { payload: '1', text: 'Create Request' },
+    { payload: '2', text: 'Rate Package' },
+    { payload: '3', text: 'Request To Hold' },
+    { payload: '4', text: 'Verify Address' },
+    { payload: '5', text: 'Details' },
+    { payload: '6', text: 'International' },
+    { payload: '7', text: 'Clear All' },
+];
+let iconMenuItems = [
+    { payload: '1', text: 'Download' },
+    { payload: '2', text: 'More Info' }
+];
 
 class UpperHeader extends React.Component {
     constructor() {
@@ -59,27 +81,35 @@ class UpperHeader extends React.Component {
     render() {
         return(
 <div>
-            <div id="header" class="row">
-            <table>
-            <tr>
 
-                   <td>  <button onClick={this.creatRequest} >Create Request</button> </td>
-                   <td> <button onClick={this.RatePackage} >Rate Package</button></td>
-                   <td> <button onClick={this.ReqToHold} >Request To Hold</button></td>
-                   <td><button onClick={this.VerifyAddr} >Verify Address</button></td>
-                   <td> <button  onClick={this.Details}>Details</button></td>
-                   <td> <button onClick={this.International} >International</button></td>
-                   <td><button  onClick={this.Clear}>Clear All</button></td>
-            </tr>
-            </table>
-            </div>
-            <table>
-                <tr>
-                   <td> <FirstPanel /> </td>
-                    <td><SecondPanel /> </td>
-                    <td><ThirdPanel /> </td>
-            </tr>
-            </table>
+                <Toolbar>
+                    <ToolbarGroup key={0} float="left">
+                        <DropDownMenu menuItems={filterOptions} />
+                    </ToolbarGroup>
+                    <ToolbarGroup key={1} float="right">
+                        <ToolbarTitle text="Options" />
+                        <FontIcon className="mui-icon-sort" />
+                        <DropDownIcon iconClassName="icon-navigation-expand-more" menuItems={iconMenuItems} />
+                        <ToolbarSeparator/>
+                        <RaisedButton label="Create Broadcast" primary={true} />
+                    </ToolbarGroup>
+                </Toolbar>
+
+                <table>
+                    <tr>
+
+                        <td><Paper zDepth={1}>
+                            <FirstPanel />
+                        </Paper></td>
+                        <td><Paper zDepth={1}>
+                            <SecondPanel />
+                        </Paper></td>
+                        <td> <Paper zDepth={1}>
+                            <ThirdPanel />
+                        </Paper></td>
+                   </tr>
+                </table>
+
         </div>
 
 

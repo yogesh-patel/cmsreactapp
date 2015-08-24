@@ -23,10 +23,10 @@ class MainComponent extends React.Component{
             <div className="row">
                  <div className="col-lg-6">
                     <ReactMaerial.AppBar
-                        title="Home"
+                        title="CMS"
 
                         showMenuIconButton={false}
-                        iconElementRight={<ReactMaerial.FlatButton label="Save" />} />
+                        iconElementRight={<ReactMaerial.FlatButton label="" />} />
                  </div>
         <UpperHeader />
 

@@ -16,6 +16,10 @@ var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
 var FlatButton = mui.FlatButton;
+var Paper = mui.Paper;
+var Checkbox = mui.Checkbox;
+var TextField = mui.TextField;
+
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -42,8 +46,8 @@ class SecondPanel extends React.Component {
     render() {
         return (
 
-            <div>
-                <div id="SecondUpperPanel">
+           <Paper >
+                <div  id="SecondUpperPanel">
                     <table>
 
                         <tr className="trHeader">
@@ -84,10 +88,12 @@ class SecondPanel extends React.Component {
                         </tr>
                         <tr>
                             <td><label>Account</label></td>
-                            <td><input type="text" /></td>
+                            <td><TextField /></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" value="Split duty and Tax" /><label>Split duty and Tax</label></td>
+                            <td colSpan="3">
+                                <Checkbox name="checkboxName1"  value="checkboxValue1" label="Split duty and Tax"/>
+                            </td>
 
                         </tr>
 
@@ -100,7 +106,7 @@ class SecondPanel extends React.Component {
                             <td><FlatButton  label="Select(F12)" className="RightAllignedButtons" /></td>
                         </tr>
                         <tr>
-                            <td><input type="text" Style="overflow:scroll" /></td>
+                            <td><TextField style={{"overflow-y":"scroll"}} /></td>
                         </tr>
                         <tr  className="trHeader">
                             <td colSpan="3"> <input type="button" id="min" value="*" /><label id="LTL">LTL</label><input type="button" value="-" className="collapseButton" /></td>
@@ -113,7 +119,7 @@ class SecondPanel extends React.Component {
                         </tr>
                     </table>
                 </div>
-            </div>
+            </Paper>
     );
     }
 

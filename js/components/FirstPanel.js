@@ -15,6 +15,9 @@ var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
 var FlatButton = mui.FlatButton;
+var TextField = mui.TextField;
+var Paper = mui.Paper;
+
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -28,15 +31,10 @@ class FirstPanel extends React.Component {
     constructor() {
         super();
 
-        this.state = {comp: "2"};
-        this.state = {PO: ""};
-        this.state = {contact: ""};
-        this.state = {Addr1: ""};
-        this.state = {Addr2: ""};
-        this.state = {Addr3: ""};
-        this.state = {city: ""};
-        this.state = {state: ""};
-        this.state = {zip: ""};
+        this.state = {comp: "Wyne Comp",PO: "",
+                     contact: "Mr Wayne",Addr1: "475 Vally Rd",
+                     Addr2: "",Addr3: "",city: "wayne",
+                    state: "NJ",zip: "7470", phone: "1212121212"};
 
     }
 
@@ -69,9 +67,11 @@ class FirstPanel extends React.Component {
         var city = this.state.city;
         var state = this.state.state;
         var zip = this.state.zip;
+        var phone = this.state.phone;
+
 
         return (
-            <div>
+            <Paper>
                 <div id="FirstUpperPanel" >
 
                  <table>
@@ -102,36 +102,36 @@ class FirstPanel extends React.Component {
                  </tr>
                  <tr>
                      <td><label>PO#</label></td>
-                     <td><input type="text" value={PO} onChange={this.handleInputChange.bind(this, 'PO') } /></td>
+                     <td><TextField value={PO} onChange={this.handleInputChange.bind(this, 'PO') } /></td>
                  </tr>
 
                  <tr>
                      <td><label>Company</label></td>
 
-                     <td><input value={comp} onChange={this.handleInputChange.bind(this, 'comp') }  type="text" /></td>
+                     <td><TextField value={comp} onChange={this.handleInputChange.bind(this, 'comp') }  /></td>
 
                  </tr>
                  <tr>
                      <td><label>Contact</label></td>
-                     <td><input type="text" value={contact} onChange={this.handleInputChange.bind(this, 'contact') }/></td>
+                     <td><TextField value={contact} onChange={this.handleInputChange.bind(this, 'contact') }/></td>
                  </tr>
                  <tr>
                      <td><label>Address Line1</label></td>
-                     <td><input type="text" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/></td>
+                     <td><TextField value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/></td>
                  </tr>
                  <tr>
                      <td><label>Line2</label></td>
-                     <td><input type="text" value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></td>
+                     <td><TextField value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></td>
                  </tr>
                  <tr>
                      <td><label>Line3</label></td>
-                     <td><input type="text" value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></td>
+                     <td><TextField value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></td>
                  </tr>
                  <tr>
                      <td><label>City-State-Zip</label></td>
-                     <td><input type="text" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') }/>
-                         <input type="text" id="txtState" value={state} onChange={this.handleInputChange.bind(this, 'state') } />
-                         <input type="text" id="txtZip" value={zip} onChange={this.handleInputChange.bind(this, 'zip') }/>
+                     <td><TextField id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } style={{"width" : "90px"}}/>
+                         <TextField id="txtState" value={state} onChange={this.handleInputChange.bind(this, 'state') } style={{"width" : "80px"}} />
+                         <TextField id="txtZip" value={zip} onChange={this.handleInputChange.bind(this, 'zip') } style={{"width" : "60px"}}/>
                      </td>
 
                  </tr>
@@ -143,21 +143,21 @@ class FirstPanel extends React.Component {
                  </tr>
                  <tr>
                      <td><label>Phone</label></td>
-                     <td><input type="text" /></td>
+                     <td><TextField value={phone} onChange={this.handleInputChange.bind(this, 'phone') } /></td>
                  </tr>
                  <tr>
                      <td><label>Department</label></td>
-                     <td><input type="text" /></td>
+                     <td> <DropDownMenu menuItems={menuItems} style={{"width" : "100%"}}/></td>
                  </tr>
                  <tr>
-                     <td></td>
-                      <td ><FlatButton id="btnEmail" onClick={this.email} label="Email" className="RightAllignedButtons" /> </td>
+
+                      <td colSpan="2"><FlatButton id="btnEmail" onClick={this.email} label="Email" className="RightAllignedButtons" /> </td>
                  </tr>
                  </table>
 
                  </div>
 
-             </div>
+             </Paper>
         );
     }
 

@@ -280,6 +280,8 @@ button.view-cart:active
 }
 .RightAllignedButtons{
     float: right;
+    width: 120px;
+    background-color: silver;
 }
 .collapseButton{
     width: 15px;
