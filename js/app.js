@@ -1,6 +1,6 @@
 var React = require('react');
-var mui = require('material-ui');
-var MainComponent= require('./components/MainComponent');
+
+var MainComponent= require('./component/MainComponent');
 //var TabBar= require('./components/TabBar');
 
 //Router.run(routes, Router.HashLocation, function (Root) {
