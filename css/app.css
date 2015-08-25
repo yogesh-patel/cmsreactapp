@@ -91,7 +91,7 @@ button
     border-radius: 3px;
     outline: none;
     background: #0086b3;
-  /*  box-shadow: 0 5px 0 #27ae60;*/
+
 }
 
 button:hover
@@ -206,21 +206,24 @@ button.view-cart:active
     color: white;
     background: #2c3e50;
 }
-#FirstUpperPanel{
+/*#FirstUpperPanel{
     border: solid;
     border-width: 1px;
     border-color: black;
+    vertical-align:top;
 }
 #SecondUpperPanel{
     border: solid;
     border-width: 1px;
     border-color: black;
+    vertical-align:top;
 }
 #ThirdUpperPanel{
     border: solid;
     border-width: 1px;
     border-color: black;
-}
+    vertical-align:top;
+}*/
 #btnCust{
     width: 150px;
     height: 25px;
@@ -274,6 +277,7 @@ button.view-cart:active
 .tdRad{
     display: inline-flex !important;
     float: left;
+    align-items: flex-start;
 }
 .trHeader{
     background-color: #0086b3;
@@ -284,8 +288,15 @@ button.view-cart:active
     background-color: silver;
 }
 .collapseButton{
-    width: 15px;
+    width: 15px !important;
     float: right;
+}
+.td-table{
+    vertical-align:top;
+    border:solid;
+    border-color:black;
+    border-width:1px;
+    max-height: 400px !important;
 }
 .btn-header{
     background-color:transparent;

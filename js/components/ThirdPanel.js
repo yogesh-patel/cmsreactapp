@@ -15,6 +15,7 @@ var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
 var FlatButton = mui.FlatButton;
+var RaisedButton = mui.RaisedButton;
 var TextField = mui.TextField;
 
 var injectTapEventPlugin = require("react-tap-event-plugin");
@@ -31,6 +32,14 @@ let menuItems = [
 class ThirdPanel extends React.Component {
     constructor() {
         super();
+
+        this.state = {PackageCount: "Wyne Company",
+            Package: "",
+            Weight: "",
+
+
+        };
+
     }
 
     getChildContext() {
@@ -39,63 +48,79 @@ class ThirdPanel extends React.Component {
 
         };
     }
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.setState(partialState);
+    }
 
+    carton () {
+        alert('Button Carton clicked');
+    }
+    instructions () {
+    alert('Button Instructions clicked');
+}
     render() {
+
+        var PackageCount = this.state.PackageCount;
+        var Package = this.state.Package;
+        var Weight = this.state.Weight;
+
         return (
 
-            <div>
+            <div >
                 <div id="ThirdUpperPanel">
                     <table>
                         <tr className="trHeader">
                             <td colSpan="2"> <input type="button" id="min" value="*" /><label id="packageParam">Package Parameters</label><input type="button" value="-" className="collapseButton" /></td>
                             </tr>
                             <tr>
-                                <td colSpan="2"><label>Box Information</label></td>
+                                <td colSpan="2"><label style={{"font-weight":"bold"}}>Box Information</label></td>
                             </tr>
                             <tr style={{"background-color":"silver"}}>
                                 <td>Package Count</td>
                                 <td>Package#</td>
                             </tr>
                             <tr>
-                                <td><TextField /></td>
-                                <td><TextField  /> <br /></td>
+                                <td><TextField value={PackageCount} onChange={this.handleInputChange.bind(this, 'PackageCount') }/></td>
+                                <td><TextField  value={Package} onChange={this.handleInputChange.bind(this, 'Package') }/> <br /></td>
 
                             </tr>
                             <tr style={{"background-color":"silver"}}>
-                                <td colSpan="2" >Weight</td>
+                                <td colSpan="2"  style={{"font-weight":"bold"}}>Weight</td>
                             </tr>
                             <tr>
                                 <td><label>Weight</label></td>
                                 <td><label>Units</label></td>
                             </tr>
                             <tr>
-                                <td><TextField /></td>
+                                <td><TextField value={Weight} onChange={this.handleInputChange.bind(this, 'Weight') }/></td>
                                 <td>
                                     <DropDownMenu menuItems={menuItems} />
                                 </td>
                             </tr>
                             <tr>
-                                <td colSpan="2"><label>Dimentions</label></td>
+                                <td colSpan="2"><label style={{"font-weight":"bold"}}>Dimentions</label></td>
                             </tr>
                             <tr>
-                                <td colSpan="2"><FlatButton label="Carton" className="RightAllignedButtons"/></td>
+                                <td colSpan="2"><RaisedButton onClick={this.carton} secondary={true} label="Carton" style={{"float":"right"}}/></td>
                             </tr>
                             <tr>
                                 <td style={{"background-color":"silver"}}>
                                     <div>
-                                        <label>Length  </label><label style={{"width":"70px","margin-left":"5px"}}>   Width</label>
+                                        <label style={{"width":"70px"}}>Length  </label><label style={{"width":"70px","margin-left":"20px"}}>   Width</label>
                                     </div>
                                 </td>
 
                                 <td style={{"background-color":"silver"}}>
                                     <div>
-                                        <label style={{"width":"100px"}}>Height  </label><label style={{"width":"70px", "align-self":"center"}}>   Units</label>
+                                        <label style={{"width":"100px"}}>Height  </label><label style={{"width":"70px", "float":"center" ,"margin-left":"20px"}}>   Units</label>
                                     </div>
                                 </td>
 
                             </tr>
                             <tr>
-                                <td><div><TextField style={{"width":"70px"}} /><TextField style={{"width":"70px"}} /></div></td>
+                                <td><div><TextField style={{"width":"70px"}} /><TextField style={{"width":"70px","margin-left":"10px"}} /></div></td>
 
                                 <td class="td-width">
                                     <div>
@@ -110,10 +135,10 @@ class ThirdPanel extends React.Component {
                                 </tr>
                                 <tr>
                                     <td><label>Shipment</label></td>
-                                    <td><FlatButton label="Instructions" className="RightAllignedButtons" /></td>
+                                    <td><RaisedButton label="Instructions" secondary={true} onClick={this.instructions} style={{"float":"right"}} /></td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="2"><TextField style={{"width":"300px","overflow-y":"scroll"}} /></td>
+                                    <td colSpan="2"><TextField style={{"overflow-y":"scroll"}} /></td>
                                 </tr>
                                 <tr><td colSpan="2"><label>Package</label></td></tr>
                                 <tr>

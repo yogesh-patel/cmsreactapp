@@ -7,7 +7,17 @@ var React = require('react');
 var ReactMaerial = require('material-ui');
 var ThemeManager = new ReactMaerial.Styles.ThemeManager();
 var UpperHeader = require('./UpperHeader');
+var DropDownMenu = ReactMaerial.DropDownMenu;
+var iconElementRight = ThemeManager.iconElementRight;
 
+let filterOptions = [
+    { payload: '1', text: 'Home' },
+    { payload: '2', text: 'Ship' },
+    { payload: '3', text: 'View' },
+    { payload: '4', text: 'Manage' },
+    { payload: '5', text: 'Help' },
+    { payload: '6', text: 'Logout' }
+];
 
 class MainComponent extends React.Component{
     constructor(props){
@@ -18,6 +28,11 @@ class MainComponent extends React.Component{
             muiTheme: ThemeManager.getCurrentTheme()
         };
     }
+
+    menuSelect(e, selectedIndex, menuItem){
+        alert(menuItem.text);
+    }
+
     render(){
         return (
             <div className="row">
@@ -25,8 +40,9 @@ class MainComponent extends React.Component{
                     <ReactMaerial.AppBar
                         title="CMS"
 
-                        showMenuIconButton={false}
-                        iconElementRight={<ReactMaerial.FlatButton label="" />} />
+                        showMenuIconButton={true}
+                        iconElementRight={<DropDownMenu menuItems={filterOptions} onChange={this.menuSelect} menuItems={filterOptions}/>} />
+
                  </div>
         <UpperHeader />
 

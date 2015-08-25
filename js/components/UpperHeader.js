@@ -2,10 +2,6 @@
  * Created by vedangm on 08/21/2015.
  */
 
-
-/**
- * Created by vedangm on 08/21/2015.
- */
 'use strict';
 /*var React = require('react');
 
@@ -30,6 +26,8 @@ injectTapEventPlugin();
 var FirstPanel = require('./FirstPanel');
 var SecondPanel = require('./SecondPanel');
 var ThirdPanel = require('./ThirdPanel');
+var LowerSidePanel = require('./LowerSidePanel');
+var LowerRightPanel = require('./LowerRightPanel');
 
 let filterOptions = [
     { payload: '1', text: 'Create Request' },
@@ -56,6 +54,10 @@ class UpperHeader extends React.Component {
         };
     }
 
+    menuSelect(e, selectedIndex, menuItem){
+        alert(menuItem.text);
+    }
+
     creatRequest(){
         alert("button create request");
     }
@@ -80,11 +82,11 @@ class UpperHeader extends React.Component {
 
     render() {
         return(
-<div>
+            <div>
 
                 <Toolbar>
                     <ToolbarGroup key={0} float="left">
-                        <DropDownMenu menuItems={filterOptions} />
+                        <DropDownMenu menuItems={filterOptions} onChange={this.menuSelect} menuItems={filterOptions}/>
                     </ToolbarGroup>
                     <ToolbarGroup key={1} float="right">
                         <ToolbarTitle text="Options" />
@@ -95,22 +97,27 @@ class UpperHeader extends React.Component {
                     </ToolbarGroup>
                 </Toolbar>
 
-                <table>
-                    <tr>
-
-                        <td><Paper zDepth={1}>
+                <table >
+                    <tr style={{"Height":"400px" }}>
+                        <td className="td-table"><Paper zDepth={1}>
                             <FirstPanel />
                         </Paper></td>
-                        <td><Paper zDepth={1}>
+                        <td className="td-table"><Paper zDepth={1}>
                             <SecondPanel />
                         </Paper></td>
-                        <td> <Paper zDepth={1}>
+                        <td className="td-table"  > <Paper zDepth={1}>
                             <ThirdPanel />
                         </Paper></td>
                    </tr>
+                    <tr>
+
+                        <td  > <LowerSidePanel /> </td>
+                        <td colSpan="3" style={{"verticalAlign":"top"}}> <LowerRightPanel /> </td>
+                    </tr>
+
                 </table>
 
-        </div>
+             </div>
 
 
 

@@ -15,9 +15,11 @@ var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
 var FlatButton = mui.FlatButton;
+var RaisedButton = mui.RaisedButton;
 var TextField = mui.TextField;
 var Paper = mui.Paper;
-
+var RadioButton = mui.RadioButton;
+var RadioButtonGroup = mui.RadioButtonGroup;
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
@@ -31,10 +33,18 @@ class FirstPanel extends React.Component {
     constructor() {
         super();
 
-        this.state = {comp: "Wyne Comp",PO: "",
-                     contact: "Mr Wayne",Addr1: "475 Vally Rd",
-                     Addr2: "",Addr3: "",city: "wayne",
-                    state: "NJ",zip: "7470", phone: "1212121212"};
+        this.state = {
+              company: "Wyne Company",
+              PO: "",
+              contact: "Mr Wayne",
+              Addr1: "475 Vally Rd",
+              Addr2: "",
+              Addr3: "",
+              city: "wayne",
+              state: "NJ",
+              zip: "7470",
+              phone: "1212121212"
+        };
 
     }
 
@@ -47,7 +57,7 @@ class FirstPanel extends React.Component {
 
     handleInputChange(key, event) {
         var partialState = {};
-        partialState[key] = parseFloat(event.target.value);
+        partialState[key] = event.target.value;
         this.setState(partialState);
     }
     cust () {
@@ -58,7 +68,7 @@ class FirstPanel extends React.Component {
     }
     render() {
 
-        var comp = this.state.comp;
+        var company = this.state.company;
         var PO = this.state.PO;
         var contact = this.state.contact;
         var Addr1 = this.state.Addr1;
@@ -71,8 +81,8 @@ class FirstPanel extends React.Component {
 
 
         return (
-            <Paper>
-                <div id="FirstUpperPanel" >
+            <Paper >
+                <Paper id="FirstUpperPanel" >
 
                  <table>
 
@@ -84,20 +94,34 @@ class FirstPanel extends React.Component {
             <div id="custdiv" className ="collapse">
                  <tr>
                      <td> <label>Add Customer</label></td>
-                     <td colSpan="2" id="tdRadio" className="tdRad">
-                     <input type="radio" value="None" name="a" />None<input type="radio" value="To Private List" name="a" />To Private List<input type="radio" name="a" value="To Global List" />To Global List
+                     <td colSpan="2" className="tdRad" >
+
+                         <RadioButtonGroup style={{"display":"inline-flex", "width":"80px", "marginLeft":"0px", "marginRight":"0px"}} name="shipSpeed" defaultSelected="None">
+                             <RadioButton
+                                 value="None"
+                                 label="None"
+                                 />
+                             <RadioButton
+                                 value="To Private List"
+                                 label="To Private List"
+                                 />
+                             <RadioButton
+                                 value="To Global List"
+                                 label="To Global List"
+                                 />
+                         </RadioButtonGroup>
                      </td>
 
                  </tr>
 
                  <tr>
-                     <td> <FlatButton label="Customer(F8)" id="btnCust" onClick={this.cust} /> </td>
-                     <td> <label >Customer Code</label><input id="Text1" type="text" /> </td>
+                     <td> <RaisedButton secondary={true} label="Customer(F8)" id="btnCust" onClick={this.cust} style={{"width":"150px", "fontSize":"small", "paddingLeft":"0px"}}/> </td>
+                     <td> <label style={{"marginLeft":"5px"}}>Customer Code</label><TextField id="Text1" style={{"width":"80px", "marginLeft":"5px"}}/> </td>
 
                  </tr>
              </div>
                 <tr id="shipInfo" className="trHeader">
-                    <td colSpan="2" Style="display:inline-flex"><input type="button" value="-"/><label>Ship To Information</label><input type="button" className="collapseButton" value="-"/></td>
+                    <td colSpan="2"><input type="button" value="-"/><label>Ship To Information</label><input type="button" className="collapseButton" value="-"/></td>
 
                  </tr>
                  <tr>
@@ -108,7 +132,7 @@ class FirstPanel extends React.Component {
                  <tr>
                      <td><label>Company</label></td>
 
-                     <td><TextField value={comp} onChange={this.handleInputChange.bind(this, 'comp') }  /></td>
+                     <td><TextField value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></td>
 
                  </tr>
                  <tr>
@@ -151,11 +175,11 @@ class FirstPanel extends React.Component {
                  </tr>
                  <tr>
 
-                      <td colSpan="2"><FlatButton id="btnEmail" onClick={this.email} label="Email" className="RightAllignedButtons" /> </td>
+                      <td colSpan="2"><RaisedButton secondary={true} id="btnEmail" onClick={this.email} label="Email" style={{"float":"right"}}/> </td>
                  </tr>
                  </table>
 
-                 </div>
+                 </Paper>
 
              </Paper>
         );

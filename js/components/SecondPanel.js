@@ -16,6 +16,7 @@ var Tab = mui.Tab;
 var ThemeManager = new mui.Styles.ThemeManager();
 var DropDownMenu = mui.DropDownMenu;
 var FlatButton = mui.FlatButton;
+var RaisedButton = mui.RaisedButton;
 var Paper = mui.Paper;
 var Checkbox = mui.Checkbox;
 var TextField = mui.TextField;
@@ -42,12 +43,20 @@ class SecondPanel extends React.Component {
 
         };
     }
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.setState(partialState);
+    }
+    selects () {
+        alert('Button Select clicked');
+    }
 
     render() {
         return (
 
            <Paper >
-                <div  id="SecondUpperPanel">
+                <Paper  id="SecondUpperPanel">
                     <table>
 
                         <tr className="trHeader">
@@ -103,7 +112,7 @@ class SecondPanel extends React.Component {
                         </tr>
                         <tr>
                             <td><label>Special Services</label></td>
-                            <td><FlatButton  label="Select(F12)" className="RightAllignedButtons" /></td>
+                            <td><RaisedButton  label="Select(F12)" secondary={true} onClick={this.selects} style={{"float":"right"}} /></td>
                         </tr>
                         <tr>
                             <td><TextField style={{"overflow-y":"scroll"}} /></td>
@@ -118,7 +127,7 @@ class SecondPanel extends React.Component {
                             </td>
                         </tr>
                     </table>
-                </div>
+                </Paper>
             </Paper>
     );
     }
