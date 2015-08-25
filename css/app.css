@@ -90,8 +90,8 @@ button
     border: 0;
     border-radius: 3px;
     outline: none;
-    background: #2ecc71;
-    box-shadow: 0 5px 0 #27ae60;
+    background: #0086b3;
+
 }
 
 button:hover
@@ -206,7 +206,35 @@ button.view-cart:active
     color: white;
     background: #2c3e50;
 }
-
+/*#FirstUpperPanel{
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    vertical-align:top;
+}
+#SecondUpperPanel{
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    vertical-align:top;
+}
+#ThirdUpperPanel{
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    vertical-align:top;
+}*/
+#btnCust{
+    width: 150px;
+    height: 25px;
+    font-size: small;
+}
+#btnEmail{
+    width: 100px;
+    height: 25px;
+    font-size: small;
+    float: right;
+}
 .remove-item
 {
     background: #e74c3c;
@@ -223,6 +251,61 @@ button.view-cart:active
 {
     border-top: 5px solid white;
     box-shadow: none;
+}
+#btnEmail{
+    float: right;
+}
+#Country_list{
+    height: 20px;
+    width: 180px;
+    font-size: medium;
+}
+#txtCity{
+    width: 40px;
+}
+#txtState{
+    width: 40px;
+}
+#txtZip{
+    width: 50px;
+}
+
+.trHeader{
+    width: 400px;
+    background-color: cadetblue;
+}
+.tdRad{
+    display: inline-flex !important;
+    float: left;
+    align-items: flex-start;
+}
+.trHeader{
+    background-color: #0086b3;
+}
+.RightAllignedButtons{
+    float: right;
+    width: 120px;
+    background-color: silver;
+}
+.collapseButton{
+    width: 15px !important;
+    float: right;
+}
+.td-table{
+    vertical-align:top;
+    border:solid;
+    border-color:black;
+    border-width:1px;
+    max-height: 400px !important;
+}
+.btn-header{
+    background-color:transparent;
+    border-top:hidden;
+    border-bottom:hidden;
+    border-left:hidden;
+    border-right-width:thin;
+    border-right-color:white;
+    width:65px;
 }
 
 @media (max-width: 1280px)
