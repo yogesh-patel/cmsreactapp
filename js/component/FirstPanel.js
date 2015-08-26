@@ -24,11 +24,9 @@ class FirstPanel extends React.Component {
             city: "wayne",
             state: "NJ",
             zip: "7470",
-            phone: "1212121212"
+            phone: "1212121212",
+            open: "true"
 
-        };
-        this.state = {
-            open: true
         };
 
     }
@@ -42,6 +40,11 @@ class FirstPanel extends React.Component {
     }
     email () {
         alert('Button Email clicked');
+
+    }
+    collapse (key, event) {
+        alert('Button collapse clicked');
+        this.setState({ open: !this.state.open });
     }
 
     render() {
@@ -63,12 +66,14 @@ class FirstPanel extends React.Component {
 
                         <table>
                         <tbody>
-                            <tr >
-                                <td  colSpan="3"> <input type="button" value="-"/><label>Customer </label>
-                                    <Button bsSize='xsmall' data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample" >- </Button>  </td>
+                        <Panel collapsible expanded={this.state.open}>
+                            <tr className="trHeader">
+                                <td  colSpan="3"> <Button bsSize='small' type="button" value="-"> - </Button>
+                                    <label >Customer </label>
+                                    <Button bsSize='small' onClick={this.collapse.bind(this, 'coll')} style={{"float":"right" }} > - </Button>  </td>
 
                             </tr>
-                            <div className="collapse" id="collapseExample">
+
                                 <tr>
 
                                     <td> <label>Add Customer</label></td>
@@ -80,14 +85,17 @@ class FirstPanel extends React.Component {
                                 </tr>
 
                                 <tr>
-                                    <td> <Button bsStyle='info' bsSize='xsmall' id="btnCust" onClick={this.cust}>Customer(F8)</Button></td>
+                                    <td> <Button bsStyle='info' bsSize='small' id="btnCust" onClick={this.cust}>Customer(F8)</Button></td>
 
                                     <td> <label style={{"marginLeft":"5px"}}>Customer Code</label><input type="text" id="Text1" style={{"width":"80px", "marginLeft":"5px"}}/> </td>
 
                                 </tr>
-                            </div>
-                            <tr id="shipInfo">
-                                <td colSpan="2"><input type="button" value="-"/><label>Ship To Information</label><input type="button" className="collapseButton" value="-"/></td>
+                            </Panel>
+
+                            <tr id="shipInfo" className="trHeader">
+                                <td colSpan="2"><Button bsSize='small' > * </Button>
+                                    <label>Ship To Information</label>
+                                    <Button bsSize='small' style={{"float":"right" }}> - </Button></td>
 
                             </tr>
                             <tr>
@@ -98,7 +106,7 @@ class FirstPanel extends React.Component {
                             <tr>
                                 <td><label>Company</label></td>
 
-                                <td><input type="text" value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></td>
+                                <td ><input type="text" value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></td>
 
                             </tr>
                             <tr>
@@ -148,7 +156,7 @@ class FirstPanel extends React.Component {
                             </tr>
                             <tr>
 
-                                <td colSpan="2"><Button bsSize='xsmall' bsStyle='info' id="btnEmail" onClick={this.email} style={{"float":"right"}}>Email </Button> </td>
+                                <td colSpan="2"><Button bsSize='small' bsStyle='info' id="btnEmail" onClick={this.email} style={{"float":"right"}}>Email </Button> </td>
                             </tr>
                         </tbody>
                         </table>

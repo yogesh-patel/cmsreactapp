@@ -14,6 +14,8 @@ const navInstance = ReactBoot.navInstance;
 var FirstPanel = require('./FirstPanel');
 var SecondPanel = require('./SecondPanel');
 var ThirdPanel = require('./ThirdPanel');
+var LowerSidePanel = require('./LowerSidePanel');
+var LowerRightPanel = require('./LoweRightPanel');
 
 class UpperHeader extends React.Component {
     render() {
@@ -34,21 +36,20 @@ class UpperHeader extends React.Component {
                     <NavItem eventKey={7} title='Item'>Clear All</NavItem>
                 </Nav>
 
-                <Grid>
-                    <Row className='row'>
-                        <Col xs={4} sm={4}><code><FirstPanel /></code></Col>
-                        <Col xs={6} md={4}><code><SecondPanel /></code></Col>
-                        <Col  xs={6} md={4}><code><ThirdPanel /></code></Col>
+                <Grid >
+                    <Row className='show-grid'>
+                        <Col xs={4} sm={4}  style={{"float":"left"}}><FirstPanel /></Col>
+                        <Col xs={4} md={4}><SecondPanel /></Col>
+                        <Col  xs={4} md={4}><ThirdPanel /></Col>
                     </Row>
 
-                    <Row>
-                        <Col  xs={6} md={2}><code></code></Col>
-                        <Col  xs={6} md={10}><code></code></Col>
+                    <Row className='show-grid'>
+                        <Col  xs={2} md={2}><LowerSidePanel /></Col>
+                        <Col  xs={10} md={10}><LowerRightPanel /></Col>
 
                     </Row>
 
                 </Grid>
-                );
 
 
             </div>

@@ -29,9 +29,11 @@ class SecondPanel extends React.Component{
                 <div>
                     <div  id="SecondUpperPanel">
                         <table>
-
+                        <tbody>
                             <tr className="trHeader">
-                                <td colSpan="3"> <input type="button" id="min" value="*" /><label>Carrier Delivery Information</label> <input type="button" value="-" className="collapseButton" /></td>
+                                <td colSpan="3"> <Button bsSize='small' > * </Button>
+                                    <label>Carrier Delivery Information</label>
+                                    <Button bsSize='small' style={{"float":"right" }}> - </Button></td>
 
                             </tr>
 
@@ -57,7 +59,9 @@ class SecondPanel extends React.Component{
                             </tr>
 
                             <tr className="trHeader">
-                                <td colSpan="3"> <input type="button" id="min" value="*" /><label id="customer">Billing Information</label><input type="button" value="-" className="collapseButton" /></td>
+                                <td colSpan="3"> <Button bsSize='small' > * </Button>
+                                    <label id="customer">Billing Information</label>
+                                    <Button bsSize='small' style={{"float":"right" }}> - </Button></td>
                             </tr>
                             <tr>
                                 <td><label>Freight Payment</label></td>
@@ -91,7 +95,9 @@ class SecondPanel extends React.Component{
                             </tr>
 
                             <tr className="trHeader">
-                                <td colSpan="3"> <input type="button" id="min" value="*" /><label id="specialServices">Special Services</label><input type="button" value="-" className="collapseButton" /></td>
+                                <td colSpan="3"><Button bsSize='small' > * </Button>
+                                    <label id="specialServices">Special Services</label>
+                                    <Button bsSize='small' style={{"float":"right" }}> - </Button></td>
 
                             </tr>
                             <tr>
@@ -102,7 +108,9 @@ class SecondPanel extends React.Component{
                                 <td><input type="text" style={{"overflow-y":"scroll"}} /></td>
                             </tr>
                             <tr  className="trHeader">
-                                <td colSpan="3"> <input type="button" id="min" value="*" /><label id="LTL">LTL</label><input type="button" value="-" className="collapseButton" /></td>
+                                <td colSpan="3"> <Button bsSize='small' > - </Button>
+                                    <label id="LTL">LTL</label>
+                                    <Button bsSize='small' style={{"float":"right" }}> - </Button></td>
                             </tr>
                             <tr>
                                 <td><label>Freight Class</label></td>
@@ -113,6 +121,7 @@ class SecondPanel extends React.Component{
                                     </select>
                                 </td>
                             </tr>
+                        </tbody>
                         </table>
                     </div>
                 </div>
