@@ -38,16 +38,22 @@ class SpecialServicesPanel extends React.Component {
                     <Col xs={4} sm={4}>
                         <Panel collapsible defaultExpanded header='Special Services' bsStyle='info'>
 
-                            <table>
-                                <tr>
-                                    <td><label>Special Services</label></td>
-                                    <td><Button bsize="xsmall" bsStyle='info' onClick={this.selects} style={{"float":"right"}} >Select(F12) </Button></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" style={{"overflow-y":"scroll"}} /></td>
-                                </tr>
+                            <Grid>
+                                <Row>
+                                    <Col xs={2} sm={2}><label>Special Services</label> </Col>
+                                    <Col xs={1} sm={1}>
+                                        <Button bsize="xsmall" bsStyle='info' onClick={this.selects} style={{"float":"right"}} >Select(F12) </Button>
+                                    </Col>
+                                </Row>
 
-                            </table>
+                                <Row>
+                                    <Col xs={3} sm={3}>
+                                        <Input type='textarea' label='Text Area' />
+                                    </Col>
+                                </Row>
+                            </Grid>
+
+
                         </Panel>
                     </Col>
               </Row>
