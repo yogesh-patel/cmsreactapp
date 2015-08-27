@@ -10,6 +10,9 @@ var Button = ReactBoot.Button;
 var Panel = ReactBoot.Panel;
 var PanelInstance = require('./PanelInstance');
 var ShipToInfoPanel = require('./ShipToInfoPanel');
+var Grid = ReactBoot.Grid;
+var Row = ReactBoot.Row;
+var Col = ReactBoot.Col;
 
 class FirstPanel extends React.Component {
 
@@ -23,29 +26,20 @@ class FirstPanel extends React.Component {
 
 
         return (
-            <div>
-                    <div id="FirstUpperPanel" >
+                 <div id="FirstUpperPanel" >
 
-                        <table>
-                        <tbody>
-
-
-                            <tr>
-                                <td> <PanelInstance /></td>
-                            </tr>
-
-
-                            <tr>
-                                  <td> <ShipToInfoPanel /> </td>
-                            </tr>
-
-                        </tbody>
-                        </table>
-
-                    </div>
+                     <Grid>
+                     <Row>
+                         <Col xs={4} sm={4}> <PanelInstance /></Col>
+                         </Row>
+                         <Row>
+                             <Col xs={4} sm={4}> <ShipToInfoPanel /></Col>
+                         </Row>
+                     </Grid>
 
 
-            </div>
+                   </div>
+
         );
     }
 

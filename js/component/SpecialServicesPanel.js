@@ -20,6 +20,10 @@ class SpecialServicesPanel extends React.Component {
 
     constructor (){
         super();
+
+        this.state = {
+            SpecialService: ""
+        };
     }
 
     handleInputChange(key, event) {
@@ -32,6 +36,7 @@ class SpecialServicesPanel extends React.Component {
     }
 
     render() {
+        var SpecialService = this.state.SpecialService;
         return (
             <Grid>
                 <Row>
@@ -48,7 +53,7 @@ class SpecialServicesPanel extends React.Component {
 
                                 <Row>
                                     <Col xs={3} sm={3}>
-                                        <Input type='textarea' label='Text Area' />
+                                        <Input type='textarea' label='Text Area' value={SpecialService} onChange={this.handleInputChange.bind(this, 'SpecialService') } />
                                     </Col>
                                 </Row>
                             </Grid>

@@ -21,6 +21,11 @@ class InstructionsPanel extends React.Component {
     constructor (){
         super();
 
+        this.state = {
+            Package: "",
+            Shipment: "",
+
+        };
     }
 
     handleInputChange(key, event) {
@@ -34,43 +39,45 @@ class InstructionsPanel extends React.Component {
     }
 
     render() {
+        var Shipment = this.state.Shipment;
+        var Package = this.state.Package;
 
 
         return (
             <Grid>
                 <Row>
                     <Col xs={4} sm={4}>
-                <Panel collapsible defaultExpanded header='Instructions' bsStyle='info'>
+                        <Panel collapsible defaultExpanded header='Instructions' bsStyle='info'>
 
-                    <Grid >
-                        <Row >
-                            <Col xs={2} sm={2} >
-                                <label>Shipment</label>
-                            </Col>
-                            <Col xs={1} md={1}>
-                                <Button bSize="xsmall" bsStyle='info' onClick={this.instructions} >Instructions</Button>
-                            </Col>
+                            <Grid >
+                                <Row >
+                                    <Col xs={2} sm={2} >
+                                        <label>Shipment</label>
+                                    </Col>
+                                    <Col xs={1} md={1}>
+                                        <Button bSize="xsmall" bsStyle='info' onClick={this.instructions} >Instructions</Button>
+                                    </Col>
 
-                        </Row>
+                                </Row>
 
-                        <Row >
-                            <Col  xs={3} md={3}>
-                                <Input type='textarea' label='Text Area' />
-                            </Col>
-                        </Row>
-                        <Row >
-                            <Col  xs={3} md={3}>
-                                <label>Package</label>
-                            </Col>
+                                <Row >
+                                    <Col  xs={3} md={3}>
+                                        <Input type='textarea' value={Shipment} onChange={this.handleInputChange.bind(this, 'Shipment') } />
+                                    </Col>
+                                </Row>
+                                <Row >
+                                    <Col  xs={3} md={3}>
+                                        <label>Package</label>
+                                    </Col>
 
-                        </Row>
-                        <Row >
-                            <Col  xs={3} md={3}>
-                                <Input type='textarea' label='Text Area' />
-                            </Col>
-                        </Row>
-                    </Grid>
-                </Panel>
+                                </Row>
+                                <Row >
+                                    <Col  xs={3} md={3}>
+                                        <Input type='textarea' value={Package} onChange={this.handleInputChange.bind(this, 'Package') } />
+                                    </Col>
+                                </Row>
+                            </Grid>
+                        </Panel>
                     </Col>
                 </Row>
             </Grid>

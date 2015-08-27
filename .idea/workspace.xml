@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8fe94c7-8aed-4904-acbb-256a1110c095" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/BillingInfoPanel.js" afterPath="$PROJECT_DIR$/js/component/BillingInfoPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/FirstPanel.js" afterPath="$PROJECT_DIR$/js/component/FirstPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/InstructionsPanel.js" afterPath="$PROJECT_DIR$/js/component/InstructionsPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/MainComponent.js" afterPath="$PROJECT_DIR$/js/component/MainComponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/PackageParametersPanel.js" afterPath="$PROJECT_DIR$/js/component/PackageParametersPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/PanelInstance.js" afterPath="$PROJECT_DIR$/js/component/PanelInstance.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" afterPath="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/SpecialServicesPanel.js" afterPath="$PROJECT_DIR$/js/component/SpecialServicesPanel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bundle.js" afterPath="$PROJECT_DIR$/js/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -29,17 +36,37 @@
         <entry file="file://$PROJECT_DIR$/js/component/PanelInstance.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackageParametersPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
+      <file leaf-file-name="ShipToInfoPanel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/component/ShipToInfoPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+              <caret line="122" column="87" selection-start-line="122" selection-start-column="87" selection-end-line="122" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstPanel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/component/FirstPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PackageParametersPanel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5325615">
+              <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -49,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/js/component/ThirdPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+              <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -59,45 +86,35 @@
         <entry file="file://$PROJECT_DIR$/js/component/InstructionsPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
-                <marker date="1440661438959" expanded="true" signature="878:2104" placeholder="..." />
-                <marker date="1440661438959" expanded="true" signature="966:2102" placeholder="..." />
-                <marker date="1440661438959" expanded="true" signature="994:2077" placeholder="..." />
-                <marker date="1440661438959" expanded="true" signature="1025:1402" placeholder="..." />
-                <marker date="1440661438959" expanded="true" signature="1433:1625" placeholder="..." />
-                <marker date="1440661438959" expanded="true" signature="1655:1827" placeholder="..." />
-                <marker date="1440661438959" expanded="true" signature="1857:2049" placeholder="..." />
+                <marker date="1440667178441" expanded="true" signature="1050:2604" placeholder="..." />
+                <marker date="1440667178441" expanded="true" signature="1146:2602" placeholder="..." />
+                <marker date="1440667178441" expanded="true" signature="1182:2569" placeholder="..." />
+                <marker date="1440667178441" expanded="true" signature="1221:1654" placeholder="..." />
+                <marker date="1440667178441" expanded="true" signature="1693:1974" placeholder="..." />
+                <marker date="1440667178441" expanded="true" signature="2012:2216" placeholder="..." />
+                <marker date="1440667178441" expanded="true" signature="2254:2533" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LTLPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/component/LTLPanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpecialServicesPanel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SpecialServicesPanel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/component/SpecialServicesPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7380608">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/component/MainComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -117,17 +134,7 @@
         <entry file="file://$PROJECT_DIR$/js/component/BillingInfoPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarrierDeliveryInfoPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/component/CarrierDeliveryInfoPanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -163,22 +170,22 @@
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/js/component/LowerSidePanel.js" />
-        <option value="$PROJECT_DIR$/js/component/MainComponent.js" />
-        <option value="$PROJECT_DIR$/js/component/FirstPanel.js" />
         <option value="$PROJECT_DIR$/js/component/SecondPanel.js" />
         <option value="$PROJECT_DIR$/js/component/PackageParameteresPanel.js" />
         <option value="$PROJECT_DIR$/js/component/ThirdPanel.js" />
-        <option value="$PROJECT_DIR$/js/component/PanelInstance.js" />
         <option value="$PROJECT_DIR$/js/component/LoweRightPanel.js" />
-        <option value="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" />
         <option value="$PROJECT_DIR$/js/component/ShoppingRequestHistoryPanel.js" />
         <option value="$PROJECT_DIR$/js/component/UpperHeader.js" />
         <option value="$PROJECT_DIR$/js/component/LTLPanel.js" />
-        <option value="$PROJECT_DIR$/js/component/PackageParametersPanel.js" />
-        <option value="$PROJECT_DIR$/js/component/InstructionsPanel.js" />
-        <option value="$PROJECT_DIR$/js/component/BillingInfoPanel.js" />
         <option value="$PROJECT_DIR$/js/component/CarrierDeliveryInfoPanel.js" />
+        <option value="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" />
+        <option value="$PROJECT_DIR$/js/component/InstructionsPanel.js" />
         <option value="$PROJECT_DIR$/js/component/SpecialServicesPanel.js" />
+        <option value="$PROJECT_DIR$/js/component/BillingInfoPanel.js" />
+        <option value="$PROJECT_DIR$/js/component/PanelInstance.js" />
+        <option value="$PROJECT_DIR$/js/component/MainComponent.js" />
+        <option value="$PROJECT_DIR$/js/component/FirstPanel.js" />
+        <option value="$PROJECT_DIR$/js/component/PackageParametersPanel.js" />
       </list>
     </option>
   </component>
@@ -360,7 +367,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1603" height="876" extended-state="1" />
+    <frame x="-4" y="0" width="1603" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18210863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -368,18 +375,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24920128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19054241" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2339833" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -403,11 +410,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/components/SecondPanel.js</url>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/component/InstructionsPanel.js</url>
-          <line>39</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="9" />
@@ -712,22 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/FirstPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/ShipToInfoPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/component/ShoppingRequestHistoryPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18813314">
@@ -746,34 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/MainComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024602026">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/UpperHeader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/ThirdPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -786,22 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/BillingInfoPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/component/CarrierDeliveryInfoPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -810,10 +756,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/ThirdPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/UpperHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/ShipToInfoPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="87" selection-start-line="122" selection-start-column="87" selection-end-line="122" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/SpecialServicesPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/BillingInfoPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/component/PanelInstance.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/MainComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -821,23 +815,31 @@
     <entry file="file://$PROJECT_DIR$/js/component/InstructionsPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
-            <marker date="1440661438959" expanded="true" signature="878:2104" placeholder="..." />
-            <marker date="1440661438959" expanded="true" signature="966:2102" placeholder="..." />
-            <marker date="1440661438959" expanded="true" signature="994:2077" placeholder="..." />
-            <marker date="1440661438959" expanded="true" signature="1025:1402" placeholder="..." />
-            <marker date="1440661438959" expanded="true" signature="1433:1625" placeholder="..." />
-            <marker date="1440661438959" expanded="true" signature="1655:1827" placeholder="..." />
-            <marker date="1440661438959" expanded="true" signature="1857:2049" placeholder="..." />
+            <marker date="1440667178441" expanded="true" signature="1050:2604" placeholder="..." />
+            <marker date="1440667178441" expanded="true" signature="1146:2602" placeholder="..." />
+            <marker date="1440667178441" expanded="true" signature="1182:2569" placeholder="..." />
+            <marker date="1440667178441" expanded="true" signature="1221:1654" placeholder="..." />
+            <marker date="1440667178441" expanded="true" signature="1693:1974" placeholder="..." />
+            <marker date="1440667178441" expanded="true" signature="2012:2216" placeholder="..." />
+            <marker date="1440667178441" expanded="true" signature="2254:2533" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/SpecialServicesPanel.js">
+    <entry file="file://$PROJECT_DIR$/js/component/FirstPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7380608">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5325615">
+          <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
           <folding />
         </state>
       </provider>

@@ -12,6 +12,9 @@ var NavItem = ReactBoot.NavItem;
 var UpperHeader = require('./UpperHeader');
 var Panel = ReactBoot.Panel;
 var Button = ReactBoot.Button;
+var Grid = ReactBoot.Grid;
+var Row = ReactBoot.Row;
+var Col = ReactBoot.Col;
 
 class PanelInstance extends React.Component {
 
@@ -63,75 +66,83 @@ class PanelInstance extends React.Component {
 
 
         return (
-            <div >
-                <Panel collapsible defaultExpanded header='Ship To Information' bsStyle='info'>
+            <Grid >
+                <Row>
+                    <Col xs={4} sm={4}>
+                        <Panel collapsible defaultExpanded header='Ship To Information' bsStyle='info'>
 
-                    <table>
-                        <tr>
-                            <td><label>PO#</label></td>
-                            <td><input type="text" value={PO} onChange={this.handleInputChange.bind(this, 'PO') } /></td>
-                        </tr>
+                            <Grid>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>PO#</label> </Col>
+                                    <Col xs={2} sm={2}> <input type="text" value={PO} onChange={this.handleInputChange.bind(this, 'PO') } /></Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Company</label> </Col>
+                                    <Col xs={2} sm={2}><input type="text" value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Contact</label> </Col>
+                                    <Col xs={2} sm={2}><input type="text" value={contact} onChange={this.handleInputChange.bind(this, 'contact') }/></Col>
+                                </Row>
 
-                        <tr>
-                            <td><label>Company</label></td>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Address Line1</label> </Col>
+                                    <Col xs={2} sm={2}><input type="text" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/></Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Line2</label> </Col>
+                                    <Col xs={2} sm={2}><input type="text" value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></Col>
+                                </Row>
 
-                            <td ><input type="text" value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></td>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Line3</label> </Col>
+                                    <Col xs={2} sm={2}><input type="text" value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>City-State-Zip</label> </Col>
+                                    <Col xs={2} sm={2}>
+                                        <input type="text" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } style={{"width" : "90px"}}/>
+                                        <input type="text" id="txtState" value={state} onChange={this.handleInputChange.bind(this, 'state') } style={{"width" : "80px"}} />
+                                        <input type="text" id="txtZip" value={zip} onChange={this.handleInputChange.bind(this, 'zip') } style={{"width" : "60px"}}/>
 
-                        </tr>
-                        <tr>
-                            <td><label>Contact</label></td>
-                            <td><input type="text" value={contact} onChange={this.handleInputChange.bind(this, 'contact') }/></td>
-                        </tr>
-                        <tr>
-                            <td><label>Address Line1</label></td>
-                            <td><input type="text" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/></td>
-                        </tr>
-                        <tr>
-                            <td><label>Line2</label></td>
-                            <td><input type="text" value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></td>
-                        </tr>
-                        <tr>
-                            <td><label>Line3</label></td>
-                            <td><input type="text" value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></td>
-                        </tr>
-                        <tr>
-                            <td><label>City-State-Zip</label></td>
-                            <td><input type="text" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } style={{"width" : "90px"}}/>
-                                <input type="text" id="txtState" value={state} onChange={this.handleInputChange.bind(this, 'state') } style={{"width" : "80px"}} />
-                                <input type="text" id="txtZip" value={zip} onChange={this.handleInputChange.bind(this, 'zip') } style={{"width" : "60px"}}/>
-                            </td>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Country</label></Col>
+                                    <Col xs={2} sm={2}><select id="units1" name="department" >
+                                                         <option value="in.">in.</option>
+                                                         <option value="in">Cm</option>
+                                                     </select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Phone</label> </Col>
+                                    <Col xs={2} sm={2}><input type="text" value={phone} onChange={this.handleInputChange.bind(this, 'phone') } /></Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Department</label> </Col>
+                                    <Col xs={2} sm={2}> <select id="units1" name="department" >
+                                                        <option value="in.">in.</option>
+                                                        <option value="in">Cm</option>
+                                                    </select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={2} sm={2}></Col>
+                                    <Col xs={1} sm={1}><Button bsSize='small' bsStyle='info' id="btnEmail" onClick={this.email} style={{"float":"right"}}>Email </Button> </Col>
 
-                        </tr>
-                        <tr>
-                            <td><label>Country</label></td>
-                            <td>
-                                <select id="units1" name="department" >
-                                    <option value="in.">in.</option>
-                                    <option value="in">Cm</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label>Phone</label></td>
-                            <td><input type="text" value={phone} onChange={this.handleInputChange.bind(this, 'phone') } /></td>
-                        </tr>
-                        <tr>
-                            <td><label>Department</label></td>
-                            <td>  <select id="units1" name="department" >
-                                <option value="in.">in.</option>
-                                <option value="in">Cm</option>
-                            </select>
-                            </td>
-                        </tr>
-                        <tr>
+                                </Row>
 
-                            <td colSpan="2"><Button bsSize='small' bsStyle='info' id="btnEmail" onClick={this.email} style={{"float":"right"}}>Email </Button> </td>
-                        </tr>
 
-                    </table>
-                </Panel>
+                             </Grid>
 
-            </div>
+
+
+                        </Panel>
+
+                    </Col>
+                </Row>
+            </Grid>
         );
 
     }

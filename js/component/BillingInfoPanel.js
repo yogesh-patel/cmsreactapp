@@ -20,6 +20,16 @@ class BillingInfoPanel extends React.Component {
 
     constructor (){
         super();
+
+        this.state ={
+            account : ""
+        };
+    }
+
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.setState(partialState);
     }
 
     cust () {
@@ -27,6 +37,9 @@ class BillingInfoPanel extends React.Component {
     }
 
     render() {
+
+        var account = this.state.account;
+
         return (
             <Grid>
                 <Row>
@@ -55,7 +68,7 @@ class BillingInfoPanel extends React.Component {
                                     </tr>
                                     <tr>
                                         <td><label>Account</label></td>
-                                        <td><input type="text" /></td>
+                                        <td><input type="text"  value={account} onChange={this.handleInputChange.bind(this, 'account') }/></td>
                                     </tr>
                                     <tr>
                                         <td colSpan="3">
