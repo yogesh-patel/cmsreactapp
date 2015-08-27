@@ -20,13 +20,22 @@ class CarrierDeliveryInfoPanel extends React.Component {
 
     constructor (){
         super();
-    }
 
-    cust () {
-        alert('button Customer is clicked');
+        this.state = {
+            shipVia: "",
+            delivery : ""
+        };
+    }
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.setState(partialState);
     }
 
     render() {
+        var delivery = this.state.delivery;
+        var shipVia = this.state.shipVia;
+
         return (
             <Grid>
                 <Row>
@@ -37,7 +46,7 @@ class CarrierDeliveryInfoPanel extends React.Component {
                                 <Row>
                                     <Col xs={2} sm={2}> <label>Ship Via</label> </Col>
                                     <Col xs={2} sm={2}>
-                                        <select id="ShipVia" name="ShipVia" >
+                                        <select id="ShipVia" name="ShipVia" onchange ={this.shipVia}>
                                             <option value="in.">in.</option>
                                             <option value="in">Cm</option>
                                         </select>
@@ -46,7 +55,7 @@ class CarrierDeliveryInfoPanel extends React.Component {
                                 <Row>
                                     <Col xs={2} sm={2}> <label>Del. By</label></Col>
                                     <Col xs={2} sm={2}>
-                                        <select id="DeliveredBy" name="DeliveredBy" >
+                                        <select id="DeliveredBy" name="DeliveredBy" onselect={this.delivery} >
                                             <option value="in.">in.</option>
                                             <option value="in">Cm</option>
                                         </select>

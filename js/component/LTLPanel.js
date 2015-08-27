@@ -21,6 +21,9 @@ class LTLPanel extends React.Component {
 
     constructor (){
         super();
+        this.state = {
+          freightClass: ""
+        };
     }
 
     handleInputChange(key, event) {
@@ -33,6 +36,8 @@ class LTLPanel extends React.Component {
     }
 
     render() {
+        var freightClass = this.state.freightClass;
+
         return (
             <Grid>
                 <Row>
@@ -47,12 +52,11 @@ class LTLPanel extends React.Component {
                                         <label>Freight Class</label>
                                     </Col>
                                     <Col xs={2} sm={2}>
-                                        <select id="freightClass" name="FreightClass" style={{"margin-left":"10px"}}>
+                                        <select id="freightClass" name="FreightClass" onselect={this.freightClass} >
                                             <option value="in.">in.</option>
                                             <option value="in">Cm</option>
                                         </select>
                                     </Col>
-
 
                                 </Row>
                             </Grid>

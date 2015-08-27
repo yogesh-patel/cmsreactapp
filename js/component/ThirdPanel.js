@@ -10,6 +10,7 @@ var Button = ReactBoot.Button;
 var Input = ReactBoot.Input;
 var PackageParametersPanel = require('./PackageParametersPanel');
 var InstructionsPanel = require('./InstructionsPanel');
+var Panel = ReactBoot.Panel;
 
 class ThirdPanel extends React.Component {
     constructor(){
@@ -42,22 +43,21 @@ class ThirdPanel extends React.Component {
            <div id="ThirdUpperPanel">
                     <table>
                         <tbody>
-                        <tr >
-                            <td >
-                                <PackageParametersPanel />
-                            </td>
-                        </tr>
+                            <tr >
+                                <td >
+                                    <PackageParametersPanel />
+                                </td>
+                            </tr>
 
-                        <tr >
-                            <td >
-                                <InstructionsPanel />
-                            </td>
-                        </tr>
+                            <tr >
+                                <td >
+                                    <InstructionsPanel />
+                                </td>
+                            </tr>
 
                         </tbody>
                     </table>
                 </div>
-
 
         );
     }
