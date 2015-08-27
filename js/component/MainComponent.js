@@ -14,7 +14,7 @@ var UpperHeader = require('./UpperHeader');
 class MainComponent extends React.Component {
     render() {
         return (
-            <div>
+            <div className='container'>
                 <Navbar brand='React-Bootstrap' inverse toggleNavKey={0}>
                     <Nav right eventKey={0}> {/* This is the eventKey referenced */}
                         <NavItem eventKey={1} href='#'>Ship</NavItem>

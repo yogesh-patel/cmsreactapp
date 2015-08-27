@@ -26,8 +26,8 @@ class UpperHeader extends React.Component {
         return (
 
             <div>
-                <Nav bsStyle='pills' activeKey={1} onSelect={handleSelect}>
-                    <NavItem eventKey={1} href='/home'>Create Request</NavItem>
+                <Nav bsStyle='pills' activeKey={0} onSelect={handleSelect}>
+                    <NavItem eventKey={1} title='item'>Create Request</NavItem>
                     <NavItem eventKey={2} title='Item'>Rate Package</NavItem>
                     <NavItem eventKey={3} title='Item'>Request To Hold</NavItem>
                     <NavItem eventKey={4} title='Item'>Verify Address</NavItem>
@@ -38,7 +38,7 @@ class UpperHeader extends React.Component {
 
                 <Grid >
                     <Row className='show-grid'>
-                        <Col xs={4} sm={4}  style={{"float":"left"}}><FirstPanel /></Col>
+                        <Col xs={4} sm={4} ><FirstPanel /></Col>
                         <Col xs={4} md={4}><SecondPanel /></Col>
                         <Col  xs={4} md={4}><ThirdPanel /></Col>
                     </Row>
@@ -55,7 +55,7 @@ class UpperHeader extends React.Component {
             </div>
 
     );
-        React.render(navInstance, mountNode);
+
     }
 }
 
