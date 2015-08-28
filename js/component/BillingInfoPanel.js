@@ -18,12 +18,9 @@ var Col = ReactBoot.Col;
 
 class BillingInfoPanel extends React.Component {
 
-    constructor (){
-        super();
+    constructor (props){
+        super(props);
 
-        this.state ={
-            account : ""
-        };
     }
 
     handleInputChange(key, event) {
@@ -38,7 +35,7 @@ class BillingInfoPanel extends React.Component {
 
     render() {
 
-        var account = this.state.account;
+        var account = this.props.billingInfo.account;
 
         return (
             <Grid>

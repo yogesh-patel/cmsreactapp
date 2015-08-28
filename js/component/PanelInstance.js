@@ -17,12 +17,9 @@ var Col = ReactBoot.Col;
 
 class PanelInstance extends React.Component {
 
-    constructor (){
-        super();
+    constructor (props){
+        super(props);
 
-        this.state={
-            CustomerCode: ""
-        };
     }
     handleInputChange(key, event) {
         var partialState = {};
@@ -35,7 +32,7 @@ class PanelInstance extends React.Component {
 
     render() {
 
-       var CustomerCode = this.state.CustomerCode;
+       var CustomerCode = this.props.PanelInstance.CustomerCode;
 
         return (
             <Grid >

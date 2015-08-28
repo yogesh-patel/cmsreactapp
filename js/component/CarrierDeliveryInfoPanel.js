@@ -18,13 +18,10 @@ var Col = ReactBoot.Col;
 
 class CarrierDeliveryInfoPanel extends React.Component {
 
-    constructor (){
-        super();
+    constructor (props){
+        super(props);
 
-        this.state = {
-            shipVia: "",
-            delivery : ""
-        };
+
     }
     handleInputChange(key, event) {
         var partialState = {};
@@ -33,8 +30,8 @@ class CarrierDeliveryInfoPanel extends React.Component {
     }
 
     render() {
-        var delivery = this.state.delivery;
-        var shipVia = this.state.shipVia;
+        var delivery = this.props.carrierDeliveryInfo.delivery;
+        var shipVia = this.props.carrierDeliveryInfo.shipVia;
 
         return (
             <Grid>

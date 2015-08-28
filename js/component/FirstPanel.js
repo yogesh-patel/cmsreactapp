@@ -16,9 +16,8 @@ var Col = ReactBoot.Col;
 
 class FirstPanel extends React.Component {
 
-    constructor() {
-        super();
-
+    constructor(props) {
+        super(props);
 
     }
 
@@ -30,10 +29,10 @@ class FirstPanel extends React.Component {
 
                      <Grid>
                      <Row>
-                         <Col xs={4} sm={4}> <PanelInstance /></Col>
+                         <Col xs={4} sm={4}> <PanelInstance PanelInstance= {this.props.firstPanel.PanelInstance}/></Col>
                          </Row>
                          <Row>
-                             <Col xs={4} sm={4}> <ShipToInfoPanel /></Col>
+                             <Col xs={4} sm={4}> <ShipToInfoPanel ShipToInfo= {this.props.firstPanel.shipToInfo} /></Col>
                          </Row>
                      </Grid>
 

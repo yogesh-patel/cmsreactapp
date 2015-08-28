@@ -19,42 +19,61 @@ class MainComponent extends React.Component {
         this.state={
 
             xmlObject:{
-                shipToInfo:{
-                    company: "Wyne Company",
-                    PO: "",
-                    contact: "Mr Wayne",
-                    Addr1: "475 Vally Rd",
-                    Addr2: "",
-                    Addr3: "",
-                    city: "wayne",
-                    state: "NJ",
-                    zip: "7470",
-                    phone: "1212121212"
+
+                FirsPanelObject:{
+                    shipToInfo:{
+                        company: "Wayne Company",
+                        PO: "",
+                        contact: "Mr Wayne",
+                        Addr1: "475 Vally Rd",
+                        Addr2: "",
+                        Addr3: "",
+                        city: "wayne",
+                        State: "NJ",
+                        Zip: "7470",
+                        phone: "1212121212"
+                    },
+                    PanelInstance:{
+                        CustomerCode: "555"
+                    }
                 },
-                BillingInfo:{
-                  account: ""
+                SecondPanelObject:{
+
+                    CarrierDeliveryInfo:{
+                        shipVia: "",
+                        delivery: ""
+                    },
+                    BillingInfo:{
+                        account: "234234"
+                    },
+                    SpecialServices:{
+                        SpecialService: ""
+                    },
+                    LTL:{
+                        freightClass: ""
+                    },
+
                 },
-                PanelInstance:{
-                    CustomerCode: ""
-                },
-                Instructions:{
-                    Package: "",
-                    Shipment: ""
-                },
-                SpecialServices:{
-                    SpecialService: ""
-                },
-                LTL:{
-                    freightClass: ""
-                },
-                CarrierDeliveryInfo:{
-                    shipVia: "",
-                    delivery: ""
+                ThirdPanel:{
+                    Instructions:{
+                        Package: "",
+                        Shipment: ""
+                    },
+
+                    PackageParameters:{
+                        PackageCount: "Wyne Company",
+                        Package: "",
+                        Weight: "",
+                        length: "",
+                        width: "",
+                        height: ""
+                    }
                 }
 
             }
         };
     }
+
     render() {
         return (
             <Panel>

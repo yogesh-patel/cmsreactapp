@@ -19,17 +19,9 @@ var Col = ReactBoot.Col;
 
 class PackageParametersPanel extends React.Component {
 
-    constructor (){
-        super();
+    constructor (props){
+        super(props);
 
-        this.state = {PackageCount: "Wyne Company",
-            Package: "",
-            Weight: "",
-            length: "",
-            width: "",
-            height: ""
-
-        };
 
     }
 
@@ -45,12 +37,12 @@ class PackageParametersPanel extends React.Component {
 
     render() {
 
-        var PackageCount = this.state.PackageCount;
-        var Package = this.state.Package;
-        var Weight = this.state.Weight;
-        var length = this.state.length;
-        var width = this.state.width;
-        var height = this.state.height;
+        var PackageCount = this.props.packageParameters.PackageCount;
+        var Package = this.props.packageParameters.Package;
+        var Weight = this.props.packageParameters.Weight;
+        var length = this.props.packageParameters.length;
+        var width = this.props.packageParameters.width;
+        var height = this.props.packageParameters.height;
 
         return (
            <Grid>

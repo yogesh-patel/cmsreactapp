@@ -18,12 +18,10 @@ var Col = ReactBoot.Col;
 
 class SpecialServicesPanel extends React.Component {
 
-    constructor (){
-        super();
+    constructor (props){
+        super(props);
 
-        this.state = {
-            SpecialService: ""
-        };
+
     }
 
     handleInputChange(key, event) {
@@ -36,7 +34,8 @@ class SpecialServicesPanel extends React.Component {
     }
 
     render() {
-        var SpecialService = this.state.SpecialService;
+        var SpecialService = this.props.specialServices.SpecialService;
+
         return (
             <Grid>
                 <Row>

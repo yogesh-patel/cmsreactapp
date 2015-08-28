@@ -1,7 +1,6 @@
 /**
  * Created by vedangm on 08/27/2015.
  */
-
 'use strict';
 
 var React = require('react');
@@ -15,25 +14,10 @@ var Col = ReactBoot.Col;
 
 class PanelInstance extends React.Component {
 
-    constructor() {
-        super();
-
-        this.state = {
-            company: "Wyne Company",
-            PO: "",
-            contact: "Mr Wayne",
-            Addr1: "475 Vally Rd",
-            Addr2: "",
-            Addr3: "",
-            city: "wayne",
-            state: "NJ",
-            zip: "7470",
-            phone: "1212121212"
-
-        };
+    constructor(props) {
+        super(props);
 
     }
-
 
     handleInputChange(key, event) {
         var partialState = {};
@@ -48,16 +32,16 @@ class PanelInstance extends React.Component {
 
     render() {
 
-        var company = this.state.company;
-        var PO = this.state.PO;
-        var contact = this.state.contact;
-        var Addr1 = this.state.Addr1;
-        var Addr2 = this.state.Addr2;
-        var Addr3 = this.state.Addr3;
-        var city = this.state.city;
-        var state = this.state.state;
-        var zip = this.state.zip;
-        var phone = this.state.phone;
+        var company = this.props.ShipToInfo.company;
+        var PO = this.props.ShipToInfo.PO;
+        var contact = this.props.ShipToInfo.contact;
+        var Addr1 = this.props.ShipToInfo.Addr1;
+        var Addr2 = this.props.ShipToInfo.Addr2;
+        var Addr3 = this.props.ShipToInfo.Addr3;
+        var city = this.props.ShipToInfo.city;
+        var state = this.props.ShipToInfo.State;
+        var zip = this.props.ShipToInfo.Zip;
+        var phone = this.props.ShipToInfo.phone;
 
         return (
             <Grid >

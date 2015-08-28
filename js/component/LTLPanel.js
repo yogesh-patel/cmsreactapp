@@ -21,9 +21,7 @@ class LTLPanel extends React.Component {
 
     constructor (){
         super();
-        this.state = {
-          freightClass: ""
-        };
+
     }
 
     handleInputChange(key, event) {
@@ -36,7 +34,7 @@ class LTLPanel extends React.Component {
     }
 
     render() {
-        var freightClass = this.state.freightClass;
+        var freightClass = this.props.ltlInfo.freightClass;
 
         return (
             <Grid>

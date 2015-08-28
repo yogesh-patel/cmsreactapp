@@ -13,14 +13,9 @@ var InstructionsPanel = require('./InstructionsPanel');
 var Panel = ReactBoot.Panel;
 
 class ThirdPanel extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
-        this.state = {PackageCount: "Wyne Company",
-            Package: "",
-            Weight: "",
-
-        };
 
     }
     handleInputChange(key, event) {
@@ -34,9 +29,6 @@ class ThirdPanel extends React.Component {
     }
 
     render (){
-        var PackageCount = this.state.PackageCount;
-        var Package = this.state.Package;
-        var Weight = this.state.Weight;
 
         return(
 
@@ -45,13 +37,13 @@ class ThirdPanel extends React.Component {
                         <tbody>
                             <tr >
                                 <td >
-                                    <PackageParametersPanel />
+                                    <PackageParametersPanel packageParameters = {this.props.thirdPanel.PackageParameters} />
                                 </td>
                             </tr>
 
                             <tr >
                                 <td >
-                                    <InstructionsPanel />
+                                    <InstructionsPanel instructions = {this.props.thirdPanel.Instructions} />
                                 </td>
                             </tr>
 

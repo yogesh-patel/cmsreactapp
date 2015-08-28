@@ -18,14 +18,10 @@ var Col = ReactBoot.Col;
 
 class InstructionsPanel extends React.Component {
 
-    constructor (){
-        super();
+    constructor (props){
+        super(props);
 
-        this.state = {
-            Package: "",
-            Shipment: "",
 
-        };
     }
 
     handleInputChange(key, event) {
@@ -39,8 +35,8 @@ class InstructionsPanel extends React.Component {
     }
 
     render() {
-        var Shipment = this.state.Shipment;
-        var Package = this.state.Package;
+        var Shipment = this.props.instructions.Shipment;
+        var Package = this.props.instructions.Package;
 
 
         return (

@@ -46,12 +46,12 @@ class UpperSidePanel extends React.Component {
             <div>
                 <ButtonGroup vertical>
                      <Button bsSize='small' onClick={this.createRequest}  > Create Request</Button>
-                    <Button bsSize='small' onClick={this.ratePackage} > Rate Package</Button>
-                    <Button bsSize='small' onClick={this.requestToHold} >Request To Hold </Button>
-                    <Button bsSize='small' onClick={this.verifyAddress}>Verify Address</Button>
+                     <Button bsSize='small' onClick={this.ratePackage} > Rate Package</Button>
+                     <Button bsSize='small' onClick={this.requestToHold} >Request To Hold </Button>
+                     <Button bsSize='small' onClick={this.verifyAddress}>Verify Address</Button>
                      <Button bsSize='small' onClick={this.Details} >Details </Button>
                      <Button bsSize='small' onClick={this.releaseHold} >International</Button>
-                   <Button bsSize='small' onClick={this.releaseHold} >Clear All</Button>
+                     <Button bsSize='small' onClick={this.releaseHold} >Clear All</Button>
 
                 </ButtonGroup>
 

@@ -13,8 +13,8 @@ var SpecialServicesPanel = require('./SpecialServicesPanel');
 var LTLPanel = require('./LTLPanel');
 class SecondPanel extends React.Component{
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
 
     }
@@ -35,7 +35,7 @@ class SecondPanel extends React.Component{
                         <table>
                         <tbody>
                             <tr >
-                               <td > <CarrierDeliveryInfoPanel /> </td>
+                               <td > <CarrierDeliveryInfoPanel carrierDeliveryInfo = {this.props.secondPanel.CarrierDeliveryInfo}/> </td>
 
                             </tr>
 
@@ -43,18 +43,18 @@ class SecondPanel extends React.Component{
 
                             <tr>
                                <td >
-                                    <BillingInfoPanel />
+                                    <BillingInfoPanel billingInfo = {this.props.secondPanel.BillingInfo}/>
                                </td>
                             </tr>
 
 
                             <tr >
-                                <td> <SpecialServicesPanel /> </td>
+                                <td> <SpecialServicesPanel specialServices = {this.props.secondPanel.SpecialServices} /> </td>
                             </tr>
 
                             <tr >
                                 <td>
-                                    <LTLPanel />
+                                    <LTLPanel ltlInfo = {this.props.secondPanel.LTL} />
                                 </td>
                             </tr>
 
