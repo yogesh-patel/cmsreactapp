@@ -15,7 +15,22 @@ var UpperHeader = require('./UpperHeader');
 class MainComponent extends React.Component {
     constructor(props){
         super(props);
-      //  this.currentlyLoadedXML = null;
+
+        this.callbacks = {
+            FirsPanelObject:{
+                shipToInfo:{
+                    company: function(newValue) {
+                        alert("Nested callback");
+                    }
+                },
+                PanelInstance:{
+                    CustomerCode: function(newValue) {
+                        alert("In Panel Instance");
+                    }
+                }
+            }
+        };
+
         this.state={
 
             xmlObject:{
@@ -75,30 +90,9 @@ class MainComponent extends React.Component {
 
         };
 
-       /* dataCallback : {
-                datCallbackFirstPanel:{
-                    dataCallbackPanelInstance:{
-                        CustomerCodeCallBack : ""
-                        }
-                    }
 
-
-
-                }
-        }*/
     }
 
-
-    updateValue (modifiedValue){
-    this.setState({
-        value:modifiedValue
-    })
-}
-    getInitialState(){
-    return{
-        value:'My Value'
-    }
-}
 
     render() {
         return (
@@ -112,7 +106,7 @@ class MainComponent extends React.Component {
 
                     </Nav>
                 </Navbar>
-                <UpperHeader xmlObject={this.state.xmlObject} value={this.state.value} updateValue={this.updateValue} />
+                <UpperHeader xmlObject={this.state.xmlObject} value={this.state.value} updateValue={this.updateValue} NestedCallback = {this.callbacks}/>
             </Panel>
         );
     }

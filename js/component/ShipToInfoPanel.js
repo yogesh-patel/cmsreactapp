@@ -23,6 +23,8 @@ class PanelInstance extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+        this.props.ShipInfo.company(partialState[key]);
+
         this.setState(partialState);
     }
 
@@ -31,7 +33,6 @@ class PanelInstance extends React.Component {
     }
 
     render() {
-
         var company = this.props.ShipToInfo.company;
         var PO = this.props.ShipToInfo.PO;
         var contact = this.props.ShipToInfo.contact;
@@ -56,7 +57,7 @@ class PanelInstance extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Company</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" bsStyle='error' value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></Col>
+                                    <Col xs={3} sm={3}><input type="text" bsStyle='error' value={company} onChange={this.handleInputChange.bind(this, 'company')}  /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Contact</label> </Col>

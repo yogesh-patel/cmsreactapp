@@ -23,9 +23,13 @@ class PanelInstance extends React.Component {
     }
     handleInputChange(key, event) {
         var partialState = {};
-        partialState[key] = float.event.target.value;
+        partialState[key] = event.target.value;
+
+        this.props.PanelInfo.CustomerCode(partialState[key]);
+
         this.setState(partialState);
     }
+
     cust () {
         alert('button Customer is clicked');
     }

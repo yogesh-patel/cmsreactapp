@@ -21,6 +21,14 @@ class FirstPanel extends React.Component {
 
     }
 
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.firstPanelObj.shipToInfo.company(partialState[key]);
+
+        this.setState(partialState);
+    }
+
     render() {
 
 
@@ -29,11 +37,14 @@ class FirstPanel extends React.Component {
 
                      <Grid>
                      <Row>
-                         <Col xs={4} sm={4}> <PanelInstance PanelInstance= {this.props.firstPanel.PanelInstance}/></Col>
+                         <Col xs={4} sm={4}> <PanelInstance PanelInstance= {this.props.firstPanel.PanelInstance} PanelInfo = {this.props.firstPanelObj.PanelInstance}/></Col>
+                        </Row>
+                         <Row>
+                             <Col xs={4} sm={4}> <ShipToInfoPanel ShipToInfo= {this.props.firstPanel.shipToInfo} ShipInfo = {this.props.firstPanelObj.ShipToInfo} /></Col>
                          </Row>
                          <Row>
-                             <Col xs={4} sm={4}> <ShipToInfoPanel ShipToInfo= {this.props.firstPanel.shipToInfo} /></Col>
-                         </Row>
+                             <Col sm={12}><input type="text" onChange={this.handleInputChange.bind(this, 'company')}/></Col>
+                             </Row>
                      </Grid>
 
                    </div>

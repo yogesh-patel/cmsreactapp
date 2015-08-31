@@ -21,21 +21,23 @@ var UpperSidePanel = require('./UpperSidePanel');
 
 
 class UpperHeader extends React.Component {
-    constructor(props,state) {
-        super(props, state);
+    constructor(props) {
+        super(props);
 
     }
 
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+        this.props.NestedCallback.FirsPanelObject.shipToInfo.company(partialState[key]);
+
         this.setState(partialState);
     }
 
-    update(){
+/*    update(){
     var modifiedValue=this.refs.inputValue.getDOMNode().value;
-    this.props.updateValue(modifiedValue);
-}
+    this.props.company(modifiedValue);
+}*/
     render() {
 
         function handleSelect (selectedKey) {
@@ -51,7 +53,7 @@ class UpperHeader extends React.Component {
                     <Row className='show-grid'>
                         <Panel>
                         <Col xs={1} sm={1} ><UpperSidePanel /> </Col>
-                        <Col xs={4} sm={4} ><FirstPanel firstPanel ={this.props.xmlObject.FirsPanelObject}/></Col>
+                        <Col xs={4} sm={4} ><FirstPanel firstPanel ={this.props.xmlObject.FirsPanelObject} firstPanelObj = {this.props.NestedCallback.FirsPanelObject}/></Col>
                         <Col xs={4} md={4}><SecondPanel secondPanel = {this.props.xmlObject.SecondPanelObject} /></Col>
                         <Col  xs={3} md={3}><ThirdPanel thirdPanel = {this.props.xmlObject.ThirdPanel} /></Col>
                         </Panel>
