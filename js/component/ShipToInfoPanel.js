@@ -11,6 +11,7 @@ var Button = ReactBoot.Button;
 var Grid = ReactBoot.Grid;
 var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
+var Input = ReactBoot.Input;
 
 class PanelInstance extends React.Component {
 
@@ -27,7 +28,6 @@ class PanelInstance extends React.Component {
 
     email () {
         alert('Button Email clicked');
-
     }
 
     render() {
@@ -52,11 +52,11 @@ class PanelInstance extends React.Component {
                             <Grid>
                                 <Row>
                                     <Col xs={1} sm={1}><label>PO#</label> </Col>
-                                    <Col xs={3} sm={3}> <input type="text" value={PO} onChange={this.handleInputChange.bind(this, 'PO') } /></Col>
+                                    <Col xs={3} sm={3}> <input type="text" value={PO} onChange={this.handleInputChange.bind(this, 'PO') }  /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Company</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></Col>
+                                    <Col xs={3} sm={3}><input type="text" bsStyle='error' value={company} onChange={this.handleInputChange.bind(this, 'company') }  /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Contact</label> </Col>
@@ -83,14 +83,13 @@ class PanelInstance extends React.Component {
                                         <input type="text" bsSize="small" id="txtState" value={state} onChange={this.handleInputChange.bind(this, 'state') } />
                                         <input type="text" bsSize="small" id="txtZip" value={zip} onChange={this.handleInputChange.bind(this, 'zip') } />
                                     </Col>
-
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Country</label></Col>
-                                    <Col xs={3} sm={3}><select id="units1" name="department" >
-                                                         <option value="in.">India</option>
-                                                         <option value="in">United States</option>
-                                                     </select>
+                                    <Col xs={3} sm={3}><select id="country" name="Country" >
+                                                        <option value="in.">India</option>
+                                                        <option value="in">United States</option>
+                                                    </select>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -99,7 +98,7 @@ class PanelInstance extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Department</label> </Col>
-                                    <Col xs={3} sm={3}> <select id="units1" name="department" >
+                                    <Col xs={3} sm={3}> <select id="department" name="department" >
                                                         <option value="in.">in.</option>
                                                         <option value="in">Cm</option>
                                                     </select>

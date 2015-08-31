@@ -21,17 +21,27 @@ var UpperSidePanel = require('./UpperSidePanel');
 
 
 class UpperHeader extends React.Component {
-    constructor(props) {
-        super(props);
-
+    constructor(props,state) {
+        super(props, state);
 
     }
 
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.setState(partialState);
+    }
+
+    update(){
+    var modifiedValue=this.refs.inputValue.getDOMNode().value;
+    this.props.updateValue(modifiedValue);
+}
     render() {
 
         function handleSelect (selectedKey) {
             alert('selected ' + selectedKey);
         }
+
 
         return (
 
@@ -53,6 +63,9 @@ class UpperHeader extends React.Component {
                             <Col  xs={10} md={10}><LowerRightPanel /></Col>
                         </Panel>
                     </Row>
+                    <Row>
+                        <Col sm={12}> <input type="text" value={this.props.value} onChange={this.handleInputChange.bind(this, 'company')} /></Col>
+                     </Row>
 
                 </Grid>
 

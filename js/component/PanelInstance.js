@@ -23,7 +23,7 @@ class PanelInstance extends React.Component {
     }
     handleInputChange(key, event) {
         var partialState = {};
-        partialState[key] = event.target.value;
+        partialState[key] = float.event.target.value;
         this.setState(partialState);
     }
     cust () {

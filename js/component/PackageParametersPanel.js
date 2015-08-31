@@ -22,7 +22,6 @@ class PackageParametersPanel extends React.Component {
     constructor (props){
         super(props);
 
-
     }
 
     handleInputChange(key, event) {

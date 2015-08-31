@@ -15,7 +15,7 @@ var UpperHeader = require('./UpperHeader');
 class MainComponent extends React.Component {
     constructor(props){
         super(props);
-        this.currentlyLoadedXML = null;
+      //  this.currentlyLoadedXML = null;
         this.state={
 
             xmlObject:{
@@ -71,8 +71,34 @@ class MainComponent extends React.Component {
                 }
 
             }
+
+
         };
+
+       /* dataCallback : {
+                datCallbackFirstPanel:{
+                    dataCallbackPanelInstance:{
+                        CustomerCodeCallBack : ""
+                        }
+                    }
+
+
+
+                }
+        }*/
     }
+
+
+    updateValue (modifiedValue){
+    this.setState({
+        value:modifiedValue
+    })
+}
+    getInitialState(){
+    return{
+        value:'My Value'
+    }
+}
 
     render() {
         return (
@@ -86,7 +112,7 @@ class MainComponent extends React.Component {
 
                     </Nav>
                 </Navbar>
-                <UpperHeader xmlObject={this.state.xmlObject}/>
+                <UpperHeader xmlObject={this.state.xmlObject} value={this.state.value} updateValue={this.updateValue} />
             </Panel>
         );
     }

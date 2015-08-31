@@ -36,7 +36,6 @@ class FirstPanel extends React.Component {
                          </Row>
                      </Grid>
 
-
                    </div>
 
         );
