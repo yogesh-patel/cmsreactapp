@@ -27,6 +27,7 @@ class LTLPanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+        this.props.ltlInfo.freightClass(partialState[key]);
         this.setState(partialState);
     }
     selects () {
@@ -50,7 +51,7 @@ class LTLPanel extends React.Component {
                                         <label>Freight Class</label>
                                     </Col>
                                     <Col xs={2} sm={2}>
-                                        <select id="freightClass" name="FreightClass" onselect={this.freightClass} >
+                                        <select id="freightClass" name="FreightClass" onselect={this.freightClass} onChange = {this.props.ltlInfo.freightClass} >
                                             <option value="in.">in.</option>
                                             <option value="in">Cm</option>
                                         </select>

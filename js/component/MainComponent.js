@@ -20,15 +20,103 @@ class MainComponent extends React.Component {
             FirsPanelObject:{
                 shipToInfo:{
                     company: function(newValue) {
-                        alert("Nested callback");
-                    }
+                        alert(newValue);
+                    },
+                    PO: function(newValue) {
+                        alert(newValue);
+                    },
+                    contact: function(newValue) {
+                        alert(newValue);
+                    },
+                    Addr1:function(newValue) {
+                        alert(newValue);
+                    },
+                    Addr2:function(newValue) {
+                        alert(newValue);
+                    },
+                    Addr3:function(newValue) {
+                        alert(newValue);
+                    },
+                    city:function(newValue) {
+                        alert(newValue);
+                    },
+                    State:function(newValue) {
+                        alert(newValue);
+                    },
+                    Zip:function(newValue) {
+                        alert(newValue);
+                    },
+                    phone:function(newValue) {
+                        alert(newValue);
+                    },
+                    department:function(newValue) {
+                        alert(newValue);
+                    },
                 },
                 PanelInstance:{
                     CustomerCode: function(newValue) {
-                        alert("In Panel Instance");
+                        alert(newValue);
                     }
                 }
+            },
+            SecondPanelObject:{
+                CarrierDeliveryInfo:{
+                    shipVia: function(newValue) {
+                        alert(newValue);
+                    },
+                    delivery: function(newValue){
+                        alert(newValue);
+                    }
+
+                },
+                BillingInfo: {
+                    account : function (newValue){
+                        alert(newValue);
+                    }
+                },
+                SpecialServices:  {
+                    SpecialService: function (newValue) {
+                        alert(newValue);
+                    }
+                },
+                LTL:{
+                    freightClass: function (newValue) {
+                        alert(newValue);
+                    }
+                }
+            },
+            ThirdPanel: {
+                Instructions: {
+                    Package: function (newValue) {
+                        alert(newValue);
+                    },
+                    Shipment: function (newValue) {
+                        alert(newValue);
+                    }
+                },
+                PackageParameters: {
+                    PackageCount: function (newValue) {
+                        alert(newValue);
+                    },
+                    Package: function (newValue) {
+                        alert(newValue);
+                    },
+                    Weight: function (newValue) {
+                        alert(newValue);
+                    },
+                    length: function (newValue) {
+                        alert(newValue);
+                    },
+                    width: function (newValue) {
+                        alert(newValue);
+                    },
+                    height: function (newValue) {
+                        alert(newValue);
+                    }
+
+                },
             }
+
         };
 
         this.state={
@@ -46,7 +134,8 @@ class MainComponent extends React.Component {
                         city: "wayne",
                         State: "NJ",
                         Zip: "7470",
-                        phone: "1212121212"
+                        phone: "1212121212",
+                        department: "1212121212"
                     },
                     PanelInstance:{
                         CustomerCode: "555"

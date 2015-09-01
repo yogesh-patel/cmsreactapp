@@ -26,12 +26,14 @@ class CarrierDeliveryInfoPanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+        this.props.carrierDeliveryInfo.shipVia(partialState[key]);
+
         this.setState(partialState);
     }
 
     render() {
-        var delivery = this.props.carrierDeliveryInfo.delivery;
-        var shipVia = this.props.carrierDeliveryInfo.shipVia;
+    //    var delivery = this.props.carrierDeliveryInfo.delivery;
+     //   var shipVia = this.props.carrierDeliveryInfo.shipVia;
 
         return (
             <Grid>
@@ -43,7 +45,7 @@ class CarrierDeliveryInfoPanel extends React.Component {
                                 <Row>
                                     <Col xs={2} sm={2}> <label>Ship Via</label> </Col>
                                     <Col xs={2} sm={2}>
-                                        <select id="ShipVia" name="ShipVia" onchange ={this.shipVia}>
+                                        <select id="ShipVia" name="ShipVia" onChange={this.handleInputChange.bind(this, 'shipVia')} onselect = {this.handleInputChange.bind(this, 'shipVia')}>
                                             <option value="in.">in.</option>
                                             <option value="in">Cm</option>
                                         </select>
@@ -52,7 +54,7 @@ class CarrierDeliveryInfoPanel extends React.Component {
                                 <Row>
                                     <Col xs={2} sm={2}> <label>Del. By</label></Col>
                                     <Col xs={2} sm={2}>
-                                        <select id="DeliveredBy" name="DeliveredBy" onselect={this.delivery} >
+                                        <select id="DeliveredBy" name="DeliveredBy" onChange={this.handleInputChange.bind(this, 'delivery')} onselect={this.props.carrierDeliveryInfo.delivery} >
                                             <option value="in.">in.</option>
                                             <option value="in">Cm</option>
                                         </select>

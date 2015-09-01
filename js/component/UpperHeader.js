@@ -54,8 +54,8 @@ class UpperHeader extends React.Component {
                         <Panel>
                         <Col xs={1} sm={1} ><UpperSidePanel /> </Col>
                         <Col xs={4} sm={4} ><FirstPanel firstPanel ={this.props.xmlObject.FirsPanelObject} firstPanelObj = {this.props.NestedCallback.FirsPanelObject}/></Col>
-                        <Col xs={4} md={4}><SecondPanel secondPanel = {this.props.xmlObject.SecondPanelObject} /></Col>
-                        <Col  xs={3} md={3}><ThirdPanel thirdPanel = {this.props.xmlObject.ThirdPanel} /></Col>
+                        <Col xs={4} md={4}><SecondPanel secondPanel = {this.props.xmlObject.SecondPanelObject} secondPanelObj = {this.props.NestedCallback.SecondPanelObject} /></Col>
+                        <Col  xs={3} md={3}><ThirdPanel thirdPanel = {this.props.xmlObject.ThirdPanel} thirdPanelObj = {this.props.NestedCallback.ThirdPanel}/></Col>
                         </Panel>
                     </Row>
 

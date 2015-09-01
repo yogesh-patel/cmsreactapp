@@ -27,6 +27,8 @@ class SpecialServicesPanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+
+        this.props.Special.SpecialService(partialState[key]);
         this.setState(partialState);
     }
     selects () {

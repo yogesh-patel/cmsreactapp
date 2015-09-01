@@ -21,6 +21,7 @@ class SecondPanel extends React.Component{
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+        this.props.secondPanelObj.BillingInfo.account(partialState[key]);
         this.setState(partialState);
     }
     selects () {
@@ -35,7 +36,7 @@ class SecondPanel extends React.Component{
                         <table>
                         <tbody>
                             <tr >
-                               <td > <CarrierDeliveryInfoPanel carrierDeliveryInfo = {this.props.secondPanel.CarrierDeliveryInfo}/> </td>
+                               <td > <CarrierDeliveryInfoPanel carrierDeliveryInfo = {this.props.secondPanel.CarrierDeliveryInfo} carrierDeliveryInfo = {this.props.secondPanelObj.CarrierDeliveryInfo}/> </td>
 
                             </tr>
 
@@ -43,13 +44,13 @@ class SecondPanel extends React.Component{
 
                             <tr>
                                <td >
-                                    <BillingInfoPanel billingInfo = {this.props.secondPanel.BillingInfo}/>
+                                    <BillingInfoPanel billingInfo = {this.props.secondPanel.BillingInfo} BillInfo = {this.props.secondPanelObj.BillingInfo} />
                                </td>
                             </tr>
 
 
                             <tr >
-                                <td> <SpecialServicesPanel specialServices = {this.props.secondPanel.SpecialServices} /> </td>
+                                <td> <SpecialServicesPanel specialServices = {this.props.secondPanel.SpecialServices}  Special = {this.props.secondPanelObj.SpecialServices} /> </td>
                             </tr>
 
                             <tr >
@@ -57,6 +58,9 @@ class SecondPanel extends React.Component{
                                     <LTLPanel ltlInfo = {this.props.secondPanel.LTL} />
                                 </td>
                             </tr>
+                        <tr>
+                            <td><input type="text" onChange={this.handleInputChange.bind(this, 'account')}/></td>
+                         </tr>
 
                         </tbody>
                         </table>

@@ -21,6 +21,7 @@ class ThirdPanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+        this.props.thirdPanelObj.PackageParameters.height(partialState[key]);
         this.setState(partialState);
     }
 
@@ -37,13 +38,13 @@ class ThirdPanel extends React.Component {
                         <tbody>
                             <tr >
                                 <td >
-                                    <PackageParametersPanel packageParameters = {this.props.thirdPanel.PackageParameters} />
+                                    <PackageParametersPanel packageParameters = {this.props.thirdPanel.PackageParameters} packageParams = {this.props.thirdPanelObj.PackageParameters} />
                                 </td>
                             </tr>
 
                             <tr >
                                 <td >
-                                    <InstructionsPanel instructions = {this.props.thirdPanel.Instructions} />
+                                    <InstructionsPanel instructions = {this.props.thirdPanel.Instructions} InstructionsInfo = {this.props.thirdPanelObj.Instructions} />
                                 </td>
                             </tr>
 

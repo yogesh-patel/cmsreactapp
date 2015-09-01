@@ -27,6 +27,9 @@ class PackageParametersPanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+
+        this.props.packageParams.PackageCount(partialState[key]);
+
         this.setState(partialState);
     }
 

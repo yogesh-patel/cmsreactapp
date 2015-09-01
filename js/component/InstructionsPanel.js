@@ -27,6 +27,7 @@ class InstructionsPanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
+        this.props.InstructionsInfo.Package(partialState[key]);
         this.setState(partialState);
     }
 
