@@ -23,25 +23,38 @@ class LowerSidePanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
-        this.props.lowerSidePanelObj.RePrint(partialState[key]);
+       // this.props.lowerSidePanelObj.RePrint(partialState[key]);
 
         this.setState(partialState);
     }
 
-    rePrint () {
-        alert('Button reprint clicked');
+    rePrint (key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.lowerSidePanelObj.RePrint(partialState[key]);
     }
-    view () {
-        alert('Button View clicked');
+    view (key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.lowerSidePanelObj.View(partialState[key]);
     }
-    stop () {
-        alert('Button Stop clicked');
+    stop (key, event) {
+
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.lowerSidePanelObj.Stop(partialState[key]);
     }
-    hold () {
-        alert('Button Hold clicked');
+    hold (key, event) {
+
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.lowerSidePanelObj.Hold(partialState[key]);
     }
-    releaseHold () {
-        alert('Button Release Hold clicked');
+    releaseHold (key, event) {
+
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.lowerSidePanelObj.ReleaseHold(partialState[key]);
     }
     render() {
         var RePrint = this.props.lowerSidePanel.RePrint;
@@ -52,11 +65,11 @@ class LowerSidePanel extends React.Component {
 
         return(
            <ButtonGroup vertical>
-                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'RePrint')}  > RePrint</Button>
-                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'View')} > View</Button>
-                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'Stop')} >Stop </Button>
-                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'Hold')} >Hold</Button>
-                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'ReleaseHold')} >Release Hold </Button>
+                <Button bsSize='small' onClick={this.rePrint.bind(this, 'RePrint')}  > RePrint</Button>
+                <Button bsSize='small' onClick={this.view.bind(this,'View')} > View</Button>
+                <Button bsSize='small' onClick={this.stop.bind(this, 'Stop')} >Stop </Button>
+                <Button bsSize='small' onClick={this.hold.bind(this, 'Hold')} >Hold</Button>
+                <Button bsSize='small' onClick={this.releaseHold.bind(this, 'ReleaseHold')} >Release Hold </Button>
 
             </ButtonGroup>
 

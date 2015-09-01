@@ -23,9 +23,21 @@ class PanelInstance extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
-        this.props.ShipInfo.contact(partialState[key]);
+        //this.setState(partialState);
+        //this.props.ShipInfo.contact(partialState[key]);
 
-        this.setState(partialState);
+        var method_prefix = "this.props.ShipInfo.";
+        var method_name = key;
+
+        var new_method = method_prefix + method_name   + "('" + partialState[key] + "');";
+
+        var ret = eval(new_method);
+
+        //new_method(partialState[key]);
+
+        //window[method_prefix + method_name](partialState[key]);
+
+
     }
 
     email () {

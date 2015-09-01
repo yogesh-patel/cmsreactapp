@@ -26,8 +26,13 @@ class BillingInfoPanel extends React.Component {
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
-        this.props.BillInfo.account(partialState[key]);
-        this.setState(partialState);
+
+        var method_prefix = "this.props.BillInfo.";
+        var method_name = key;
+
+        var new_method = method_prefix + method_name   + "('" + partialState[key] + "');";
+
+        var ret = eval(new_method);
     }
 
     cust () {

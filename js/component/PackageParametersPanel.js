@@ -28,9 +28,13 @@ class PackageParametersPanel extends React.Component {
         var partialState = {};
         partialState[key] = event.target.value;
 
-        this.props.packageParams.PackageCount(partialState[key]);
 
-        this.setState(partialState);
+        var method_prefix = "this.props.packageParams.";
+        var method_name = key;
+
+        var new_method = method_prefix + method_name   + "('" + partialState[key] + "');";
+
+        var ret = eval(new_method);
     }
 
     carton () {

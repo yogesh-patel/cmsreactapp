@@ -21,6 +21,8 @@ class PanelInstance extends React.Component {
         super(props);
 
     }
+
+
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
@@ -36,7 +38,7 @@ class PanelInstance extends React.Component {
 
     render() {
 
-       var CustomerCode = this.props.PanelInstance.CustomerCode;
+       var CustomerCode = this.props.PanelInstanceInfo.CustomerCode;
 
         return (
             <Grid >

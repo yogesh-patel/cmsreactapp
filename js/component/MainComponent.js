@@ -15,12 +15,18 @@ var UpperHeader = require('./UpperHeader');
 class MainComponent extends React.Component {
     constructor(props){
         super(props);
+        var self = this;
 
         this.callbacks = {
             FirsPanelObject:{
                 shipToInfo:{
                     company: function(newValue) {
                         alert(newValue);
+                        var partialState = {};
+
+
+                        partialState["company"] = newValue;
+                      //  self.state.xmlObject.FirsPanelObject.shipToInfo.setState(newValue);
                     },
                     PO: function(newValue) {
                         alert(newValue);
@@ -139,7 +145,7 @@ class MainComponent extends React.Component {
                     alert('Button Verify Address clicked');
                 },
                 Details: function (newValue) {
-                    alert('Button Release Hold clicked');
+                    alert('Button Details clicked');
                 },
                 International: function (newValue) {
                     alert('Button International clicked');
@@ -174,7 +180,7 @@ class MainComponent extends React.Component {
 
                 FirsPanelObject:{
                     shipToInfo:{
-                        company: "Wayne Company",
+                        company: "Wayne Nilesh",
                         PO: "",
                         contact: "Mr Wayne",
                         Addr1: "475 Vally Rd",

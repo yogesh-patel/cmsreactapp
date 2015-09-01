@@ -37,7 +37,7 @@ class FirstPanel extends React.Component {
 
                      <Grid>
                      <Row>
-                         <Col xs={4} sm={4}> <PanelInstance PanelInstance= {this.props.firstPanel.PanelInstance} PanelInfo = {this.props.firstPanelObj.PanelInstance}/></Col>
+                         <Col xs={4} sm={4}> <PanelInstance PanelInstanceInfo = {this.props.firstPanel.PanelInstance} PanelInfo = {this.props.firstPanelObj.PanelInstance}/></Col>
                         </Row>
                          <Row>
                              <Col xs={4} sm={4}> <ShipToInfoPanel ShipToInfo= {this.props.firstPanel.shipToInfo} ShipInfo = {this.props.firstPanelObj.shipToInfo} /></Col>
