@@ -124,6 +124,46 @@ class MainComponent extends React.Component {
                     },
 
                 },
+            },
+            UpperSidePanel: {
+                CreateRequest: function (newValue) {
+                    alert('Button Create Request clicked');
+                },
+                RatePackage: function (newValue) {
+                    alert('Button Rate Package clicked');
+                },
+                RequestToHold: function (newValue) {
+                    alert('Button Request To Hold clicked');
+                },
+                VerifyAddress: function (newValue) {
+                    alert('Button Verify Address clicked');
+                },
+                Details: function (newValue) {
+                    alert('Button Release Hold clicked');
+                },
+                International: function (newValue) {
+                    alert('Button International clicked');
+                },
+                ClearAll: function (newValue) {
+                    alert('Button Clear All clicked');
+                }
+            },
+            LowerSidePanel: {
+                RePrint: function (newValue) {
+                    alert('Button reprint clicked');
+                },
+                View: function (newValue) {
+                    alert('Button View clicked');
+                },
+                Stop: function (newValue) {
+                    alert('Button Stop clicked');
+                },
+                Hold: function (newValue) {
+                    alert('Button Hold clicked');
+                },
+                ReleaseHold: function (newValue) {
+                    alert('Button ReleaseHold clicked');
+                }
             }
 
         };
@@ -184,13 +224,26 @@ class MainComponent extends React.Component {
                         deliveredBy: "",
                         units: ""
                     }
+                },
+                UpperSidePanel:{
+                    CreateRequest: "",
+                    RatePackage: "",
+                    RequestToHold: "",
+                    VerifyAddress: "",
+                    Details: "",
+                    International: "",
+                    ClearAll: ""
+                },
+                LowerSidePanel:{
+                    RePrint: "",
+                    View: "",
+                    Stop: "",
+                    Hold: "",
+                    ReleaseHold: ""
                 }
-
             }
 
-
         };
-
 
     }
 

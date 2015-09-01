@@ -20,7 +20,13 @@ class LowerSidePanel extends React.Component {
     constructor() {
         super();
     }
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.lowerSidePanelObj.RePrint(partialState[key]);
 
+        this.setState(partialState);
+    }
 
     rePrint () {
         alert('Button reprint clicked');
@@ -38,13 +44,19 @@ class LowerSidePanel extends React.Component {
         alert('Button Release Hold clicked');
     }
     render() {
+        var RePrint = this.props.lowerSidePanel.RePrint;
+        var View = this.props.lowerSidePanel.View;
+        var Stop = this.props.lowerSidePanel.Stop;
+        var Hold = this.props.lowerSidePanel.Hold;
+        var ReleaseHold = this.props.lowerSidePanel.ReleaseHold;
+
         return(
            <ButtonGroup vertical>
-                 <Button bsSize='small' onClick={this.rePrint}  > RePrint</Button>
-                <Button bsSize='small' onClick={this.view} > View</Button>
-                <Button bsSize='small' onClick={this.stop} >Stop </Button>
-                <Button bsSize='small' onClick={this.hold} >Hold</Button>
-                <Button bsSize='small' onClick={this.releaseHold} >Release Hold </Button>
+                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'RePrint')}  > RePrint</Button>
+                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'View')} > View</Button>
+                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'Stop')} >Stop </Button>
+                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'Hold')} >Hold</Button>
+                <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'ReleaseHold')} >Release Hold </Button>
 
             </ButtonGroup>
 

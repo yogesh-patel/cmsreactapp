@@ -22,39 +22,37 @@ class UpperSidePanel extends React.Component {
         super();
     }
 
+    handleInputChange(key, event) {
+        var partialState = {};
+        partialState[key] = event.target.value;
+        this.props.upperSidePanelObj.CreateRequest(partialState[key]);
 
-    createRequest () {
-        alert('Button Create Request clicked');
+        this.setState(partialState);
     }
-    ratePackage () {
-        alert('Button Rate Package clicked');
-    }
-    requestToHold () {
-        alert('Button Request To Hold clicked');
-    }
-    verifyAddress () {
-        alert('Button Verify Address clicked');
-    }
-    Details () {
-        alert('Button Release Hold clicked');
-    }
+
 
     render() {
+        var CreateRequest = this.props.upperSidePanel.CreateRequest;
+        var RatePackage = this.props.upperSidePanel.RatePackage;
+        var RequestToHold = this.props.upperSidePanel.RequestToHold;
+        var VerifyAddress = this.props.upperSidePanel.VerifyAddress;
+        var Details = this.props.upperSidePanel.Details;
+        var International = this.props.upperSidePanel.International;
+        var ClearAll = this.props.upperSidePanel.ClearAll;
 
         return (
 
             <div>
-                <ButtonGroup vertical>
-                     <Button bsSize='small' onClick={this.createRequest}  > Create Request</Button>
-                     <Button bsSize='small' onClick={this.ratePackage} > Rate Package</Button>
-                     <Button bsSize='small' onClick={this.requestToHold} >Request To Hold </Button>
-                     <Button bsSize='small' onClick={this.verifyAddress}>Verify Address</Button>
-                     <Button bsSize='small' onClick={this.Details} >Details </Button>
-                     <Button bsSize='small' onClick={this.releaseHold} >International</Button>
-                     <Button bsSize='small' onClick={this.releaseHold} >Clear All</Button>
+                <ButtonGroup vertical >
+                     <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'CreateRequest')} > Create Request</Button>
+                     <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'RatePackage')} > Rate Package</Button>
+                     <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'RequestToHold')} >Request To Hold </Button>
+                     <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'VerifyAddress')}>Verify Address</Button>
+                     <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'Details')} >Details </Button>
+                     <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'International')} >International</Button>
+                     <Button bsSize='small' onClick={this.handleInputChange.bind(this, 'ClearAll')} >Clear All</Button>
 
                 </ButtonGroup>
-
 
             </div>
 
