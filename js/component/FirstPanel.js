@@ -42,9 +42,7 @@ class FirstPanel extends React.Component {
                          <Row>
                              <Col xs={4} sm={4}> <ShipToInfoPanel ShipToInfo= {this.props.firstPanel.shipToInfo} ShipInfo = {this.props.firstPanelObj.shipToInfo} /></Col>
                          </Row>
-                         <Row>
-                             <Col sm={12}><input type="text" onChange={this.handleInputChange.bind(this, 'company')}/></Col>
-                             </Row>
+
                      </Grid>
 
                    </div>

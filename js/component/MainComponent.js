@@ -72,6 +72,9 @@ class MainComponent extends React.Component {
                 BillingInfo: {
                     account : function (newValue){
                         alert(newValue);
+                    },
+                    billDuty: function (newValue) {
+                        alert(newValue);
                     }
                 },
                 SpecialServices:  {
@@ -112,7 +115,13 @@ class MainComponent extends React.Component {
                     },
                     height: function (newValue) {
                         alert(newValue);
-                    }
+                    },
+                    deliveredBy: function (newValue) {
+                        alert(newValue);
+                    },
+                    units: function (newValue) {
+                        alert(newValue);
+                    },
 
                 },
             }
@@ -148,7 +157,8 @@ class MainComponent extends React.Component {
                         delivery: ""
                     },
                     BillingInfo:{
-                        account: "234234"
+                        account: "234234",
+                        billDuty: ""
                     },
                     SpecialServices:{
                         SpecialService: ""
@@ -170,7 +180,9 @@ class MainComponent extends React.Component {
                         Weight: "",
                         length: "",
                         width: "",
-                        height: ""
+                        height: "",
+                        deliveredBy: "",
+                        units: ""
                     }
                 }
 

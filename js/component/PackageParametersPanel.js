@@ -45,6 +45,8 @@ class PackageParametersPanel extends React.Component {
         var length = this.props.packageParameters.length;
         var width = this.props.packageParameters.width;
         var height = this.props.packageParameters.height;
+        var deliveredBy = this.props.packageParameters.deliveredBy;
+        var units = this.props.packageParameters.units;
 
         return (
            <Grid>
@@ -75,9 +77,9 @@ class PackageParametersPanel extends React.Component {
                                 <tr>
                                     <td><input type="text" value={Weight} onChange={this.handleInputChange.bind(this, 'Weight') }/></td>
                                     <td>
-                                        <select id="DeliveredBy" name="DeliveredBy" style={{"margin-left":"10px"}}>
+                                        <select id="DeliveredBy" name="DeliveredBy" style={{"margin-left":"10px"}} onChange={this.handleInputChange.bind(this, 'deliveredBy') }>
                                             <option value="in.">in.</option>
-                                            <option value="in">Cm</option>
+                                            <option value="Cm">Cm</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -108,9 +110,9 @@ class PackageParametersPanel extends React.Component {
                                     <td class="td-width">
                                         <div>
                                             <input type="text"  style={{"width":"70px"}}  value={height} onChange={this.handleInputChange.bind(this, 'height') }/>
-                                            <select id="DeliveredBy" name="DeliveredBy" style={{"margin-left":"10px"}} >
+                                            <select id="units" name="units" style={{"margin-left":"10px"}} onChange={this.handleInputChange.bind(this, 'units') } >
                                                 <option value="in.">in.</option>
-                                                <option value="in">Cm</option>
+                                                <option value="Cm">Cm</option>
                                             </select>
                                         </div>
                                     </td>

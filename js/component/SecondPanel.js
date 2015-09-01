@@ -55,12 +55,10 @@ class SecondPanel extends React.Component{
 
                             <tr >
                                 <td>
-                                    <LTLPanel ltlInfo = {this.props.secondPanel.LTL} />
+                                    <LTLPanel ltlInfo = {this.props.secondPanel.LTL} ltl = {this.props.secondPanelObj.LTL} />
                                 </td>
                             </tr>
-                        <tr>
-                            <td><input type="text" onChange={this.handleInputChange.bind(this, 'account')}/></td>
-                         </tr>
+
 
                         </tbody>
                         </table>

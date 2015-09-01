@@ -37,6 +37,7 @@ class BillingInfoPanel extends React.Component {
     render() {
 
         var account = this.props.billingInfo.account;
+        var billDuty = this.props.billingInfo.billDuty;
 
         return (
             <Grid>
@@ -48,9 +49,9 @@ class BillingInfoPanel extends React.Component {
                                     <tr>
                                         <td><label>Freight Payment</label></td>
                                         <td>
-                                            <select id="freightPayment" name="FreightPayment" >
+                                            <select id="freightPayment" name="FreightPayment" onChange={this.handleInputChange.bind(this, 'account') } >
                                                 <option value="in.">in.</option>
-                                                <option value="in">Cm</option>
+                                                <option value="Cm">Cm</option>
                                             </select>
 
                                         </td>
@@ -58,9 +59,9 @@ class BillingInfoPanel extends React.Component {
                                     <tr>
                                         <td><label>Billing Duty and Tax To</label></td>
                                         <td>
-                                            <select id="BillingDuty" name="BillingDuty" >
-                                                <option value="in.">Recipient</option>
-                                                <option value="in">Recipient</option>
+                                            <select id="BillingDuty" name="BillingDuty" onChange={this.handleInputChange.bind(this, 'billDuty') }>
+                                                <option value="Recipient.">Recipient</option>
+                                                <option value="Recipient">Recipient</option>
                                             </select>
                                         </td>
                                     </tr>

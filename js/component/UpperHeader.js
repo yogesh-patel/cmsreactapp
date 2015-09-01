@@ -65,9 +65,7 @@ class UpperHeader extends React.Component {
                             <Col  xs={10} md={10}><LowerRightPanel /></Col>
                         </Panel>
                     </Row>
-                    <Row>
-                        <Col sm={12}> <input type="text" value={this.props.value} onChange={this.handleInputChange.bind(this, 'company')} /></Col>
-                     </Row>
+
 
                 </Grid>
 
