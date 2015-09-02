@@ -52,8 +52,8 @@ class PanelInstance extends React.Component {
         var Addr2 = this.props.ShipToInfo.Addr2;
         var Addr3 = this.props.ShipToInfo.Addr3;
         var city = this.props.ShipToInfo.city;
-        var state = this.props.ShipToInfo.State;
-        var zip = this.props.ShipToInfo.Zip;
+        var State = this.props.ShipToInfo.State;
+        var Zip = this.props.ShipToInfo.Zip;
         var phone = this.props.ShipToInfo.phone;
 
         return (
@@ -93,15 +93,15 @@ class PanelInstance extends React.Component {
                                     <Col xs={1} sm={1}><label>City-State-Zip</label> </Col>
                                     <Col xs={3} sm={3}>
                                         <input type="text" bsSize="small" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } />
-                                        <input type="text" bsSize="small" id="txtState" value={state} onChange={this.handleInputChange.bind(this, 'state') } />
-                                        <input type="text" bsSize="small" id="txtZip" value={zip} onChange={this.handleInputChange.bind(this, 'zip') } />
+                                        <input type="text" bsSize="small" id="txtState" value={State} onChange={this.handleInputChange.bind(this, 'State') } />
+                                        <input type="text" bsSize="small" id="txtZip" value={Zip} onChange={this.handleInputChange.bind(this, 'Zip') } />
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Country</label></Col>
-                                    <Col xs={3} sm={3}><select id="country" name="Country" >
-                                                        <option value="in.">India</option>
-                                                        <option value="in">United States</option>
+                                    <Col xs={3} sm={3}><select id="country" name="Country" onChange={this.handleInputChange.bind(this, 'Zip') }>
+                                                        <option value="India">India</option>
+                                                        <option value="United States">United States</option>
                                                     </select>
                                     </Col>
                                 </Row>
