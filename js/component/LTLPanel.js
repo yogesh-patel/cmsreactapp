@@ -45,14 +45,14 @@ class LTLPanel extends React.Component {
 
                             <Grid>
                                 <Row>
-                                    <Col xs={2} sm={2}>
+                                    <Col xs={1} sm={1}>
                                         <label>Freight Class</label>
                                     </Col>
                                     <Col xs={2} sm={2}>
-                                        <select id="freightClass" name="FreightClass" onChange={this.handleInputChange.bind(this, 'freightClass')} >
+                                        <Input type="select" id="freightClass" name="FreightClass" onChange={this.handleInputChange.bind(this, 'freightClass')} >
                                             <option value="in.">in.</option>
                                             <option value="Cm">Cm</option>
-                                        </select>
+                                        </Input>
                                     </Col>
 
                                 </Row>

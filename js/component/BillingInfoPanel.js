@@ -15,6 +15,8 @@ var Input = ReactBoot.Input;
 var Grid = ReactBoot.Grid;
 var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
+var Label = ReactBoot.Label;
+
 
 class BillingInfoPanel extends React.Component {
 
@@ -54,25 +56,25 @@ class BillingInfoPanel extends React.Component {
                                     <tr>
                                         <td><label>Freight Payment</label></td>
                                         <td>
-                                            <select id="freightPayment" name="FreightPayment" onChange={this.handleInputChange.bind(this, 'account') } >
+                                            <Input type="select" id="freightPayment" name="FreightPayment" onChange={this.handleInputChange.bind(this, 'account') } >
                                                 <option value="in.">in.</option>
                                                 <option value="Cm">Cm</option>
-                                            </select>
+                                            </Input>
 
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><label>Billing Duty and Tax To</label></td>
                                         <td>
-                                            <select id="BillingDuty" name="BillingDuty" onChange={this.handleInputChange.bind(this, 'billDuty') }>
+                                            <Input type="select" id="BillingDuty" name="BillingDuty" onChange={this.handleInputChange.bind(this, 'billDuty') }>
                                                 <option value="Recipient.">Recipient</option>
                                                 <option value="Recipient">Recipient</option>
-                                            </select>
+                                            </Input>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><label>Account</label></td>
-                                        <td><input type="text"  value={account} onChange={this.handleInputChange.bind(this, 'account') }/></td>
+                                        <td><Input type="text"  value={account} onChange={this.handleInputChange.bind(this, 'account') }/></td>
                                     </tr>
                                     <tr>
                                         <td colSpan="3">

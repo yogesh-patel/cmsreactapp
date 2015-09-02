@@ -16,6 +16,7 @@ var Input = ReactBoot.Input;
 var Grid = ReactBoot.Grid;
 var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
+var Label = ReactBoot.Label;
 
 class PackageParametersPanel extends React.Component {
 
@@ -55,78 +56,66 @@ class PackageParametersPanel extends React.Component {
         return (
            <Grid>
                <Row>
-                   <Col xs={4} sm={4}>
+                   <Col sm={4}>
                         <Panel collapsible defaultExpanded header='Package Parameters' bsStyle='info'>
 
-                            <table>
-                                <tr>
-                                    <td colSpan="2"><label style={{"font-weight":"bold"}}>Box Information</label></td>
-                                </tr>
-                                <tr style={{"background-color":"silver"}}>
-                                    <td>Package Count</td>
-                                    <td>Package#</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" value={PackageCount} onChange={this.handleInputChange.bind(this, 'PackageCount') }/></td>
-                                    <td><input type="text"  value={Package} onChange={this.handleInputChange.bind(this, 'Package') }/> <br /></td>
+                            <Grid>
+                                <Row>
+                                    <Col sm={4}><label style={{"font-weight":"bold"}}>Box Information</label>
+                                    </Col>
 
-                                </tr>
-                                <tr>
-                                    <td colSpan="2"  style={{"font-weight":"bold"}}>Weight</td>
-                                </tr>
-                                <tr>
-                                    <td><label>Weight</label></td>
-                                    <td><label>Units</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" value={Weight} onChange={this.handleInputChange.bind(this, 'Weight') }/></td>
-                                    <td>
-                                        <select id="DeliveredBy" name="DeliveredBy" style={{"margin-left":"10px"}} onChange={this.handleInputChange.bind(this, 'deliveredBy') }>
-                                            <option value="in.">in.</option>
-                                            <option value="Cm">Cm</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colSpan="2"><label style={{"font-weight":"bold"}}>Dimentions</label></td>
-                                </tr>
-                                <tr>
-                                    <td colSpan="2"><Button bsStyle='info' bSize="xsmall" onClick={this.carton}  style={{"float":"right"}}> Carton</Button> </td>
-                                </tr>
-                                <tr>
-                                    <td style={{"background-color":"silver"}}>
-                                        <div>
-                                            <label style={{"width":"70px"}}>Length  </label><label style={{"width":"70px","margin-left":"20px"}}>   Width</label>
-                                        </div>
-                                    </td>
+                                </Row>
+                                <Row>
+                                     <Col sm={2}><Label>Package Count</Label></Col>
+                                    <Col sm={2}><Label>Package#</Label></Col>
+                                </Row>
+                                <Row>
+                                    <Col sm={2}><Input type="text" bsSize="small" value={PackageCount} onChange={this.handleInputChange.bind(this, 'PackageCount') }/></Col>
+                                    <Col sm={2}><Input type="text" bsSize="small" value={Package} onChange={this.handleInputChange.bind(this, 'Package') }/></Col>
+                                </Row>
+                                <Row>
+                                    <Col sm={4}><label style={{"font-weight":"bold"}}>Weight</label></Col>
+                                </Row>
+                                <Row>
+                                    <Col sm={2}><Label>Weight</Label></Col>
+                                    <Col sm={2}><Label>Units</Label></Col>
+                                 </Row>
+                                <Row>
+                                    <Col sm={2}><Input type="text" value={Weight} onChange={this.handleInputChange.bind(this, 'Weight') }/></Col>
+                                    <Col sm={2}> <select id="DeliveredBy" name="DeliveredBy" style={{"margin-left":"10px"}} onChange={this.handleInputChange.bind(this, 'deliveredBy') }>
+                                                    <option value="in.">in.</option>
+                                                    <option value="Cm">Cm</option>
+                                                </select>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col sm={4}><Label style={{"font-weight":"bold"}}>Dimentions</Label></Col>
+                                 </Row>
+                                <Row>
+                                    <Col sm={4}><Button bsStyle='info' bSize="xsmall" onClick={this.carton}  style={{"float":"right"}}> Carton</Button></Col>
+                                 </Row>
 
-                                    <td style={{"background-color":"silver"}}>
-                                        <div>
-                                            <label style={{"width":"70px"}}>Height  </label><label style={{"width":"70px" ,"margin-left":"10px"}}>   Units</label>
-                                        </div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td><div><input type="text" style={{"width":"70px"}}  value={length} onChange={this.handleInputChange.bind(this, 'length') } />
-                                        <input type="text" style={{"width":"70px","margin-left":"10px"}}  value={width} onChange={this.handleInputChange.bind(this, 'width') } /></div></td>
-
-                                    <td class="td-width">
-                                        <div>
-                                            <input type="text"  style={{"width":"70px"}}  value={height} onChange={this.handleInputChange.bind(this, 'height') }/>
-                                            <select id="units" name="units" style={{"margin-left":"10px"}} onChange={this.handleInputChange.bind(this, 'units') } >
+                                <Row>
+                                    <Col sm={1}><Label >Length</Label></Col>
+                                    <Col sm={1}><Label >Width</Label></Col>
+                                    <Col sm={1}><Label>Height</Label></Col>
+                                    <Col sm={1}><Label >Units</Label></Col>
+                                </Row>
+                                <Row>
+                                    <Col sm={1}><Input type="text" bsSize="small" value={length} onChange={this.handleInputChange.bind(this, 'length') } /></Col>
+                                    <Col sm={1}><Input type="text" bsSize="small" value={width} onChange={this.handleInputChange.bind(this, 'width') } /></Col>
+                                    <Col sm={1}><Input type="text" bsSize="small" value={height} onChange={this.handleInputChange.bind(this, 'height') }/></Col>
+                                    <Col sm={1}><select id="units" bsSize="small" name="units" onChange={this.handleInputChange.bind(this, 'units') } >
                                                 <option value="in.">in.</option>
                                                 <option value="Cm">Cm</option>
                                             </select>
-                                        </div>
-                                    </td>
+                                    </Col>
+                                </Row>
+                             </Grid>
 
-                                </tr>
-
-                            </table>
                         </Panel>
                    </Col>
-            </Row>
+                 </Row>
             </Grid>
         );
 

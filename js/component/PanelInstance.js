@@ -14,6 +14,7 @@ var Button = ReactBoot.Button;
 var Grid = ReactBoot.Grid;
 var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
+var Input = ReactBoot.Input;
 
 class PanelInstance extends React.Component {
 
@@ -65,7 +66,7 @@ class PanelInstance extends React.Component {
 
                                     <td> <label style={{"marginLeft":"5px"}}>Customer Code</label></td>
                                      <td>
-                                         <input type="text" id="Text1" style={{"width":"80px", "marginLeft":"5px"}} bsSize="small" value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
+                                         <Input type="text" id="Text1" style={{"width":"80px", "marginLeft":"5px"}} bsSize="small" value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
                                     </td>
 
                                 </tr>

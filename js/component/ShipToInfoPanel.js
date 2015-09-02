@@ -12,6 +12,7 @@ var Grid = ReactBoot.Grid;
 var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
 var Input = ReactBoot.Input;
+var Label = ReactBoot.Label;
 
 class PanelInstance extends React.Component {
 
@@ -65,56 +66,56 @@ class PanelInstance extends React.Component {
                             <Grid>
                                 <Row>
                                     <Col xs={1} sm={1}><label>PO#</label> </Col>
-                                    <Col xs={3} sm={3}> <input type="text" value={PO} onChange={this.handleInputChange.bind(this, 'PO') }  /></Col>
+                                    <Col xs={2} sm={2}> <Input type="text" bsSize="small" value={PO} onChange={this.handleInputChange.bind(this, 'PO') }  /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Company</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" bsStyle='error' value={company} onChange={this.handleInputChange.bind(this, 'company')}  /></Col>
+                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={company} onChange={this.handleInputChange.bind(this, 'company')}  /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Contact</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" value={contact} onChange={this.handleInputChange.bind(this, 'contact') }/></Col>
+                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={contact} onChange={this.handleInputChange.bind(this, 'contact') }/></Col>
                                 </Row>
 
                                 <Row>
                                     <Col xs={1} sm={1}><label>Address</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/></Col>
+                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Line2</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></Col>
+                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></Col>
                                 </Row>
 
                                 <Row>
                                     <Col xs={1} sm={1}><label>Line3</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></Col>
+                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>City-State-Zip</label> </Col>
-                                    <Col xs={3} sm={3}>
-                                        <input type="text" bsSize="small" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } />
-                                        <input type="text" bsSize="small" id="txtState" value={State} onChange={this.handleInputChange.bind(this, 'State') } />
-                                        <input type="text" bsSize="small" id="txtZip" value={Zip} onChange={this.handleInputChange.bind(this, 'Zip') } />
+                                    <Col xs={2} sm={2}>
+                                        <Input type="text" bsSize="small" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } />
+                                        <Input type="text" bsSize="small" id="txtState" value={State} onChange={this.handleInputChange.bind(this, 'State') } />
+                                        <Input type="text" bsSize="small" id="txtZip" value={Zip} onChange={this.handleInputChange.bind(this, 'Zip') } />
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Country</label></Col>
-                                    <Col xs={3} sm={3}><select id="country" name="Country" onChange={this.handleInputChange.bind(this, 'Zip') }>
+                                    <Col xs={2} sm={2}><Input type= 'select' bsSize="small" id="country" name="Country" onChange={this.handleInputChange.bind(this, 'department') }>
                                                         <option value="India">India</option>
                                                         <option value="United States">United States</option>
-                                                    </select>
+                                                    </Input>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Phone</label> </Col>
-                                    <Col xs={3} sm={3}><input type="text" value={phone} onChange={this.handleInputChange.bind(this, 'phone') } /></Col>
+                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={phone} onChange={this.handleInputChange.bind(this, 'phone') } /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Department</label> </Col>
-                                    <Col xs={3} sm={3}> <select id="department" name="department" onChange={this.handleInputChange.bind(this, 'department') } >
+                                    <Col xs={2} sm={2}> <Input type= 'select' bsSize="small" id="department" name="department" onChange={this.handleInputChange.bind(this, 'department') } >
                                                         <option value="in.">in.</option>
                                                         <option value="in">Cm</option>
-                                                    </select>
+                                                    </Input>
                                     </Col>
                                 </Row>
                                 <Row>
