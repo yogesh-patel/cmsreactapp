@@ -7,6 +7,7 @@
     "babel-runtime": "^5.8.20",
     "bootstrap": "^3.3.5",
     "classnames": "^2.1.3",
+    "envify": "^3.4.0",
     "flux": "^2.0.0",
     "material-ui": "^0.10.4",
     "react": "^0.13.0",
@@ -14,8 +15,9 @@
     "react-flexgrid": "^0.7.0",
     "react-router": "^0.13.3",
     "react-tap-event-plugin": "^0.1.7",
+    "reactify": "^1.1.1",
     "underscore": "^1.7.0",
-    "watchify": "^3.3.1"
+    "watchify": "^3.4.0"
   },
   "devDependencies": {
     "browserify": "~6.2.0",
