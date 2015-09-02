@@ -8,7 +8,6 @@ var ReactBoot = require('react-bootstrap');
 var Navbar = ReactBoot.Navbar;
 var Nav = ReactBoot.Nav;
 var NavItem = ReactBoot.NavItem;
-<<<<<<< HEAD
 var Panel = ReactBoot.Panel;
 var UpperHeader = require('./UpperHeader');
 
@@ -94,8 +93,8 @@ class MainComponent extends React.Component {
             FirsPanelObject:{
                 shipToInfo:{
                     company: function(newValue) {
-                      var comp =  self.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
-                      //  this.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
+                        var comp =  self.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
+                        //  this.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
                         self.setState({xmlObject : self.myXMLOBj});
                         alert(newValue);
 
@@ -322,22 +321,6 @@ class MainComponent extends React.Component {
                 </Navbar>
                 <UpperHeader xmlObject={this.state.xmlObject} value={this.state.value} updateValue={this.updateValue} NestedCallback = {this.callbacks}/>
             </Panel>
-=======
-
-
-class MainComponent extends React.Component {
-    render() {
-        return (
-            <Navbar brand='React-Bootstrap' inverse toggleNavKey={0}>
-                <Nav right eventKey={0}> {/* This is the eventKey referenced */}
-                    <NavItem eventKey={1} href='#'>Ship</NavItem>
-                    <NavItem eventKey={2} href='#'>Manage</NavItem>
-                    <NavItem eventKey={2} href='#'>View</NavItem>
-                    <NavItem eventKey={2} href='#'>Help</NavItem>
-
-                </Nav>
-            </Navbar>
->>>>>>> c81e7a5be170092cfacdb29697312624575cfda5
         );
     }
 }
