@@ -23,7 +23,6 @@ class PanelInstance extends React.Component {
 
     }
 
-
     handleInputChange(key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
@@ -50,7 +49,6 @@ class PanelInstance extends React.Component {
                 <Row>
                     <Col xs={4} sm={4}>
                         <Panel collapsible defaultExpanded header='Customer' bsStyle='info'>
-
 
                            <table>
                                 <tr>

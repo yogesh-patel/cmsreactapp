@@ -56,7 +56,7 @@ class InstructionsPanel extends React.Component {
                                     <Col xs={2} sm={2} >
                                         <label>Shipment</label>
                                     </Col>
-                                    <Col xs={1} md={1}>
+                                    <Col xs={1} sm={1}>
                                         <Button bSize="xsmall" bsStyle='info' onClick={this.instructions} >Instructions</Button>
                                     </Col>
 

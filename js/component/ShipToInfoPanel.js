@@ -91,12 +91,20 @@ class PanelInstance extends React.Component {
                                     <Col xs={2} sm={2}><Input type="text" bsSize="small" value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></Col>
                                 </Row>
                                 <Row>
-                                    <Col xs={1} sm={1}><label>City-State-Zip</label> </Col>
+                                    <Col xs={1} sm={1}><label>City</label> </Col>
                                     <Col xs={2} sm={2}>
                                         <Input type="text" bsSize="small" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } />
-                                        <Input type="text" bsSize="small" id="txtState" value={State} onChange={this.handleInputChange.bind(this, 'State') } />
-                                        <Input type="text" bsSize="small" id="txtZip" value={Zip} onChange={this.handleInputChange.bind(this, 'Zip') } />
+
                                     </Col>
+
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>State</label> </Col>
+                                    <Col xs={2} sm={2}> <Input type="text" bsSize="small" id="txtState" value={State} onChange={this.handleInputChange.bind(this, 'State') } /></Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><label>Zip</label> </Col>
+                                    <Col xs={2} sm={2}>  <Input type="text" bsSize="small" id="txtZip" value={Zip} onChange={this.handleInputChange.bind(this, 'Zip') } /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Country</label></Col>

@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8fe94c7-8aed-4904-acbb-256a1110c095" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/BillingInfoPanel.js" afterPath="$PROJECT_DIR$/js/component/BillingInfoPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/CarrierDeliveryInfoPanel.js" afterPath="$PROJECT_DIR$/js/component/CarrierDeliveryInfoPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/LTLPanel.js" afterPath="$PROJECT_DIR$/js/component/LTLPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/InstructionsPanel.js" afterPath="$PROJECT_DIR$/js/component/InstructionsPanel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/PackageParametersPanel.js" afterPath="$PROJECT_DIR$/js/component/PackageParametersPanel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/PanelInstance.js" afterPath="$PROJECT_DIR$/js/component/PanelInstance.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" afterPath="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/component/UpperHeader.js" afterPath="$PROJECT_DIR$/js/component/UpperHeader.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bundle.js" afterPath="$PROJECT_DIR$/js/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cmsreactapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/js/component/ShipToInfoPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="53" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
+              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -55,16 +53,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
-              <folding />
+              <folding>
+                <marker date="1441200888612" expanded="true" signature="905:1944" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="928:1924" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="954:1901" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="998:1874" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="1091:1841" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="1130:1805" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="1172:1303" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="1340:1765" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200888612" expanded="true" signature="1400:1722" placeholder="&lt;xml/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PanelInstance.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PanelInstance.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/component/PanelInstance.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27062228">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -75,7 +83,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1441195080818" expanded="true" signature="12324:12990" placeholder="&lt;xml/&gt;" />
+                <marker date="1441195080818" expanded="true" signature="12348:12815" placeholder="&lt;xml/&gt;" />
+                <marker date="1441195080818" expanded="true" signature="12415:12789" placeholder="&lt;xml/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,16 +97,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <marker date="1441198447942" expanded="true" signature="1246:2413" placeholder="&lt;xml/&gt;" />
+                <marker date="1441198447942" expanded="true" signature="1274:2042" placeholder="&lt;xml/&gt;" />
+                <marker date="1441198447942" expanded="true" signature="2064:2388" placeholder="&lt;xml/&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PackageParametersPanel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5550725">
+              <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackageParametersPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
+      <file leaf-file-name="InstructionsPanel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/component/InstructionsPanel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,26 +131,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpecialServicesPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/component/SpecialServicesPanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding>
-                <marker date="1441189788147" expanded="true" signature="1057:2169" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1080:2149" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1106:2128" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1150:2101" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1256:2066" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1295:1682" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1431:1643" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1716:2030" placeholder="&lt;xml/&gt;" />
-                <marker date="1441189788147" expanded="true" signature="1758:1991" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1126:3372" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1149:3352" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1175:3329" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1223:3301" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1336:3264" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1380:1977" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1505:1935" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="1554:1888" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="2014:2639" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="2147:2597" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="2196:2551" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="2676:2938" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="2975:3222" placeholder="&lt;xml/&gt;" />
+                <marker date="1441200663499" expanded="true" signature="3020:3179" placeholder="&lt;xml/&gt;" />
               </folding>
             </state>
           </provider>
@@ -177,16 +198,16 @@
         <option value="$PROJECT_DIR$/js/component/FirstPanel.js" />
         <option value="$PROJECT_DIR$/js/component/LowerSidePanel.js" />
         <option value="$PROJECT_DIR$/js/component/UpperSidePanel.js" />
-        <option value="$PROJECT_DIR$/js/component/InstructionsPanel.js" />
         <option value="$PROJECT_DIR$/js/component/SpecialServicesPanel.js" />
         <option value="$PROJECT_DIR$/js/component/MainComponent.js" />
         <option value="$PROJECT_DIR$/js/component/UpperHeader.js" />
-        <option value="$PROJECT_DIR$/js/component/PackageParametersPanel.js" />
-        <option value="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" />
         <option value="$PROJECT_DIR$/js/component/BillingInfoPanel.js" />
         <option value="$PROJECT_DIR$/js/component/LTLPanel.js" />
         <option value="$PROJECT_DIR$/js/component/CarrierDeliveryInfoPanel.js" />
         <option value="$PROJECT_DIR$/js/component/PanelInstance.js" />
+        <option value="$PROJECT_DIR$/js/component/ShipToInfoPanel.js" />
+        <option value="$PROJECT_DIR$/js/component/InstructionsPanel.js" />
+        <option value="$PROJECT_DIR$/js/component/PackageParametersPanel.js" />
       </list>
     </option>
   </component>
@@ -278,12 +299,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Changed Files" />
         <subPane subId="Project Files" />
         <subPane subId="Default" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,7 +444,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
-          <folding />
+          <folding>
+            <marker date="1441198447942" expanded="true" signature="1246:2413" placeholder="&lt;xml/&gt;" />
+            <marker date="1441198447942" expanded="true" signature="1274:2042" placeholder="&lt;xml/&gt;" />
+            <marker date="1441198447942" expanded="true" signature="2064:2388" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -431,7 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -446,12 +470,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
-          <folding>
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -487,7 +506,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1441195080818" expanded="true" signature="12324:12990" placeholder="&lt;xml/&gt;" />
+            <marker date="1441195080818" expanded="true" signature="12348:12815" placeholder="&lt;xml/&gt;" />
+            <marker date="1441195080818" expanded="true" signature="12415:12789" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -495,7 +518,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
-          <folding />
+          <folding>
+            <marker date="1441198447942" expanded="true" signature="1246:2413" placeholder="&lt;xml/&gt;" />
+            <marker date="1441198447942" expanded="true" signature="1274:2042" placeholder="&lt;xml/&gt;" />
+            <marker date="1441198447942" expanded="true" signature="2064:2388" placeholder="&lt;xml/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -503,7 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -526,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -556,7 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="40" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,13 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/InstructionsPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/component/ShoppingRequestHistoryPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8869565">
@@ -724,12 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788142" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -738,15 +747,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
-            <marker date="1441189788147" expanded="true" signature="1057:2169" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1080:2149" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1106:2128" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1150:2101" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1256:2066" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1295:1682" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1431:1643" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1716:2030" placeholder="&lt;xml/&gt;" />
-            <marker date="1441189788147" expanded="true" signature="1758:1991" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
+            <marker date="1441189788147" expanded="true" signature="-1:-1" placeholder="&lt;xml/&gt;" />
           </folding>
         </state>
       </provider>
@@ -755,6 +764,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding>
+            <marker date="1441195080818" expanded="true" signature="12324:12990" placeholder="&lt;xml/&gt;" />
+            <marker date="1441195080818" expanded="true" signature="12348:12815" placeholder="&lt;xml/&gt;" />
+            <marker date="1441195080818" expanded="true" signature="12415:12789" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/UpperHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <marker date="1441198447942" expanded="true" signature="1246:2413" placeholder="&lt;xml/&gt;" />
+            <marker date="1441198447942" expanded="true" signature="1274:2042" placeholder="&lt;xml/&gt;" />
+            <marker date="1441198447942" expanded="true" signature="2064:2388" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/BillingInfoPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <marker date="1441200663499" expanded="true" signature="1126:3372" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="1149:3352" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="1175:3329" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="1223:3301" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="1336:3264" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="1380:1977" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="1505:1935" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="1554:1888" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="2014:2639" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="2147:2597" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="2196:2551" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="2676:2938" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="2975:3222" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200663499" expanded="true" signature="3020:3179" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/LTLPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+          <folding>
+            <marker date="1441200888612" expanded="true" signature="905:1944" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="928:1924" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="954:1901" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="998:1874" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="1091:1841" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="1130:1805" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="1172:1303" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="1340:1765" placeholder="&lt;xml/&gt;" />
+            <marker date="1441200888612" expanded="true" signature="1400:1722" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/PanelInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -767,46 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/UpperHeader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/ShipToInfoPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="53" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/BillingInfoPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/LTLPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/component/CarrierDeliveryInfoPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -815,10 +849,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/component/PanelInstance.js">
+    <entry file="file://$PROJECT_DIR$/js/component/ShipToInfoPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27062228">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/InstructionsPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/PackageParametersPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5550725">
+          <caret line="84" column="28" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
           <folding />
         </state>
       </provider>
