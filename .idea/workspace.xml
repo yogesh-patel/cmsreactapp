@@ -44,11 +44,11 @@
       <file leaf-file-name="MainComponent.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Component/MainComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1333333">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.34492755">
+              <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
-                <element signature="e#3954#13676#0" expanded="false" />
+                <element signature="e#3952#13674#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -391,7 +391,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#3954#13676#0" expanded="false" />
+            <element signature="e#3952#13674#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -402,7 +402,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#3954#13676#0" expanded="false" />
+            <element signature="e#3952#13674#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -553,7 +553,7 @@
           <caret line="325" column="10" selection-start-line="325" selection-start-column="10" selection-end-line="325" selection-end-column="10" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#3954#13676#0" expanded="false" />
+            <element signature="e#3952#13674#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -806,11 +806,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Component/MainComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1333333">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.34492755">
+          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#3954#13676#0" expanded="false" />
+            <element signature="e#3952#13674#0" expanded="false" />
           </folding>
         </state>
       </provider>

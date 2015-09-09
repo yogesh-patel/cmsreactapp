@@ -44,6 +44,7 @@ importFile()*/
 var efs = require('fs'),
     xml2js = require('xml2js');
 
+/*
 var parser = new xml2js.Parser();
 parser.addListener('end', function(result) {
     console.dir(result);
@@ -53,12 +54,13 @@ parser.addListener('end', function(result) {
 efs.readFile(__dirname + '/ShipSchema.xml', function(err, data) {
     parser.parseString(data);
 });
+*/
 
 class MainComponent extends React.Component{
     constructor(props){
         super(props);
         var self = this;
-        
+
 
     //    var parser = new xml2js.Parser();
       //  var src = fs.readFileSync('../ApiData' + '/ShipSchema.xml');
