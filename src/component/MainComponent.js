@@ -1,46 +1,32 @@
 /**
- * Created by vedangm on 09/07/2015.
+ * Created by vedangm on 09/08/2015.
  */
 
-'use strict';
+
 
 var React = require('react');
 var ReactBoot = require('react-bootstrap');
 //var xml2js = require('xml2js');
 //var fs = require('fs');
+
 var Navbar = ReactBoot.Navbar;
 var Nav = ReactBoot.Nav;
 var NavItem = ReactBoot.NavItem;
 var Panel = ReactBoot.Panel;
 var UpperHeader = require('./UpperHeader');
-var ShipMent = require('../ApiData/ShipSchema');
-
-var parseString = require('xml2js').parseString;
-var xml = "<root><name>Vedang</name></root>"
 
 
-
+/*var parseString = require('xml2js').parseString;
+var xml = "<root><name>Vedang</name></root>";
 
 var fs = require('fs'),
-    xml2js = require('xml2js');
+    xml2js = require('xml2js');*/
 
-var parser = new xml2js.Parser();
-fs.readFile(__dirname + '/foo.xml', function(err, data) {
-    parser.parseString(data, function (err, result) {
-        console.dir(result);
-        console.log('Done');
-    });
-});
 
-class MainComponent extends React.Component {
+class MainComponent extends React.Component{
     constructor(props){
         super(props);
         var self = this;
-
-        parseString(xml, function (err, result) {
-            console.log(result);
-
-        });
 
 
         this.myXMLOBj = {
@@ -331,10 +317,10 @@ class MainComponent extends React.Component {
 
     }
 
-
     render() {
         return (
             <div>
+
                 <Navbar brand='Home' inverse toggleNavKey={0}>
                     <Nav right eventKey={0}> {/* This is the eventKey referenced */}
                         <NavItem eventKey={1} href='#'>Ship</NavItem>
@@ -344,9 +330,8 @@ class MainComponent extends React.Component {
                     </Nav>
                 </Navbar>
                 <UpperHeader xmlObject={this.state.xmlObject} value={this.state.value} updateValue={this.updateValue} NestedCallback = {this.callbacks}/>
-
             </div>
-    );
+        );
     }
 }
 

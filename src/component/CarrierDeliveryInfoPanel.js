@@ -17,9 +17,10 @@ var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
 var Input = ReactBoot.Input;
 
+//var CarrierDeliveryInfoPanel = React.createClass({
 class CarrierDeliveryInfoPanel extends React.Component {
 
-    constructor (props){
+    constructor(props){
         super(props);
 
     }

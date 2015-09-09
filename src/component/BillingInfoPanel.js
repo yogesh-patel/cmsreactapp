@@ -16,28 +16,30 @@ var Grid = ReactBoot.Grid;
 var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
 var Label = ReactBoot.Label;
+//import React, {Component} from 'react';
+//var Component = React.Component;
 
-
+//var BillingInfoPanel = React.createClass({
 class BillingInfoPanel extends React.Component {
 
-    constructor (props){
-        super(props);
+    constructor(props){
+       super(props);
 
     }
 
-    handleInputChange(key, event) {
+    handleInputChange (key, event) {
         var partialState = {};
         partialState[key] = event.target.value;
 
-        var method_prefix = "this.props.BillInfo.";
-        var method_name = key;
+        var methodPrefix = "this.props.BillInfo.";
+        var methodName = key;
 
-        var new_method = method_prefix + method_name   + "('" + partialState[key] + "');";
+        var newMethod = methodPrefix + methodName + "('" + partialState[key] + "');";
 
-        var ret = eval(new_method);
+        var ret = eval(newMethod);
     }
 
-    cust () {
+    cust() {
         alert('button Customer is clicked');
     }
 
@@ -74,7 +76,7 @@ class BillingInfoPanel extends React.Component {
                                     </tr>
                                     <tr>
                                         <td><label>Account</label></td>
-                                        <td><Input type="text"  value={account} onChange={this.handleInputChange.bind(this, 'account') }/></td>
+                                        <td><Input type="text" value={account} onChange={this.handleInputChange.bind(this, 'account') }/></td>
                                     </tr>
                                     <tr>
                                         <td colSpan="3">
@@ -85,8 +87,8 @@ class BillingInfoPanel extends React.Component {
                                     </tr>
 
                                 </table>
-                            </Panel>
 
+                            </Panel>
                     </Col>
                 </Row>
             </Grid>

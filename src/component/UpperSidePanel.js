@@ -14,7 +14,7 @@ var Col = ReactBoot.Col;
 var Button = ReactBoot.Button;
 var ButtonToolbar = ReactBoot.ButtonToolbar;
 var ButtonGroup = ReactBoot.ButtonGroup;
-
+//var es6 = require('es6-library-starter');
 
 class UpperSidePanel extends React.Component {
 

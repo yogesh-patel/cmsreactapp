@@ -17,7 +17,6 @@ class SecondPanel extends React.Component{
     constructor(props) {
         super(props);
 
-
     }
     handleInputChange(key, event) {
         var partialState = {};
@@ -40,8 +39,6 @@ class SecondPanel extends React.Component{
                                 <td > <CarrierDeliveryInfoPanel carrierDeliveryInfo = {this.props.secondPanel.CarrierDeliveryInfo} carrierDeliveryInfo = {this.props.secondPanelObj.CarrierDeliveryInfo}/> </td>
 
                             </tr>
-
-
 
                             <tr>
                                 <td >

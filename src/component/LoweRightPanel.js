@@ -23,9 +23,7 @@ class LowerRightPanel extends React.Component {
 
     }
 
-
     render() {
-
 
 
         return(

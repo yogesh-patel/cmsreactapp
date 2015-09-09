@@ -47,12 +47,12 @@ class InstructionsPanel extends React.Component {
         return (
             <Grid>
                 <Row>
-                    <Col xs={4} sm={4}>
+                    <Col xs={3} sm={3}>
                         <Panel collapsible defaultExpanded header='Instructions' bsStyle='info'>
 
                             <Grid >
                                 <Row >
-                                    <Col xs={2} sm={2} >
+                                    <Col xs={1} sm={1} >
                                         <label>Shipment</label>
                                     </Col>
                                     <Col xs={1} sm={1}>
@@ -62,18 +62,18 @@ class InstructionsPanel extends React.Component {
                                 </Row>
 
                                 <Row >
-                                    <Col  xs={3} >
+                                    <Col  xs={2} >
                                         <Input type='textarea' value={Shipment} onChange={this.handleInputChange.bind(this, 'Shipment') } />
                                     </Col>
                                 </Row>
                                 <Row >
-                                    <Col sm={3}>
+                                    <Col sm={2}>
                                         <label>Package</label>
                                     </Col>
 
                                 </Row>
                                 <Row >
-                                    <Col  sm={3}>
+                                    <Col  sm={2}>
                                         <Input type='textarea' value={Package} onChange={this.handleInputChange.bind(this, 'Package') } />
                                     </Col>
                                 </Row>

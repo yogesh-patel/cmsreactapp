@@ -12,9 +12,11 @@ var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
 var Panel = ReactBoot.Panel;
 var navInstance = ReactBoot.navInstance;
+
 var FirstPanel = require('./FirstPanel');
 var SecondPanel = require('./SecondPanel');
 var ThirdPanel = require('./ThirdPanel');
+
 var UpperSidePanel = require('./UpperSidePanel');
 var LowerSidePanel = require('./LowerSidePanel');
 var LowerRightPanel = require('./LoweRightPanel');
@@ -59,6 +61,7 @@ class UpperHeader extends React.Component {
                         <Col  xs={11} md={11}><LowerRightPanel /></Col>
 
                     </Row>
+
 
 
                 </Grid>

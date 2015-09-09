@@ -31,7 +31,6 @@ class PackageParametersPanel extends React.Component {
         var partialState = {};
         partialState[key] = event.target.value;
 
-
         var method_prefix = "this.props.packageParams.";
         var method_name = key;
 
@@ -58,72 +57,67 @@ class PackageParametersPanel extends React.Component {
         return (
            <Grid>
                <Row>
-                   <Col sm={4}>
+                   <Col sm={3}>
                         <Panel collapsible defaultExpanded header='Package Parameters' bsStyle='info'>
 
                             <Grid>
                                 <Row>
-                                    <Col sm={3}><label style={{"font-weight":"bold"}}>Box Information</label> </Col>
+                                    <Col sm={2}><label style={{"font-weight":"bold"}}>Box Information</label> </Col>
 
                                 </Row>
                                 <Row>
-                                     <Col sm={2}><Label>Package Count</Label></Col>
-                                    <Col sm={2}><Label>Package#</Label></Col>
+                                     <Col sm={1}><label>Package Count</label></Col>
+                                    <Col sm={1}><label>Package#</label></Col>
                                 </Row>
                                 <Row>
-                                    <Col sm={3}>
-                                        <table>
-                                            <tr>
-                                                <td><Input type="text" bsSize="meduim" value={PackageCount} onChange={this.handleInputChange.bind(this, 'PackageCount') }/></td>
-                                                <td><Input type="text" bsSize="medium" value={Package} onChange={this.handleInputChange.bind(this, 'Package') }/></td>
-                                             </tr>
-                                        </table>
-                                    </Col>
+                                    <Col sm={1}><Input type="text" bsSize="meduim" value={PackageCount} onChange={this.handleInputChange.bind(this, 'PackageCount') }/></Col>
+                                    <Col sm={1}><Input type="text" bsSize="medium" value={Package} onChange={this.handleInputChange.bind(this, 'Package') }/></Col>
                                 </Row>
                                 <Row>
-                                    <Col sm={4}><label style={{"font-weight":"bold"}}>Weight</label></Col>
+                                    <Col sm={2}><label style={{"font-weight":"bold"}}>Weight</label></Col>
                                 </Row>
                                 <Row>
-                                    <Col sm={2}><Label>Weight</Label></Col>
-                                    <Col sm={2}><Label>Units</Label></Col>
+                                    <Col sm={1}><label>Weight</label></Col>
+                                    <Col sm={1}><label>Units</label></Col>
                                  </Row>
                                 <Row>
-                                    <Col sm={2}><Input type="text" value={Weight} onChange={this.handleInputChange.bind(this, 'Weight') }/></Col>
-                                    <Col sm={2}> <Input type="select" id="DeliveredBy" name="DeliveredBy" onChange={this.handleInputChange.bind(this, 'deliveredBy') }>
+                                    <Col sm={1}><Input type="text" value={Weight} onChange={this.handleInputChange.bind(this, 'Weight') }/></Col>
+                                    <Col sm={1}> <Input type="select" id="DeliveredBy" name="DeliveredBy" onChange={this.handleInputChange.bind(this, 'deliveredBy') }>
                                                     <option value="in.">in.</option>
                                                     <option value="Cm">Cm</option>
                                                 </Input>
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col sm={3}><label style={{"font-weight":"bold"}}>Dimentions</label></Col>
+                                    <Col sm={2}><label style={{"font-weight":"bold"}}>Dimentions</label></Col>
                                  </Row>
                                 <Row>
-                                    <Col sm={3}><Button bsStyle='info' bSize="xsmall" onClick={this.carton}  style={{"float":"right"}}> Carton</Button></Col>
+                                    <Col sm={2}><Button bsStyle='info' bSize="xsmall" onClick={this.carton}  style={{"float":"right"}}> Carton</Button></Col>
                                  </Row>
 
                                 <Row>
                                     <Col sm={1}><label >Length</label></Col>
                                     <Col sm={1}><label >Width</label></Col>
+                                </Row>
+                                <Row>
+                                   <Col sm={1}><Input type="text" bsSize="small" value={length} onChange={this.handleInputChange.bind(this, 'length') } /></Col>
+                                    <Col sm={1}><Input type="text" bsSize="small" value={width} onChange={this.handleInputChange.bind(this, 'width') } /> </Col>
+                                 </Row>
+
+                                <Row>
                                     <Col sm={1}><label>Height</label></Col>
                                     <Col sm={1}><label >Units</label></Col>
                                 </Row>
-                                 <Row>
-                                    <Col sm={3}>
-                                        <table>
-                                            <tr>
-                                                <td><Input type="text" bsSize="small" value={length} onChange={this.handleInputChange.bind(this, 'length') } /></td>
-                                                <td><Input type="text" bsSize="small" value={width} onChange={this.handleInputChange.bind(this, 'width') } /></td>
-                                                <td><Input type="text" bsSize="small" value={height} onChange={this.handleInputChange.bind(this, 'height') }/></td>
-                                                <td><Input type="select" id="units" bsSize="small" name="units" onChange={this.handleInputChange.bind(this, 'units') } >
-                                                    <option value="in.">in.</option>
-                                                    <option value="Cm">Cm</option>
-                                                </Input></td>
-                                                </tr>
-                                            </table>
-                                     </Col>
-
+                                <Row>
+                                    <Col sm={1}><Input type="text" bsSize="small" value={height} onChange={this.handleInputChange.bind(this, 'height') }/> </Col>
+                                    <Col sm={1}>
+                                        <Input type="select" id="units" bsSize="small" name="units" onChange={this.handleInputChange.bind(this, 'units') } >
+                                            <option value="in.">in.</option>
+                                            <option value="Cm">Cm</option>
+                                        </Input>
+                                    </Col>
                                  </Row>
+
 
                              </Grid>
 

@@ -50,26 +50,29 @@ class PanelInstance extends React.Component {
                     <Col xs={4} sm={4}>
                         <Panel collapsible defaultExpanded header='Customer' bsStyle='info'>
 
-                           <table>
-                                <tr>
-                                    <td> <label>Add Customer</label></td>
-                                    <td colSpan="2" >
+                            <Grid>
+                                <Row>
+                                    <Col sm={1}><label>Add Customer</label> </Col>
+                                    <Col sm={2}>
+                                        <input type="radio" value="None" name="a" />None<input type="radio" value="To Private List" name="a" />To Private List <input type="radio" name="a" value="To Global List" />To Global List
+                                    </Col>
 
-                                        <input type="radio" value="None" name="a" />None<input type="radio" value="To Private List" name="a" />To Private List<input type="radio" name="a" value="To Global List" />To Global List
-                                    </td>
-                                </tr>
+                                </Row>
+                                <Row>
+                                    <Col sm={3}></Col>
+                                 </Row>
+                                <Row>
+                                    <Col xs={1} sm={1}><Button bsStyle='info' bsSize='small' id="btnCust" onClick={this.cust}>Customer(F8)</Button> </Col>
 
-                                <tr>
-                                    <td> <Button bsStyle='info' bsSize='small' id="btnCust" onClick={this.cust}>Customer(F8)</Button></td>
+                                    <Col xs={1} sm={1}>
+                                        <label style={{"marginLeft":"5px"}}>Customer Code</label>
+                                    </Col>
+                                    <Col xs={1} sm={1}>
+                                        <input type="text" id="Text1" style={{"width":"80px", "marginLeft":"5px"}} value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
+                                    </Col>
+                                </Row>
+                            </Grid>
 
-                                    <td> <label style={{"marginLeft":"5px"}}>Customer Code</label></td>
-                                     <td>
-                                         <Input type="text" id="Text1" style={{"width":"80px", "marginLeft":"5px"}} bsSize="small" value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
-                                    </td>
-
-                                </tr>
-
-                            </table>
                         </Panel>
                     </Col>
                 </Row>
