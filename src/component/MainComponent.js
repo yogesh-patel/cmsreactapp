@@ -15,27 +15,67 @@ var NavItem = ReactBoot.NavItem;
 var Panel = ReactBoot.Panel;
 var UpperHeader = require('./UpperHeader');
 
-
 /*var parseString = require('xml2js').parseString;
-var xml = "<root><name>Vedang</name></root>";
+var xml = "<root><name>Vedang</name></root>"; */
+/*
+var fs = require('fs');
+ var xml2js = require('xml2js');
 
-var fs = require('fs'),
-    xml2js = require('xml2js');*/
+*/
 
+/*var importFile = function() {
+    console.log("started import");
+    var file = "E:\Ni\cmsreactapp\src\Component\ShipSchema.xml";
+    console.log(file);
+    $.get(file, function(data) {
+        var lines = data.split("\n");
+        var id = 0;
+        $.each(lines, function(n, elem) {
+            parseLine(elem, id);
+            id++;
+        });
+        console.log("done parsing.");
+    }, "text");
+    console.log("done getting");
+};
+
+importFile()*/
+
+var efs = require('fs'),
+    xml2js = require('xml2js');
+
+var parser = new xml2js.Parser();
+parser.addListener('end', function(result) {
+    console.dir(result);
+    console.log('Done.');
+});
+
+efs.readFile(__dirname + '/ShipSchema.xml', function(err, data) {
+    parser.parseString(data);
+});
 
 class MainComponent extends React.Component{
     constructor(props){
         super(props);
         var self = this;
+        
 
+    //    var parser = new xml2js.Parser();
+      //  var src = fs.readFileSync('../ApiData' + '/ShipSchema.xml');
+      /*  var data = fs.readFile("../ApiData/ShipSchema.xml", "utf8");
+        fs.readfile('../ApiData' + '/ShipSchema.xml','utf8', function(err, data) {
+            parser.parseString(src, function (err, result) {
+                console.dir(result);
+                console.log(data);
+            });
+        });
 
-        this.myXMLOBj = {
-
+      */  this.myXMLOBj = {
             FirsPanelObject:{
                 shipToInfo:{
-                    company: "",  // index.xmlDoc.getElementsByTagName("Company")[0].childNodes[0].nodeValue
-                    PO: "",
-                    contact: "Mr Wayne",
+                    company: "Wayne",  // index.xmlDoc.getElementsByTagName("Company")[0].childNodes[0].nodeValue
+                    PO: "aaa",
+                    contact: "Mr. Wayne",
                     Addr1: "475 Vally Rd",
                     Addr2: "",
                     Addr3: "",

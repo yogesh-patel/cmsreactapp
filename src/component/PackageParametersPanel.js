@@ -118,7 +118,6 @@ class PackageParametersPanel extends React.Component {
                                     </Col>
                                  </Row>
 
-
                              </Grid>
 
                         </Panel>
