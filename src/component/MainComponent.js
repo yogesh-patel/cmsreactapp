@@ -14,14 +14,7 @@ var Nav = ReactBoot.Nav;
 var NavItem = ReactBoot.NavItem;
 var Panel = ReactBoot.Panel;
 var UpperHeader = require('./UpperHeader');
-
-/*var parseString = require('xml2js').parseString;
-var xml = "<root><name>Vedang</name></root>"; */
-/*
-var fs = require('fs');
- var xml2js = require('xml2js');
-
-*/
+ var parseObject = "";
 
 /*var importFile = function() {
     console.log("started import");
@@ -41,9 +34,9 @@ var fs = require('fs');
 
 importFile()*/
 
-var efs = require('fs'),
-    xml2js = require('xml2js');
-
+var fs = require('fs');
+var xml2js = require('xml2js');
+var parser = new xml2js.Parser();
 /*
 var parser = new xml2js.Parser();
 parser.addListener('end', function(result) {
@@ -56,6 +49,52 @@ efs.readFile(__dirname + '/ShipSchema.xml', function(err, data) {
 });
 */
 
+var parseString = require('xml2js').parseString;
+var xml = "<root>Hello xml2js!</root>"
+parseString(xml, function (err, result) {
+    console.dir(result);
+});
+
+
+var xmlhttp=new XMLHttpRequest();
+
+/*function XMLDoc()
+{
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            alert(xmlhttp.responseText);
+
+            parseString(xmlhttp.responseText, function (err, result) {
+                console.dir(result);
+               // parseObject = result;
+             self.myXMLOBj.FirsPanelObject.shipToInfo.contact = result.Shipment.Contact[0];
+             self.myXMLOBj.FirsPanelObject.shipToInfo.Addr1 = result.Shipment.Address1[0];
+             self.myXMLOBj.FirsPanelObject.shipToInfo.Addr2 = result.Shipment.Address2[0];
+             self.myXMLOBj.FirsPanelObject.shipToInfo.Addr3 = result.Shipment.Address3[0];
+             self.myXMLOBj.FirsPanelObject.shipToInfo.city = result.Shipment.City[0];
+             self.myXMLOBj.FirsPanelObject.shipToInfo.State = result.Shipment.State[0];
+             self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = result.Shipment.Zip[0];
+             self.myXMLOBj.FirsPanelObject.shipToInfo.Phone = result.Shipment.Phone[0];
+
+             self.setState({xmlObject : self.myXMLOBj})
+            });
+
+        }
+    };
+    xmlhttp.open("GET","http://localhost:8080/ShipSchema.xml",true);
+    xmlhttp.send();
+}*/
+
 class MainComponent extends React.Component{
     constructor(props){
         super(props);
@@ -64,28 +103,28 @@ class MainComponent extends React.Component{
 
     //    var parser = new xml2js.Parser();
       //  var src = fs.readFileSync('../ApiData' + '/ShipSchema.xml');
-      /*  var data = fs.readFile("../ApiData/ShipSchema.xml", "utf8");
-        fs.readfile('../ApiData' + '/ShipSchema.xml','utf8', function(err, data) {
+      //  var data = fs.readFile("../ApiData/ShipSchema.xml", "utf8");
+     /*   fs.readfile('../ApiData' + '/ShipSchema.xml','utf8', function(err, data) {
             parser.parseString(src, function (err, result) {
                 console.dir(result);
                 console.log(data);
             });
-        });
+        });*/
 
-      */  this.myXMLOBj = {
+        this.myXMLOBj = {
             FirsPanelObject:{
                 shipToInfo:{
-                    company: "Wayne",  // index.xmlDoc.getElementsByTagName("Company")[0].childNodes[0].nodeValue
-                    PO: "aaa",
-                    contact: "Mr. Wayne",
-                    Addr1: "475 Vally Rd",
+                    company: "", // index.xmlDoc.getElementsByTagName("Company")[0].childNodes[0].nodeValue
+                    PO: "",
+                    contact: "",
+                    Addr1: "",
                     Addr2: "",
                     Addr3: "",
-                    city: "wayne",
-                    State: "NJ",
-                    Zip: "7470",
-                    phone: "1212121212",
-                    department: "1212121212"
+                    city: "",
+                    State: "",
+                    Zip: "7",
+                    phone: "",
+                    department: ""
                 },
                 PanelInstance:{
                     CustomerCode: "555"
@@ -143,6 +182,44 @@ class MainComponent extends React.Component{
             }
 
         };
+
+    //    XMLDoc();
+        if (window.XMLHttpRequest)
+        {
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                alert(xmlhttp.responseText);
+
+                parseString(xmlhttp.responseText, function (err, result) {
+                    console.dir(result);
+                    // parseObject = result;
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.company = result.Shipment.Company[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.contact = result.Shipment.Contact[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.Addr1 = result.Shipment.Address1[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.Addr2 = result.Shipment.Address2[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.Addr3 = result.Shipment.Address3[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.city = result.Shipment.City[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.State = result.Shipment.State[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = result.Shipment.Zip[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.Phone = result.Shipment.Phone[0];
+
+                        self.setState({xmlObject : self.myXMLOBj})
+                });
+
+            }
+        };
+        xmlhttp.open("GET","http://localhost:8080/ShipSchema.xml",true);
+        xmlhttp.send();
+
+
         this.callbacks = {
             FirsPanelObject:{
                 shipToInfo:{
@@ -355,6 +432,7 @@ class MainComponent extends React.Component{
 
         this.state={
             xmlObject: this.myXMLOBj
+
         };
 
     }
