@@ -82,12 +82,12 @@ class UpperSidePanel extends React.Component {
             <div>
                 <ButtonGroup vertical >
                      <Button bsSize='small' onClick={this.CreateRequest.bind(this, 'CreateRequest')} > Create Request</Button>
-                     <Button bsSize='small' onClick={this.RatePackage.bind(this, 'RatePackage')} > Rate Package</Button>
-                     <Button bsSize='small' onClick={this.RequestToHold.bind(this, 'RequestToHold')} >Request To Hold </Button>
-                     <Button bsSize='small' onClick={this.VerifyAddress.bind(this, 'VerifyAddress')}>Verify Address</Button>
-                     <Button bsSize='small' onClick={this.Details.bind(this, 'Details')} >Details </Button>
-                     <Button bsSize='small' onClick={this.International.bind(this, 'International')} >International</Button>
-                     <Button bsSize='small' onClick={this.ClearAll.bind(this, 'ClearAll')} >Clear All</Button>
+                    &nbsp; <Button bsSize='small' onClick={this.RatePackage.bind(this, 'RatePackage')} > Rate Package</Button>
+                    &nbsp; <Button bsSize='small' onClick={this.RequestToHold.bind(this, 'RequestToHold')} >Request To Hold </Button>
+                    &nbsp; <Button bsSize='small' onClick={this.VerifyAddress.bind(this, 'VerifyAddress')}>Verify Address</Button>
+                    &nbsp; <Button bsSize='small' onClick={this.Details.bind(this, 'Details')} >Details </Button>
+                    &nbsp; <Button bsSize='small' onClick={this.International.bind(this, 'International')} >International</Button>
+                    &nbsp; <Button bsSize='small' onClick={this.ClearAll.bind(this, 'ClearAll')} >Clear All</Button>
 
                 </ButtonGroup>
 

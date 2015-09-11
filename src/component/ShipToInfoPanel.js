@@ -123,8 +123,8 @@ class PanelInstance extends React.Component {
                                 <Row>
                                     <Col xs={1} sm={1}><label>Department</label> </Col>
                                     <Col xs={2} sm={2}> <Input type= 'select' bsSize="small" id="department" name="department" onChange={this.handleInputChange.bind(this, 'department') } >
-                                                        <option value="in.">in.</option>
-                                                        <option value="in">Cm</option>
+                                                        <option value="Shopping Department">Shopping DepartMent</option>
+                                                      <option value="Sales Department">Sales DepartMent</option>
                                                     </Input>
                                     </Col>
                                 </Row>

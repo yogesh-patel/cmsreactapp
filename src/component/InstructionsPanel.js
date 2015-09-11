@@ -63,7 +63,7 @@ class InstructionsPanel extends React.Component {
 
                                 <Row >
                                     <Col  xs={2} >
-                                        <Input type='textarea' value={Shipment} onChange={this.handleInputChange.bind(this, 'Shipment') } />
+                                      &nbsp;  <Input type='textarea' value={Shipment} onChange={this.handleInputChange.bind(this, 'Shipment') } />
                                     </Col>
                                 </Row>
                                 <Row >

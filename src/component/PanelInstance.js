@@ -54,13 +54,12 @@ class PanelInstance extends React.Component {
                                 <Row>
                                     <Col sm={1}><label>Add Customer</label> </Col>
                                     <Col sm={2}>
-                                        <input type="radio" value="None" name="a" />None<input type="radio" value="To Private List" name="a" />To Private List <input type="radio" name="a" value="To Global List" />To Global List
+                                         <input type="radio" value="None" name="a" >None</input> <input type="radio" value="To Private List" name="a" />To Private List <input type="radio" name="a" value="To Global List" />To Global List
+
                                     </Col>
 
-                                </Row>
-                                <Row>
-                                    <Col sm={3}></Col>
-                                 </Row>
+                                </Row>&nbsp;
+
                                 <Row>
                                     <Col xs={1} sm={1}><Button bsStyle='info' bsSize='small' id="btnCust" onClick={this.cust}>Customer(F8)</Button> </Col>
 
@@ -68,7 +67,7 @@ class PanelInstance extends React.Component {
                                         <label style={{"marginLeft":"5px"}}>Customer Code</label>
                                     </Col>
                                     <Col xs={1} sm={1}>
-                                        <input type="text" id="Text1" style={{"width":"80px", "marginLeft":"5px"}} value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
+                                        <Input type="text" bSize="small" id="Text1" style={{"width":"80px", "marginLeft":"5px"}} value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
                                     </Col>
                                 </Row>
                             </Grid>

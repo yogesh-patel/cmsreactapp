@@ -3,11 +3,8 @@
  */
 
 
-
 var React = require('react');
 var ReactBoot = require('react-bootstrap');
-//var xml2js = require('xml2js');
-//var fs = require('fs');
 
 var Navbar = ReactBoot.Navbar;
 var Nav = ReactBoot.Nav;
@@ -16,23 +13,6 @@ var Panel = ReactBoot.Panel;
 var UpperHeader = require('./UpperHeader');
  var parseObject = "";
 
-/*var importFile = function() {
-    console.log("started import");
-    var file = "E:\Ni\cmsreactapp\src\Component\ShipSchema.xml";
-    console.log(file);
-    $.get(file, function(data) {
-        var lines = data.split("\n");
-        var id = 0;
-        $.each(lines, function(n, elem) {
-            parseLine(elem, id);
-            id++;
-        });
-        console.log("done parsing.");
-    }, "text");
-    console.log("done getting");
-};
-
-importFile()*/
 
 /*var WriteXML = function() {
     if (window.XMLHttpRequest) {
@@ -274,7 +254,6 @@ class MainComponent extends React.Component{
         xmlhttp.send();
 
 
-
         this.callbacks = {
             FirsPanelObject:{
                 shipToInfo:{
@@ -460,8 +439,10 @@ class MainComponent extends React.Component{
 
                             console.log(js2xmlparser("ShipMent", self.myXMLOBj));
 
-                            alert(js2xmlparser("ShipMent", self.myXMLOBj));
-                            //   self.setState({xmlObject: js2xmlparser("ShipMent", self.myXMLOBj)});
+                            var newXml = js2xmlparser("ShipMent", self.myXMLOBj)
+                          //  self.setState({xmlObject: newXml});
+
+                            alert(newXml);
 
                         }
                     };
@@ -513,7 +494,7 @@ class MainComponent extends React.Component{
 
         };
 
- /*       if (window.XMLHttpRequest)
+ /*     if (window.XMLHttpRequest)
         {
             xmlhttp=new XMLHttpRequest();
         }
