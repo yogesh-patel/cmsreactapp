@@ -34,9 +34,33 @@ var UpperHeader = require('./UpperHeader');
 
 importFile()*/
 
+/*var WriteXML = function() {
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    }
+    else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //   alert(xmlhttp.responseText);
+
+            console.log(js2xmlparser("ShipMent", self.myXMLOBj));
+
+            alert(js2xmlparser("ShipMent", self.myXMLOBj));
+            //   self.setState({xmlObject: js2xmlparser("ShipMent", self.myXMLOBj)});
+
+        }
+    };
+    xmlhttp.open("GET", "http://localhost:8080/ShipSchema.xml", true);
+    xmlhttp.send();
+}*/
+
 var fs = require('fs');
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
+var js2xmlparser = require("js2xmlparser");
+
 /*
 var parser = new xml2js.Parser();
 parser.addListener('end', function(result) {
@@ -95,21 +119,50 @@ var xmlhttp=new XMLHttpRequest();
     xmlhttp.send();
 }*/
 
+/*function xmlToJson(xml) {
+
+    // Create the return object
+    var obj = {};
+
+    if (xml.nodeType == 1) { // element
+        // do attributes
+        if (xml.attributes.length > 0) {
+            obj["@attributes"] = {};
+            for (var j = 0; j < xml.attributes.length; j++) {
+                var attribute = xml.attributes.item(j);
+                obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+            }
+        }
+    } else if (xml.nodeType == 3) { // text
+        obj = xml.nodeValue;
+    }
+
+    // do children
+    if (xml.hasChildNodes()) {
+        for(var i = 0; i < xml.childNodes.length; i++) {
+            var item = xml.childNodes.item(i);
+            var nodeName = item.nodeName;
+            if (typeof(obj[nodeName]) == "undefined") {
+                obj[nodeName] = xmlToJson(item);
+            } else {
+                if (typeof(obj[nodeName].push) == "undefined") {
+                    var old = obj[nodeName];
+                    obj[nodeName] = [];
+                    obj[nodeName].push(old);
+                }
+                obj[nodeName].push(xmlToJson(item));
+            }
+        }
+    }
+    return obj;
+};*/
+
+
 class MainComponent extends React.Component{
     constructor(props){
         super(props);
         var self = this;
 
-
-    //    var parser = new xml2js.Parser();
-      //  var src = fs.readFileSync('../ApiData' + '/ShipSchema.xml');
-      //  var data = fs.readFile("../ApiData/ShipSchema.xml", "utf8");
-     /*   fs.readfile('../ApiData' + '/ShipSchema.xml','utf8', function(err, data) {
-            parser.parseString(src, function (err, result) {
-                console.dir(result);
-                console.log(data);
-            });
-        });*/
 
         this.myXMLOBj = {
             FirsPanelObject:{
@@ -183,6 +236,7 @@ class MainComponent extends React.Component{
 
         };
 
+
     //    XMLDoc();
         if (window.XMLHttpRequest)
         {
@@ -211,13 +265,14 @@ class MainComponent extends React.Component{
                     self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = result.Shipment.Zip[0];
                     self.myXMLOBj.FirsPanelObject.shipToInfo.Phone = result.Shipment.Phone[0];
 
-                        self.setState({xmlObject : self.myXMLOBj})
+                    self.setState({xmlObject : self.myXMLOBj})
                 });
 
             }
         };
         xmlhttp.open("GET","http://localhost:8080/ShipSchema.xml",true);
         xmlhttp.send();
+
 
 
         this.callbacks = {
@@ -227,6 +282,8 @@ class MainComponent extends React.Component{
                         var comp =  self.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
                         //  this.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
                         self.setState({xmlObject : self.myXMLOBj});
+
+
                         alert(newValue);
 
                     },
@@ -390,6 +447,27 @@ class MainComponent extends React.Component{
             UpperSidePanel: {
                 CreateRequest: function (newValue) {
                     alert('Button Create Request clicked');
+
+                    if (window.XMLHttpRequest) {
+                        xmlhttp = new XMLHttpRequest();
+                    }
+                    else {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange = function () {
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            //   alert(xmlhttp.responseText);
+
+                            console.log(js2xmlparser("ShipMent", self.myXMLOBj));
+
+                            alert(js2xmlparser("ShipMent", self.myXMLOBj));
+                            //   self.setState({xmlObject: js2xmlparser("ShipMent", self.myXMLOBj)});
+
+                        }
+                    };
+                    xmlhttp.open("GET", "http://localhost:8080/ShipSchema.xml", true);
+                    xmlhttp.send();
+
                 },
                 RatePackage: function (newValue) {
                     alert('Button Rate Package clicked');
@@ -434,6 +512,33 @@ class MainComponent extends React.Component{
             xmlObject: this.myXMLOBj
 
         };
+
+ /*       if (window.XMLHttpRequest)
+        {
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                alert(xmlhttp.responseText);
+
+                parseString(xmlhttp.responseText, function (err, result) {
+                    console.dir(result);
+                    // parseObject = result;
+                    result.Shipment.Company[0] = self.myXMLOBj.FirsPanelObject.shipToInfo.company ;
+
+                    self.setState({xmlObject : self.myXMLOBj})
+                });
+
+            }
+        };
+        xmlhttp.open("POST","http://localhost:8080/ShipSchema.xml",true);
+        xmlhttp.send();*/
 
     }
 

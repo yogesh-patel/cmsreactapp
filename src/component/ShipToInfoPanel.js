@@ -34,6 +34,8 @@ class PanelInstance extends React.Component {
 
         var ret = eval(new_method);
 
+       var xmlhttp =new XMLHttpRequest();
+
         //new_method(partialState[key]);
 
         //window[method_prefix + method_name](partialState[key]);
