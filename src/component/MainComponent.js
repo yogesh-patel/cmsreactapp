@@ -11,8 +11,9 @@ var Nav = ReactBoot.Nav;
 var NavItem = ReactBoot.NavItem;
 var Panel = ReactBoot.Panel;
 var UpperHeader = require('./UpperHeader');
- var parseObject = "";
+//var Validation = require('./Validation');
 
+var parseObject = "";
 
 /*var WriteXML = function() {
     if (window.XMLHttpRequest) {
@@ -58,7 +59,6 @@ var xml = "<root>Hello xml2js!</root>"
 parseString(xml, function (err, result) {
     console.dir(result);
 });
-
 
 var xmlhttp=new XMLHttpRequest();
 
@@ -137,6 +137,15 @@ var xmlhttp=new XMLHttpRequest();
     return obj;
 };*/
 
+/*function validations (myXMLOBj) {
+    if(myXMLOBj.FirsPanelObject.shipToInfo.company == ""){
+        alert("Please provide company name");
+    }
+
+    if(self.myXMLOBj.FirsPanelObject.shipToInfo.company == ""){
+        alert("Please provide company name");
+    }
+}*/
 
 class MainComponent extends React.Component{
     constructor(props){
@@ -154,7 +163,7 @@ class MainComponent extends React.Component{
                     Addr2: "",
                     Addr3: "",
                     city: "",
-                    State: "",
+                    state: "",
                     Zip: "7",
                     phone: "",
                     department: ""
@@ -216,7 +225,6 @@ class MainComponent extends React.Component{
 
         };
 
-
     //    XMLDoc();
         if (window.XMLHttpRequest)
         {
@@ -241,9 +249,9 @@ class MainComponent extends React.Component{
                     self.myXMLOBj.FirsPanelObject.shipToInfo.Addr2 = result.Shipment.Address2[0];
                     self.myXMLOBj.FirsPanelObject.shipToInfo.Addr3 = result.Shipment.Address3[0];
                     self.myXMLOBj.FirsPanelObject.shipToInfo.city = result.Shipment.City[0];
-                    self.myXMLOBj.FirsPanelObject.shipToInfo.State = result.Shipment.State[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.state = result.Shipment.State[0];
                     self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = result.Shipment.Zip[0];
-                    self.myXMLOBj.FirsPanelObject.shipToInfo.Phone = result.Shipment.Phone[0];
+                    self.myXMLOBj.FirsPanelObject.shipToInfo.phone = result.Shipment.Phone[0];
 
                     self.setState({xmlObject : self.myXMLOBj})
                 });
@@ -256,75 +264,75 @@ class MainComponent extends React.Component{
 
         this.callbacks = {
             FirsPanelObject:{
-                shipToInfo:{
-                    company: function(newValue) {
-                        var comp =  self.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
-                        //  this.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
-                        self.setState({xmlObject : self.myXMLOBj});
+                    shipToInfo:{
+                        company: function(newValue) {
+                            var comp =  self.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
+                            //  this.myXMLOBj.FirsPanelObject.shipToInfo.company = newValue;
 
+                            self.setState({xmlObject : self.myXMLOBj});
 
-                        alert(newValue);
+                            alert(newValue);
 
+                        },
+                        PO: function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.PO = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        contact: function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.contact = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        Addr1:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.Addr1 = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        Addr2:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.Addr2 = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        Addr3:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.Addr3 = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        city:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.city = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        state:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.state = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        Zip:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        phone:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.phone = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
+                        department:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.department = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                            alert(newValue);
+                        },
                     },
-                    PO: function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.PO = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    contact: function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.contact = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    Addr1:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.Addr1 = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    Addr2:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.Addr2 = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    Addr3:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.Addr3 = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    city:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.city = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    State:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.state = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    Zip:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    phone:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.phone = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                    department:function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.shipToInfo.department = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
-                    },
-                },
-                PanelInstance:{
-                    CustomerCode: function(newValue) {
-                        self.myXMLOBj.FirsPanelObject.PanelInstance.CustomerCode = newValue;
-                        self.setState({xmlObject: self.myXMLOBj});
+                    PanelInstance:{
+                        CustomerCode: function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.PanelInstance.CustomerCode = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
 
-                        alert(newValue);
+                            alert(newValue);
+                        }
                     }
-                }
             },
             SecondPanelObject:{
                 CarrierDeliveryInfo:{
@@ -425,7 +433,8 @@ class MainComponent extends React.Component{
             },
             UpperSidePanel: {
                 CreateRequest: function (newValue) {
-                    alert('Button Create Request clicked');
+                  alert('Button Create Request clicked');
+
 
                     if (window.XMLHttpRequest) {
                         xmlhttp = new XMLHttpRequest();
@@ -439,7 +448,7 @@ class MainComponent extends React.Component{
 
                             console.log(js2xmlparser("ShipMent", self.myXMLOBj));
 
-                            var newXml = js2xmlparser("ShipMent", self.myXMLOBj)
+                            var newXml = js2xmlparser("ShipMent", self.myXMLOBj);
                           //  self.setState({xmlObject: newXml});
 
                             alert(newXml);
@@ -489,6 +498,7 @@ class MainComponent extends React.Component{
 
         };
 
+
         this.state={
             xmlObject: this.myXMLOBj
 
@@ -524,7 +534,10 @@ class MainComponent extends React.Component{
     }
 
     render() {
+
+
         return (
+
             <div>
 
                 <Navbar brand='Home' inverse toggleNavKey={0}>
@@ -535,7 +548,8 @@ class MainComponent extends React.Component{
                         <NavItem eventKey={2} href='#'>Help</NavItem>
                     </Nav>
                 </Navbar>
-                <UpperHeader xmlObject={this.state.xmlObject} value={this.state.value} updateValue={this.updateValue} NestedCallback = {this.callbacks}/>
+                <UpperHeader xmlObject={this.state.xmlObject}  NestedCallback = {this.callbacks}/>
+                /*value={this.state.value} updateValue={this.updateValue}*/
             </div>
         );
     }

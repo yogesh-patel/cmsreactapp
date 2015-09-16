@@ -6,6 +6,7 @@
 var React = require('react');
 var ReactBoot = require('react-bootstrap');
 var UpperHeader = require('./UpperHeader');
+var FormInput = require('../core/FormInput');
 var Panel = ReactBoot.Panel;
 var Button = ReactBoot.Button;
 var Grid = ReactBoot.Grid;
@@ -13,17 +14,21 @@ var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
 var Input = ReactBoot.Input;
 var Label = ReactBoot.Label;
+var assign = require('object-assign');
 
-class PanelInstance extends React.Component {
+
+class ShipToInfoPanel extends React.Component {
 
     constructor(props) {
         super(props);
 
-    }
+
+     }
 
     handleInputChange(key, event) {
         var partialState = {};
-        partialState[key] = event.target.value;
+     //   partialState[key] = event.target ? event.target.value : event;
+        partialState[key] = event;
         //this.setState(partialState);
         //this.props.ShipInfo.contact(partialState[key]);
 
@@ -34,12 +39,11 @@ class PanelInstance extends React.Component {
 
         var ret = eval(new_method);
 
-       var xmlhttp =new XMLHttpRequest();
+        var xmlhttp =new XMLHttpRequest();
 
         //new_method(partialState[key]);
 
         //window[method_prefix + method_name](partialState[key]);
-
 
     }
 
@@ -55,9 +59,11 @@ class PanelInstance extends React.Component {
         var Addr2 = this.props.ShipToInfo.Addr2;
         var Addr3 = this.props.ShipToInfo.Addr3;
         var city = this.props.ShipToInfo.city;
-        var State = this.props.ShipToInfo.State;
+        var state = this.props.ShipToInfo.state;
         var Zip = this.props.ShipToInfo.Zip;
         var phone = this.props.ShipToInfo.phone;
+
+      //  console.log('company>>', company);
 
         return (
             <Grid >
@@ -68,20 +74,29 @@ class PanelInstance extends React.Component {
                             <Grid>
                                 <Row>
                                     <Col xs={1} sm={1}><label>PO#</label> </Col>
-                                    <Col xs={2} sm={2}> <Input type="text" bsSize="small" value={PO} onChange={this.handleInputChange.bind(this, 'PO') }  /></Col>
+                                    <Col xs={2} sm={2}>
+                                         <FormInput isRequired={true} value={PO} fieldUpdated={this.handleInputChange.bind(this, 'PO')} />
+                                    </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Company</label> </Col>
-                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={company} onChange={this.handleInputChange.bind(this, 'company')}  /></Col>
+                                    <Col xs={2} sm={2}>
+                                        <FormInput isRequired={true} value={company} fieldUpdated={this.handleInputChange.bind(this, 'company')} />
+                                    </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Contact</label> </Col>
-                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={contact} onChange={this.handleInputChange.bind(this, 'contact') }/></Col>
+                                    <Col xs={2} sm={2}>
+                                        <FormInput isRequired={true} value={contact} fieldUpdated={this.handleInputChange.bind(this, 'contact')} />
+
+                                    </Col>
                                 </Row>
 
                                 <Row>
                                     <Col xs={1} sm={1}><label>Address</label> </Col>
-                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/></Col>
+                                    <Col xs={2} sm={2}>
+                                        <Input type="text" bsSize="small" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/>
+                                    </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Line2</label> </Col>
@@ -95,14 +110,15 @@ class PanelInstance extends React.Component {
                                 <Row>
                                     <Col xs={1} sm={1}><label>City</label> </Col>
                                     <Col xs={2} sm={2}>
-                                        <Input type="text" bsSize="small" id="txtCity" value={city} onChange={this.handleInputChange.bind(this, 'city') } />
+                                        <FormInput isRequired={true} value={city} fieldUpdated={this.handleInputChange.bind(this, 'city')} />
 
                                     </Col>
-
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>State</label> </Col>
-                                    <Col xs={2} sm={2}> <Input type="text" bsSize="small" id="txtState" value={State} onChange={this.handleInputChange.bind(this, 'State') } /></Col>
+                                    <Col xs={2} sm={2}>
+                                        <FormInput isRequired={true} value={state} fieldUpdated={this.handleInputChange.bind(this, 'state')} />
+                                    </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Zip</label> </Col>
@@ -111,21 +127,23 @@ class PanelInstance extends React.Component {
                                 <Row>
                                     <Col xs={1} sm={1}><label>Country</label></Col>
                                     <Col xs={2} sm={2}><Input type= 'select' bsSize="small" id="country" name="Country" onChange={this.handleInputChange.bind(this, 'department') }>
-                                                        <option value="India">India</option>
-                                                        <option value="United States">United States</option>
-                                                    </Input>
+                                                            <option value="India">India</option>
+                                                            <option value="United States">United States</option>
+                                                       </Input>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Phone</label> </Col>
-                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={phone} onChange={this.handleInputChange.bind(this, 'phone') } /></Col>
+                                    <Col xs={2} sm={2}>
+                                        <FormInput numbersOnly={true} value={phone} fieldUpdated ={this.handleInputChange.bind(this, 'phone') }/>
+                                    </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Department</label> </Col>
                                     <Col xs={2} sm={2}> <Input type= 'select' bsSize="small" id="department" name="department" onChange={this.handleInputChange.bind(this, 'department') } >
-                                                        <option value="Shopping Department">Shopping DepartMent</option>
-                                                      <option value="Sales Department">Sales DepartMent</option>
-                                                    </Input>
+                                                            <option value="Shopping Department">Shopping DepartMent</option>
+                                                            <option value="Sales Department">Sales DepartMent</option>
+                                                         </Input>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -146,4 +164,4 @@ class PanelInstance extends React.Component {
     }
 }
 
-module.exports = PanelInstance;
+module.exports = ShipToInfoPanel;
