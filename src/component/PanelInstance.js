@@ -9,6 +9,7 @@ var Navbar = ReactBoot.Navbar;
 var Nav = ReactBoot.Nav;
 var NavItem = ReactBoot.NavItem;
 var UpperHeader = require('./UpperHeader');
+var FormInput = require('../core/FormInput');
 var Panel = ReactBoot.Panel;
 var Button = ReactBoot.Button;
 var Grid = ReactBoot.Grid;
@@ -25,8 +26,8 @@ class PanelInstance extends React.Component {
 
     handleInputChange(key, event) {
         var partialState = {};
-        partialState[key] = event.target.value;
-
+        partialState[key] = event;
+     //   partialState[key] = event.target.value;
 
         var method_prefix = "this.props.PanelInfo.";
         var method_name = key;
@@ -67,7 +68,8 @@ class PanelInstance extends React.Component {
                                         <label style={{"marginLeft":"5px"}}>Customer Code</label>
                                     </Col>
                                     <Col xs={1} sm={1}>
-                                        <Input type="text" bSize="small" id="Text1" style={{"width":"80px", "marginLeft":"5px"}} value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
+                                        <FormInput isRequired={true} style={{"width":"80px", "marginLeft":"5px"}} value={CustomerCode} onChange={this.handleInputChange.bind(this, 'CustomerCode') }/>
+
                                     </Col>
                                 </Row>
                             </Grid>

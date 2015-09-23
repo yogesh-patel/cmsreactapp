@@ -22,7 +22,6 @@ class ShipToInfoPanel extends React.Component {
     constructor(props) {
         super(props);
 
-
      }
 
     handleInputChange(key, event) {
@@ -62,6 +61,7 @@ class ShipToInfoPanel extends React.Component {
         var state = this.props.ShipToInfo.state;
         var Zip = this.props.ShipToInfo.Zip;
         var phone = this.props.ShipToInfo.phone;
+		var department = this.props.ShipToInfo.department;
 
       //  console.log('company>>', company);
 
@@ -95,23 +95,22 @@ class ShipToInfoPanel extends React.Component {
                                 <Row>
                                     <Col xs={1} sm={1}><label>Address</label> </Col>
                                     <Col xs={2} sm={2}>
-                                        <Input type="text" bsSize="small" value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/>
+                                        <FormInput value={Addr1} onChange={this.handleInputChange.bind(this, 'Addr1') }/>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Line2</label> </Col>
-                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></Col>
+                                    <Col xs={2} sm={2}><FormInput isRequired={false} value={Addr2} onChange={this.handleInputChange.bind(this, 'Addr2') } /></Col>
                                 </Row>
 
                                 <Row>
                                     <Col xs={1} sm={1}><label>Line3</label> </Col>
-                                    <Col xs={2} sm={2}><Input type="text" bsSize="small" value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></Col>
+                                    <Col xs={2} sm={2}><FormInput value={Addr3} onChange={this.handleInputChange.bind(this, 'Addr3') } /></Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>City</label> </Col>
                                     <Col xs={2} sm={2}>
                                         <FormInput isRequired={true} value={city} fieldUpdated={this.handleInputChange.bind(this, 'city')} />
-
                                     </Col>
                                 </Row>
                                 <Row>
@@ -122,7 +121,9 @@ class ShipToInfoPanel extends React.Component {
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Zip</label> </Col>
-                                    <Col xs={2} sm={2}>  <Input type="text" bsSize="small" id="txtZip" value={Zip} onChange={this.handleInputChange.bind(this, 'Zip') } /></Col>
+                                    <Col xs={2} sm={2}>
+                                        <FormInput isRequired={true} value={Zip} fieldUpdated={this.handleInputChange.bind(this, 'Zip') } />
+                                    </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Country</label></Col>
@@ -135,15 +136,15 @@ class ShipToInfoPanel extends React.Component {
                                 <Row>
                                     <Col xs={1} sm={1}><label>Phone</label> </Col>
                                     <Col xs={2} sm={2}>
-                                        <FormInput numbersOnly={true} value={phone} fieldUpdated ={this.handleInputChange.bind(this, 'phone') }/>
+                                        <FormInput isRequired = {true} numbersOnly={true} value={phone} fieldUpdated ={this.handleInputChange.bind(this, 'phone') }/>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col xs={1} sm={1}><label>Department</label> </Col>
                                     <Col xs={2} sm={2}> <Input type= 'select' bsSize="small" id="department" name="department" onChange={this.handleInputChange.bind(this, 'department') } >
-                                                            <option value="Shopping Department">Shopping DepartMent</option>
+                                                            <option value="Shipping Department">Shipping DepartMent</option>
                                                             <option value="Sales Department">Sales DepartMent</option>
-                                                         </Input>
+                                                        </Input>
                                     </Col>
                                 </Row>
                                 <Row>

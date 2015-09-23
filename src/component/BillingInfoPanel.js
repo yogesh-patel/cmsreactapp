@@ -16,6 +16,7 @@ var Grid = ReactBoot.Grid;
 var Row = ReactBoot.Row;
 var Col = ReactBoot.Col;
 var Label = ReactBoot.Label;
+var FormInput = require('../core/FormInput');
 //import React, {Component} from 'react';
 //var Component = React.Component;
 
@@ -59,8 +60,9 @@ class BillingInfoPanel extends React.Component {
                                         <td><label>Freight Payment</label></td>
                                         <td>
                                             <Input type="select" id="freightPayment" name="FreightPayment" onChange={this.handleInputChange.bind(this, 'account') } >
-                                                <option value="in.">in.</option>
-                                                <option value="Cm">Cm</option>
+                                                <option value="Shipper">Shipper</option>
+                                                <option value="Recipient">Recipient</option>
+                                                 <option value="3rd Party">3rd Party</option>
                                             </Input>
 
                                         </td>
@@ -70,13 +72,13 @@ class BillingInfoPanel extends React.Component {
                                         <td>
                                             <Input type="select" id="BillingDuty" name="BillingDuty" onChange={this.handleInputChange.bind(this, 'billDuty') }>
                                                 <option value="Recipient.">Recipient</option>
-                                                <option value="Recipient">Recipient</option>
+                                                <option value="Shipper">Shipper</option>
                                             </Input>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><label>Account</label></td>
-                                        <td><Input type="text" value={account} onChange={this.handleInputChange.bind(this, 'account') }/></td>
+                                        <td><FormInput numbersOnly={true} type="text" value={account} onChange={this.handleInputChange.bind(this, 'account') }/></td>
                                     </tr>
                                     <tr>
                                         <td colSpan="3">

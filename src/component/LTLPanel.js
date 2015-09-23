@@ -50,8 +50,12 @@ class LTLPanel extends React.Component {
                                     </Col>
                                     <Col xs={2} sm={2}>
                                         <Input type="select" id="freightClass" name="FreightClass" onChange={this.handleInputChange.bind(this, 'freightClass')} >
-                                            <option value="in.">in.</option>
-                                            <option value="Cm">Cm</option>
+                                            <option value="class 0">class 0</option>
+                                            <option value="class 50">class 50</option>
+                                            <option value="class 60">class 60</option>
+                                            <option value="class 65">class 65</option>
+                                            <option value="class 70">class 70</option>
+                                            <option value="class 75">class 75</option>
                                         </Input>
                                     </Col>
 

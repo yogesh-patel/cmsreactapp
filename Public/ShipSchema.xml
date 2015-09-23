@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <Shipment id="0">
-    <Company>Vedang Comp</Company>
+    <Company>Wayne Comp</Company>
     <Contact>Mr Wayne</Contact>
     <Address1>475 Vally Rd</Address1>
-    <Address2 />
+    <Address2 ></Address2>
     <Address3 />
     <Address4 />
     <City>wayne</City>
@@ -11,4 +11,8 @@
     <Zip>07470</Zip>
     <Phone>1212121212</Phone>
     <Fax>1212121212</Fax>
+    <ShipVia default="0" selected="0" code="" initial="" specialservices="">
+        <Via id="3936" avail="1" account="412" carrier="28672" type="0" PrintIIL="0" code="LTLR_WL" accountnumber="11111111" shipviacode="11" service="55" serviceid="28688" specialservices=" " engine="WL" index="0" meter="" paytype="1" scac="" rated="1" orgid="0" baid="-1" rate="0" Disallowfreight="0" billdutytaxtotype="1" shipweight="0.0" addressverification="0" AutoValidate="0" XrefGroupId="0">LTLR_WL_Class 55</Via>
+        <Via id="1430" avail="1" account="278" carrier="20480" type="0" PrintIIL="0" code="FedEx" accountnumber="510201728" shipviacode="1212" service="IED" serviceid="213763" specialservices="" engine="FXRS" index="1" meter="114573" paytype="1" scac="" rated="0" orgid="0" baid="-1" rate="0" Disallowfreight="0" billdutytaxtotype="2" shipweight="0.0" addressverification="0" AutoValidate="0" XrefGroupId="0">1212</Via>
+    </ShipVia>
 </Shipment>

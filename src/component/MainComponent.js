@@ -55,12 +55,13 @@ efs.readFile(__dirname + '/ShipSchema.xml', function(err, data) {
 */
 
 var parseString = require('xml2js').parseString;
-var xml = "<root>Hello xml2js!</root>"
+/*var xml = "<root>Hello xml2js!</root>"
 parseString(xml, function (err, result) {
     console.dir(result);
-});
+});*/
 
 var xmlhttp=new XMLHttpRequest();
+var xmlhttp1=new XMLHttpRequest();
 
 /*function XMLDoc()
 {
@@ -137,21 +138,10 @@ var xmlhttp=new XMLHttpRequest();
     return obj;
 };*/
 
-/*function validations (myXMLOBj) {
-    if(myXMLOBj.FirsPanelObject.shipToInfo.company == ""){
-        alert("Please provide company name");
-    }
-
-    if(self.myXMLOBj.FirsPanelObject.shipToInfo.company == ""){
-        alert("Please provide company name");
-    }
-}*/
-
 class MainComponent extends React.Component{
     constructor(props){
         super(props);
         var self = this;
-
 
         this.myXMLOBj = {
             FirsPanelObject:{
@@ -164,8 +154,9 @@ class MainComponent extends React.Component{
                     Addr3: "",
                     city: "",
                     state: "",
-                    Zip: "7",
+                    Zip: "",
                     phone: "",
+                    country: "",
                     department: ""
                 },
                 PanelInstance:{
@@ -196,7 +187,7 @@ class MainComponent extends React.Component{
                 },
 
                 PackageParameters:{
-                    PackageCount: "Wyne Company",
+                    PackageCount: "Wayne",
                     Package: "",
                     Weight: "",
                     length: "",
@@ -238,10 +229,10 @@ class MainComponent extends React.Component{
         {
             if (xmlhttp.readyState==4 && xmlhttp.status==200)
             {
-                alert(xmlhttp.responseText);
+              //  alert(xmlhttp.responseText);
 
                 parseString(xmlhttp.responseText, function (err, result) {
-                    console.dir(result);
+                    console.log('\n\n Result err>>', err);
                     // parseObject = result;
                     self.myXMLOBj.FirsPanelObject.shipToInfo.company = result.Shipment.Company[0];
                     self.myXMLOBj.FirsPanelObject.shipToInfo.contact = result.Shipment.Contact[0];
@@ -252,7 +243,9 @@ class MainComponent extends React.Component{
                     self.myXMLOBj.FirsPanelObject.shipToInfo.state = result.Shipment.State[0];
                     self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = result.Shipment.Zip[0];
                     self.myXMLOBj.FirsPanelObject.shipToInfo.phone = result.Shipment.Phone[0];
+                 //   self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.shipVia = result.Shipment.Shipment.Via;
 
+                    console.log('\n\n Result>>', result);
                     self.setState({xmlObject : self.myXMLOBj})
                 });
 
@@ -260,6 +253,51 @@ class MainComponent extends React.Component{
         };
         xmlhttp.open("GET","http://localhost:8080/ShipSchema.xml",true);
         xmlhttp.send();
+
+
+      
+        if (window.XMLHttpRequest)
+        {
+            xmlhttp1=new XMLHttpRequest();
+        }
+        else
+        {
+            xmlhttp1=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp1.onreadystatechange=function()
+        {
+            if (xmlhttp1.readyState==4 && xmlhttp1.status==200)
+            {
+              //  alert(xmlhttp.responseText);
+                parseString(xmlhttp1.responseText, function (err, result) {
+                    console.log("Object_ShipVia result =>",result);
+                    // parseObject = result;
+                 
+                    self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.shipVia = result.ShipVia.Via;
+                 //   console.log('ShipViaCode =>',result.ShipVia.);
+                    self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.shipVia = new Array();
+               // self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.shipVia;
+                    console.log("[",result.ShipVia.Via[0].$.shipviacode,"] ");
+                    console.log(result.ShipVia.Via[0]._);
+
+                    var n =0;
+                    for(n=0;n<1000;n++) {
+                        var shipviaCode = "[" +result.ShipVia.Via[n].$.shipviacode+"] "+result.ShipVia.Via[n]._ ;
+                     
+                     //   self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.shipVia.push("["result.ShipVia.Via[n].$.shipviacode"] "result.ShipVia.Via[n]._);
+                     self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.shipVia.push(shipviaCode);
+                      //  ("[",result.ShipVia.Via[0].$.shipviacode,"] ",result.ShipVia.Via[n]._);
+
+                    // (result.ShipVia.Via[n]._)
+
+                    }
+                    self.setState({xmlObject : self.myXMLOBj});
+                });
+
+            }
+        };
+        xmlhttp1.open("GET","http://localhost:8080/ShipVia.xml",true);
+        xmlhttp1.send();
 
 
         this.callbacks = {
@@ -271,13 +309,13 @@ class MainComponent extends React.Component{
 
                             self.setState({xmlObject : self.myXMLOBj});
 
-                            alert(newValue);
+                          //  alert(newValue);
 
                         },
                         PO: function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.PO = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                          //  alert(newValue);
                         },
                         contact: function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.contact = newValue;
@@ -287,42 +325,47 @@ class MainComponent extends React.Component{
                         Addr1:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.Addr1 = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                         //   alert(newValue);
                         },
                         Addr2:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.Addr2 = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                         //   alert(newValue);
                         },
                         Addr3:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.Addr3 = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                          //  alert(newValue);
                         },
                         city:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.city = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                         //   alert(newValue);
                         },
                         state:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.state = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                         //   alert(newValue);
                         },
                         Zip:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.Zip = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                         //   alert(newValue);
                         },
                         phone:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.phone = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                          //  alert(newValue);
+                        },
+                        country:function(newValue) {
+                            self.myXMLOBj.FirsPanelObject.shipToInfo.department = newValue;
+                            self.setState({xmlObject: self.myXMLOBj});
+                          //  alert(newValue);
                         },
                         department:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.department = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                          //  alert(newValue);
                         },
                     },
                     PanelInstance:{
@@ -330,7 +373,7 @@ class MainComponent extends React.Component{
                             self.myXMLOBj.FirsPanelObject.PanelInstance.CustomerCode = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
 
-                            alert(newValue);
+                        //    alert(newValue);
                         }
                     }
             },
@@ -339,12 +382,12 @@ class MainComponent extends React.Component{
                     shipVia: function(newValue) {
                         self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.shipVia = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     },
                     delivery: function(newValue){
                         self.myXMLOBj.SecondPanelObject.CarrierDeliveryInfo.delivery = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     }
 
                 },
@@ -352,26 +395,26 @@ class MainComponent extends React.Component{
                     account : function (newValue){
                         self.myXMLOBj.SecondPanelObject.BillingInfo.account = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     },
                     billDuty: function (newValue) {
                         self.myXMLOBj.SecondPanelObject.BillingInfo.billDuty = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                     //   alert(newValue);
                     }
                 },
                 SpecialServices:  {
                     SpecialService: function (newValue) {
                         self.myXMLOBj.SecondPanelObject.SpecialServices.SpecialService = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                    //    alert(newValue);
                     }
                 },
                 LTL:{
                     freightClass: function (newValue) {
                         self.myXMLOBj.SecondPanelObject.LTL.freightClass = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     }
                 }
             },
@@ -380,54 +423,54 @@ class MainComponent extends React.Component{
                     Package: function (newValue) {
                         self.myXMLOBj.ThirdPanel.Instructions.Package = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                     //   alert(newValue);
                     },
                     Shipment: function (newValue) {
                         self.myXMLOBj.ThirdPanel.Instructions.Shipment = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                     //   alert(newValue);
                     }
                 },
                 PackageParameters: {
                     PackageCount: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.PackageCount = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     },
                     Package: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.Package = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                     //   alert(newValue);
                     },
                     Weight: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.Weight = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                     //   alert(newValue);
                     },
                     length: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.length = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     },
                     width: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.width = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     },
                     height: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.height = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                      //  alert(newValue);
                     },
                     deliveredBy: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.deliveredBy = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                     //   alert(newValue);
                     },
                     units: function (newValue) {
                         self.myXMLOBj.ThirdPanel.PackageParameters.units = newValue;
                         self.setState({xmlObject: self.myXMLOBj});
-                        alert(newValue);
+                     //   alert(newValue);
                     },
                 },
             },
@@ -504,33 +547,6 @@ class MainComponent extends React.Component{
 
         };
 
- /*     if (window.XMLHttpRequest)
-        {
-            xmlhttp=new XMLHttpRequest();
-        }
-        else
-        {
-            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange=function()
-        {
-            if (xmlhttp.readyState==4 && xmlhttp.status==200)
-            {
-                alert(xmlhttp.responseText);
-
-                parseString(xmlhttp.responseText, function (err, result) {
-                    console.dir(result);
-                    // parseObject = result;
-                    result.Shipment.Company[0] = self.myXMLOBj.FirsPanelObject.shipToInfo.company ;
-
-                    self.setState({xmlObject : self.myXMLOBj})
-                });
-
-            }
-        };
-        xmlhttp.open("POST","http://localhost:8080/ShipSchema.xml",true);
-        xmlhttp.send();*/
-
     }
 
     render() {
@@ -540,7 +556,7 @@ class MainComponent extends React.Component{
 
             <div>
 
-                <Navbar brand='Home' inverse toggleNavKey={0}>
+                <Navbar brand='Home' inverse toggleNavKey={1}>
                     <Nav right eventKey={0}> {/* This is the eventKey referenced */}
                         <NavItem eventKey={1} href='#'>Ship</NavItem>
                         <NavItem eventKey={2} href='#'>Manage</NavItem>
@@ -549,7 +565,7 @@ class MainComponent extends React.Component{
                     </Nav>
                 </Navbar>
                 <UpperHeader xmlObject={this.state.xmlObject}  NestedCallback = {this.callbacks}/>
-                /*value={this.state.value} updateValue={this.updateValue}*/
+
             </div>
         );
     }

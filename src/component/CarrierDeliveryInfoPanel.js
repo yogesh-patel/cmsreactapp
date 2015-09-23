@@ -38,10 +38,17 @@ class CarrierDeliveryInfoPanel extends React.Component {
     }
 
     render() {
-    //    var delivery = this.props.carrierDeliveryInfo.delivery;
-     //   var shipVia = this.props.carrierDeliveryInfo.shipVia;
+        var delivery = this.props.carrierDeliveryInfo.delivery;
+        var shipViaList;
+
+        if( this.props.carrierDeliveryInfo.shipVia ) {
+            shipViaList = this.props.carrierDeliveryInfo.shipVia.map(ship => {
+                return <option value={ship}>{ship}</option>;
+            });
+        }
 
         return (
+
             <Grid>
                 <Row>
                     <Col xs={4} sm={4}>
@@ -49,20 +56,23 @@ class CarrierDeliveryInfoPanel extends React.Component {
 
                             <Grid>
                                 <Row>
+
                                     <Col  sm={1}> <label>Ship Via</label> </Col>
                                     <Col  sm={2}>
                                         <Input type="select" id="ShipVia" name="ShipVia" onChange={this.handleInputChange.bind(this, 'shipVia')} onselect = {this.handleInputChange.bind(this, 'shipVia')}>
-                                            <option value="in.">in.</option>
-                                            <option value="Cm">Cm</option>
+                                            {shipViaList}
                                         </Input>
+
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col  sm={1}> <label>Del. By</label></Col>
                                     <Col  sm={2}>
                                         <Input type="select" id="DeliveredBy" name="DeliveredBy" onChange={this.handleInputChange.bind(this, 'delivery')} onselect={this.props.carrierDeliveryInfo.delivery} >
-                                            <option value="in.">in.</option>
-                                            <option value="Cm">Cm</option>
+                                            <option value="in.">09/23/2015</option>
+                                            <option value="Cm">09/24/2015</option>
+                                            <option value="Cm">09/25/2015</option>
+                                            <option value="Cm">09/26/2015</option>
                                         </Input>
                                     </Col>
 

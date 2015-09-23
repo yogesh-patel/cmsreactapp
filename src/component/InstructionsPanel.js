@@ -47,7 +47,7 @@ class InstructionsPanel extends React.Component {
         return (
             <Grid>
                 <Row>
-                    <Col xs={3} sm={3}>
+                    <Col sm={3}>
                         <Panel collapsible defaultExpanded header='Instructions' bsStyle='info'>
 
                             <Grid >

@@ -36,7 +36,7 @@ class SecondPanel extends React.Component{
                         <table>
                             <tbody>
                             <tr >
-                                <td > <CarrierDeliveryInfoPanel carrierDeliveryInfo = {this.props.secondPanel.CarrierDeliveryInfo} carrierDeliveryInfo = {this.props.secondPanelObj.CarrierDeliveryInfo}/> </td>
+                                <td > <CarrierDeliveryInfoPanel carrierDeliveryInfo = {this.props.secondPanel.CarrierDeliveryInfo} carrierDeliveryInfoObject = {this.props.secondPanelObj.CarrierDeliveryInfo}/> </td>
 
                             </tr>
 

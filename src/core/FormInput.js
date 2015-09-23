@@ -50,6 +50,7 @@ class FormInput extends React.Component {
     }
     _checkEmail(value){
         /* Email type format true=john@sam.com False=as.com as@com */
+
         var pattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
         if( !pattern.test(value) ) {
             this._formHasError('email');
@@ -70,6 +71,7 @@ class FormInput extends React.Component {
         if( this.props.numbersOnly ) {
             ip.addEventListener('keypress', this.validateForNumber.bind(this));
         }
+
     }
     _removeEvents() {
         let ip = this._getInput();
@@ -105,6 +107,7 @@ class FormInput extends React.Component {
         {
             input.setAttribute("type",this.props.type);
         }
+
     }
     componentWillReceiveProps(nextProps) {
         if( nextProps.value != this.state.value )
@@ -116,10 +119,17 @@ class FormInput extends React.Component {
         }
     }
     validateForNumber(evt) {
+
         evt.preventDefault();
         let preVal = this.state.val;
-        var charCode = (evt.which) ? evt.which : evt.keyCode;
-        if( this._isNumber(charCode) ) {
+
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+
+     //   var charCode = (evt.which) ? evt.which : evt.keyCode;
+/*      if( this._isNumber(charCode) ) {
             let value = this._getInput().value;
             let currLength = value.length + 1;
             let maxLength = this.props.maxLength;
@@ -133,13 +143,14 @@ class FormInput extends React.Component {
             this.setState({
                 val: preVal
             });
-        }
+        }*/
     }
     componentWillUnmount() {
         this._removeEvents();
     }
     validate() {
         let value = this._getInput().value;
+
         if( this.props.isRequired ) {
             if( !this._checkRequiredValidation(value) )
             {
@@ -147,7 +158,7 @@ class FormInput extends React.Component {
             }
         }
 
-        if( this.props.type == 'email' ) {
+       if( this.props.type == 'email' ) {
             console.log(this._checkEmail(value));
         }
     }

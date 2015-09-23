@@ -73,7 +73,8 @@ class PackageParametersPanel extends React.Component {
                                     <Col sm={1}><Input type="text" bsSize="meduim" value={PackageCount} onChange={this.handleInputChange.bind(this, 'PackageCount') }/></Col>
                                     <Col sm={1}><Input type="text" bsSize="medium" value={Package} onChange={this.handleInputChange.bind(this, 'Package') }/></Col>
                                 </Row>
-                                <Row>
+                               
+                                <Row >
                                     <Col sm={2}><label style={{"font-weight":"bold"}}>Weight</label></Col>
                                 </Row>
                                 <Row>
@@ -82,17 +83,18 @@ class PackageParametersPanel extends React.Component {
                                  </Row>
                                 <Row>
                                     <Col sm={1}><Input type="text" value={Weight} onChange={this.handleInputChange.bind(this, 'Weight') }/></Col>
-                                    <Col sm={1}> <Input type="select" id="DeliveredBy" name="DeliveredBy" onChange={this.handleInputChange.bind(this, 'deliveredBy') }>
-                                                    <option value="in.">in.</option>
-                                                    <option value="Cm">Cm</option>
+                                    <Col sm={1}> <Input type="select" id="DeliveredBy" bsSize="small"  name="DeliveredBy" onChange={this.handleInputChange.bind(this, 'deliveredBy') }>
+                                                    <option value="lbs">lbs</option>
+                                                    <option value="Kg">Kg</option>
                                                 </Input>
                                     </Col>
                                 </Row>
+                                
                                 <Row>
                                     <Col sm={2}><label style={{"font-weight":"bold"}}>Dimentions</label></Col>
                                  </Row>
                                 <Row>
-                                    <Col sm={2}><Button bsStyle='info' bSize="xsmall" onClick={this.carton}  style={{"float":"right"}}> Carton</Button></Col>
+                                    <Col sm={2}><Button bsStyle='info' bsSize="medium" onClick={this.carton}  style={{"float":"right"}}> Carton</Button></Col>
                                  </Row>
 
                                 <Row>
@@ -109,11 +111,13 @@ class PackageParametersPanel extends React.Component {
                                     <Col sm={1}><label >Units</label></Col>
                                 </Row>
                                 <Row>
-                                    <Col sm={1}><Input type="text" bsSize="small" value={height} onChange={this.handleInputChange.bind(this, 'height') }/> </Col>
+                                    <Col sm={1}>
+                                        <Input type="text" bsSize="small" value={height} onChange={this.handleInputChange.bind(this, 'height') }/>
+                                     </Col>
                                     <Col sm={1}>
                                         <Input type="select" id="units" bsSize="small" name="units" onChange={this.handleInputChange.bind(this, 'units') } >
-                                            <option value="in.">in.</option>
-                                            <option value="Cm">Cm</option>
+                                            <option value="in.">In.</option>
+                                            <option value="Cm.">Cm.</option>
                                         </Input>
                                     </Col>
                                  </Row>
