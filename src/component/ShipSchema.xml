@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Shipment id="0">
+    <Company>Wyne Comp</Company>
+    <Contact>Mr Wayne</Contact>
+    <Address1>475 Vally Rd</Address1>
+    <Address2 />
+    <Address3 />
+    <Address4 />
+    <City>wayne</City>
+    <State>NJ</State>
+    <Zip>07470</Zip>
+    <Phone>1212121212</Phone>
+    <Fax>1212121212</Fax>
+</Shipment>
