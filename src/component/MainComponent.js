@@ -11,55 +11,14 @@ var Nav = ReactBoot.Nav;
 var NavItem = ReactBoot.NavItem;
 var Panel = ReactBoot.Panel;
 var UpperHeader = require('./UpperHeader');
-//var Validation = require('./Validation');
 
 var parseObject = "";
-
-/*var WriteXML = function() {
-    if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest();
-    }
-    else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            //   alert(xmlhttp.responseText);
-
-            console.log(js2xmlparser("ShipMent", self.myXMLOBj));
-
-            alert(js2xmlparser("ShipMent", self.myXMLOBj));
-            //   self.setState({xmlObject: js2xmlparser("ShipMent", self.myXMLOBj)});
-
-        }
-    };
-    xmlhttp.open("GET", "http://localhost:8080/ShipSchema.xml", true);
-    xmlhttp.send();
-}*/
 
 var fs = require('fs');
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
 var js2xmlparser = require("js2xmlparser");
-
-/*
-var parser = new xml2js.Parser();
-parser.addListener('end', function(result) {
-    console.dir(result);
-    console.log('Done.');
-});
-
-efs.readFile(__dirname + '/ShipSchema.xml', function(err, data) {
-    parser.parseString(data);
-});
-*/
-
 var parseString = require('xml2js').parseString;
-/*var xml = "<root>Hello xml2js!</root>"
-parseString(xml, function (err, result) {
-    console.dir(result);
-});*/
-
 var xmlhttp=new XMLHttpRequest();
 var xmlhttp1=new XMLHttpRequest();
 
@@ -100,43 +59,6 @@ var xmlhttp1=new XMLHttpRequest();
     xmlhttp.send();
 }*/
 
-/*function xmlToJson(xml) {
-
-    // Create the return object
-    var obj = {};
-
-    if (xml.nodeType == 1) { // element
-        // do attributes
-        if (xml.attributes.length > 0) {
-            obj["@attributes"] = {};
-            for (var j = 0; j < xml.attributes.length; j++) {
-                var attribute = xml.attributes.item(j);
-                obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
-            }
-        }
-    } else if (xml.nodeType == 3) { // text
-        obj = xml.nodeValue;
-    }
-
-    // do children
-    if (xml.hasChildNodes()) {
-        for(var i = 0; i < xml.childNodes.length; i++) {
-            var item = xml.childNodes.item(i);
-            var nodeName = item.nodeName;
-            if (typeof(obj[nodeName]) == "undefined") {
-                obj[nodeName] = xmlToJson(item);
-            } else {
-                if (typeof(obj[nodeName].push) == "undefined") {
-                    var old = obj[nodeName];
-                    obj[nodeName] = [];
-                    obj[nodeName].push(old);
-                }
-                obj[nodeName].push(xmlToJson(item));
-            }
-        }
-    }
-    return obj;
-};*/
 
 class MainComponent extends React.Component{
     constructor(props){
@@ -320,7 +242,7 @@ class MainComponent extends React.Component{
                         contact: function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.contact = newValue;
                             self.setState({xmlObject: self.myXMLOBj});
-                            alert(newValue);
+                          //  alert(newValue);
                         },
                         Addr1:function(newValue) {
                             self.myXMLOBj.FirsPanelObject.shipToInfo.Addr1 = newValue;

@@ -136,7 +136,7 @@ class ShipToInfoPanel extends React.Component {
                                 <Row>
                                     <Col xs={1} sm={1}><label>Phone</label> </Col>
                                     <Col xs={2} sm={2}>
-                                        <FormInput isRequired = {true} numbersOnly={true} value={phone} fieldUpdated ={this.handleInputChange.bind(this, 'phone') }/>
+                                        <FormInput isRequired = {true} value={phone} fieldUpdated ={this.handleInputChange.bind(this, 'phone') }/>
                                     </Col>
                                 </Row>
                                 <Row>
